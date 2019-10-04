@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://1979F.github.io/"/>
-  <updated>2019-10-04T14:59:46.676Z</updated>
+  <updated>2019-10-04T16:39:38.284Z</updated>
   <id>http://1979F.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java线程知识点（一）</title>
+    <link href="http://1979F.github.io/2019/10/05/%E7%BA%BF%E7%A8%8B%E7%9F%A5%E8%AF%86%E7%82%B9%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94%20%E7%A8%8B%E5%BA%8F%E3%80%81%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB%E3%80%81Java%E7%9A%84%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E5%92%8C%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
+    <id>http://1979F.github.io/2019/10/05/线程知识点（一）—— 程序、进程、线程之间的区别与联系、Java的线程状态和生命周期/</id>
+    <published>2019-10-04T16:30:22.000Z</published>
+    <updated>2019-10-04T16:39:38.284Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-程序、进程、线程之间的区别与联系"><a href="#1-程序、进程、线程之间的区别与联系" class="headerlink" title="1  程序、进程、线程之间的区别与联系"></a>1  程序、进程、线程之间的区别与联系</h3><p>  三者之间的形象化理解：<br>    * 程序：代码实现了功能，就是程序，是静态的；<br>    * 进程：执行中的程序就是进程，是动态的；<br>     * 线程：进程内的一个执行单元,也是进程内的可调度实体，可以并发执行提高了进程的效率。</p><p><strong><em>进程和线程的关系：</em></strong><br>（1）一个线程只能属于一个进程，而一个进程可以有多个线程，但至少有一个线程。<br>（2）资源分配给进程，同一进程的所有线程共享该进程的所有资源。<br>（3）处理机分给线程，即真正在处理机上运行的是线程。<br>（4）线程在执行过程中，需要协作同步。不同进程的线程间要利用消息通信的办法实现同步。</p><a id="more"></a><p><strong><em>线程与进程的区别:</em></strong><br>  (1)  调度：线程作为调度和分配的基本单位，进程作为拥有资源的基本单位 。<br>  (2)  并发性：不仅进程之间可以并发执行，同一个进程的多个线程之间也可并发执行 。<br>  (3)  拥有资源：进程是拥有资源的一个独立单位，线程不拥有系统资源，但可以访问隶属于进程的资源。<br>  (4)  系统开销：在创建或撤消进程时，由于系统都要为之分配和回收资源，导致系统的开销明显大于创建或撤消线程时的开销。但是进程有独立的地址空间，一个进程崩溃后，在保护模式下不会对其它进程产生影响，而线程只是一个进程中的不同执行路径。线程有自己的堆栈和局部变量，但线程之间没有单独的地址空间，一个线程死掉就等于整个进程死掉，所以多进程的程序要比多线程的程序健壮，但在进程切换时，耗费资源较大，效率要差一些。</p><p><strong><em>程序与进程的区别：</em></strong><br>程序是指令的有序集合，其本身没有任何运行的含义，是一个静态的概念。而进程是程序在处理机上的一次执行过程，它是一个动态的概念。 </p><p>程序可以作为一种软件资料长期存在，而进程是有一定生命期的。程序是永久的，进程是暂时的。 </p><p>进程更能真实地描述并发，而程序不能；进程是由程序和数据两部分组成的。进程具有创建其他进程的功能，而程序没有。 </p><p>同一程序同时运行于若干个数据集合上，它将属于若干个不同的进程。也就是说同一程序可以对应多个进程。</p><h3 id="2-Java的线程状态和生命周期"><a href="#2-Java的线程状态和生命周期" class="headerlink" title="2  Java的线程状态和生命周期"></a>2  Java的线程状态和生命周期</h3><p><img src="https://img-blog.csdnimg.cn/20191005001816162.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODE2NTU3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)<img src="https://img-blog.csdnimg.cn/20191005001825156.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODE2NTU3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p>==<strong>新建状态:</strong>==<br>使用 new 关键字和 Thread 类或其子类建立一个线程对象后，该线程对象就处于新建状态。它保持这个状态直到程序 start() 这个线程。</p><p>==<strong>就绪状态:</strong>==<br>当线程对象调用了start()方法之后，该线程就进入就绪状态。就绪状态的线程处于就绪队列中，要等待JVM里线程调度器的调度。</p><p>==<strong>运行状态:</strong>==<br>如果就绪状态的线程获取 CPU 资源，就可以执行 run()，此时线程便处于运行状态。处于运行状态的线程最为复杂，它可以变为阻塞状态、就绪状态和死亡状态。</p><p>==<strong>阻塞状态:</strong>==<br>如果一个线程执行了sleep（睡眠）、suspend（挂起）等方法，失去所占用资源之后，该线程就从运行状态进入阻塞状态。在睡眠时间已到或获得设备资源后可以重新进入就绪状态。可以分为三种：</p><ol><li><em>等待阻塞</em>：运行状态中的线程执行 wait() 方法，使线程进入到等待阻塞状态。</li><li><em>同步阻塞</em>：线程在获取 synchronized 同步锁失败(因为同步锁被其他线程占用)。 </li><li><em>其他阻塞</em>：通过调用线程的 sleep() 或join() 发出了 I/O 请求时，线程就会进入到阻塞状态。当sleep() 状态超时，join() 等待线程终止或超时，或者 I/O处理完毕，线程重新转入就绪状态。</li></ol><p>==<strong>死亡状态:</strong>==<br>一个运行状态的线程完成任务或者其他终止条件发生时，该线程就切换到终止状态。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1-程序、进程、线程之间的区别与联系&quot;&gt;&lt;a href=&quot;#1-程序、进程、线程之间的区别与联系&quot; class=&quot;headerlink&quot; title=&quot;1  程序、进程、线程之间的区别与联系&quot;&gt;&lt;/a&gt;1  程序、进程、线程之间的区别与联系&lt;/h3&gt;&lt;p&gt;  三者之间的形象化理解：&lt;br&gt;    * 程序：代码实现了功能，就是程序，是静态的；&lt;br&gt;    * 进程：执行中的程序就是进程，是动态的；&lt;br&gt;     * 线程：进程内的一个执行单元,也是进程内的可调度实体，可以并发执行提高了进程的效率。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;进程和线程的关系：&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;（1）一个线程只能属于一个进程，而一个进程可以有多个线程，但至少有一个线程。&lt;br&gt;（2）资源分配给进程，同一进程的所有线程共享该进程的所有资源。&lt;br&gt;（3）处理机分给线程，即真正在处理机上运行的是线程。&lt;br&gt;（4）线程在执行过程中，需要协作同步。不同进程的线程间要利用消息通信的办法实现同步。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Java中this和super的用法总结</title>
