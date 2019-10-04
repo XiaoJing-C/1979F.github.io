@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://1979F.github.io/"/>
-  <updated>2019-10-03T16:31:50.594Z</updated>
+  <updated>2019-10-04T02:04:30.288Z</updated>
   <id>http://1979F.github.io/</id>
   
   <author>
@@ -17,19 +17,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>My first test</title>
+    <title>我的第一篇博客</title>
     <link href="http://1979F.github.io/2019/10/03/My-first-test/"/>
     <id>http://1979F.github.io/2019/10/03/My-first-test/</id>
     <published>2019-10-03T11:38:22.000Z</published>
-    <updated>2019-10-03T16:31:50.594Z</updated>
+    <updated>2019-10-04T02:04:30.288Z</updated>
     
     <summary type="html">
     
     </summary>
     
     
+      <category term="后端" scheme="http://1979F.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
     
-      <category term="暂时还没有新的内容" scheme="http://1979F.github.io/tags/%E6%9A%82%E6%97%B6%E8%BF%98%E6%B2%A1%E6%9C%89%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9/"/>
     
   </entry>
   
