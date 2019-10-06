@@ -31,7 +31,7 @@
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
     copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
     mediumzoom: false,
@@ -57,7 +57,7 @@
 </script>
 
   <meta name="description" content="1  程序、进程、线程之间的区别与联系  三者之间的形象化理解：    * 程序：代码实现了功能，就是程序，是静态的；    * 进程：执行中的程序就是进程，是动态的；     * 线程：进程内的一个执行单元,也是进程内的可调度实体，可以并发执行提高了进程的效率。">
-<meta name="keywords" content="后端,大数据,MySQL">
+<meta name="keywords" content="Java,后端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java线程知识点（一）">
 <meta property="og:url" content="http://1979F.github.io/2019/10/05/线程知识点（一）—— 程序、进程、线程之间的区别与联系、Java的线程状态和生命周期/index.html">
@@ -66,7 +66,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20191005001816162.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODE2NTU3,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20191005001825156.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODE2NTU3,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-10-06T08:07:25.843Z">
+<meta property="og:updated_time" content="2019-10-06T08:13:17.053Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java线程知识点（一）">
 <meta name="twitter:description" content="1  程序、进程、线程之间的区别与联系  三者之间的形象化理解：    * 程序：代码实现了功能，就是程序，是静态的；    * 进程：执行中的程序就是进程，是动态的；     * 线程：进程内的一个执行单元,也是进程内的可调度实体，可以并发执行提高了进程的效率。">
@@ -180,6 +180,17 @@
       
       
         
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+      
+      
+      
+        
         <li class="menu-item menu-item-archives">
       
     
@@ -280,7 +291,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-06 16:07:25" itemprop="dateModified" datetime="2019-10-06T16:07:25+08:00">2019-10-06</time>
+                <time title="修改时间：2019-10-06 16:13:17" itemprop="dateModified" datetime="2019-10-06T16:13:17+08:00">2019-10-06</time>
               </span>
             
           
@@ -347,8 +358,28 @@
 </div>
 
       
+      <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------　　　　本文结束　<i class="fa fa-heart"></i>　感谢您的阅读　　　　-------------</div>
+    
+</div>
 
+  
+</div>
       <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Java/" rel="tag"># Java</a>
+            
+              <a href="/tags/后端/" rel="tag"># 后端</a>
+            
+          </div>
+        
 
         
 
@@ -440,6 +471,19 @@
         </a>
       </div>
     
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
   </nav>
 </div>
   <div class="feed-link motion-element">
@@ -517,19 +561,24 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">XIAO_JING</span>
 </div>
+
+<!--
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.1</div>
+-->
 
 <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
 
 <script>
+
     var now = new Date(); 
     function createtime() { 
         var grt= new Date("10/03/2019 17:38:00");//在此处修改你的建站时间
@@ -540,11 +589,16 @@
         mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
         seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
         snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-        document.getElementById("timeDate").innerHTML = "&nbsp;&nbsp;|&nbsp;&nbsp; 本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("timeDate").innerHTML = " 本站已安全运行 "+dnum+" 天 "; 
         document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
     } 
 setInterval("createtime()",250);
+
 </script>
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共3k字</span>
+</div>
 
         
 <div class="busuanzi-count">
