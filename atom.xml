@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://1979F.github.io/"/>
-  <updated>2019-10-07T13:39:54.357Z</updated>
+  <updated>2019-10-07T13:59:34.268Z</updated>
   <id>http://1979F.github.io/</id>
   
   <author>
@@ -17,9 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Java线程知识点（三）线程的互斥与同步机制</title>
+    <link href="http://1979F.github.io/2019/10/07/%E7%BA%BF%E7%A8%8B%E7%9F%A5%E8%AF%86%E7%82%B9%EF%BC%88%E4%B8%89%EF%BC%89%E7%BA%BF%E7%A8%8B%E7%9A%84%E4%BA%92%E6%96%A5%E4%B8%8E%E5%90%8C%E6%AD%A5%E6%9C%BA%E5%88%B6/"/>
+    <id>http://1979F.github.io/2019/10/07/线程知识点（三）线程的互斥与同步机制/</id>
+    <published>2019-10-07T13:56:01.000Z</published>
+    <updated>2019-10-07T13:59:34.268Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="线程的互斥与同步机制"><a href="#线程的互斥与同步机制" class="headerlink" title="线程的互斥与同步机制"></a>线程的互斥与同步机制</h1><h2 id="一、互斥"><a href="#一、互斥" class="headerlink" title="一、互斥"></a>一、互斥</h2><p><strong>为何需要引入互斥机制？</strong></p><p>当多个线程对同一数据并发读写（至少有一个线程执行写操作）时，这种情形被称为竞争。竞争会导致数据读或写的不确定性。而有时这种不确定性是不可容忍的。</p><p><strong>如何实现互斥？</strong><a id="more"></a></p><p>在并发程序设计中，通常使用锁机制来实现互斥</p><p>1、由用户标记必须原子执行的代码段，即使用synchronized关键字</p><p>2、给资源一把配有自动机制的锁</p><p><strong>【注意】</strong>：</p><p>Java将资源限定为引用型对象，并为每一对象自动配备一把锁：锁初始时处于打开状态。synchronized标记的原子代码段在访问资源前，会自动检测资源对象持有的锁是否处于打开状态。若是，则占用并同时将锁置为锁闭态，并在该代码段执行完毕后。将锁的状态值为打开态；若否，则持有该代码的线程因等待资源占用而进入阻塞态。</p><p>• 只有对象才有锁，对基本类型的数据，无法实现线程的互斥访问。</p><p>• 对于未使用synchronized标记的代码，锁机制不起作用。</p><p>• 无论正常结束还是异常退出，都将自动释放锁。</p><p><strong>死锁和活锁</strong></p><p><strong><em>死锁</em></strong>：就是多个线程对临界资源的循环等待，使得这些线程均都无法获得执行。</p><p>例如：A，B，C三个线程分别占用D1、D2、D3三个临界资源，A只有获得B占用的资源D2,方能继续运行；而B只有获得C占用的资源D3，方能继续运行；C只有获得A占用的资源D1，方能继续运行。这样，A,B,C处在对资源的循环等待状态，均无法前进。</p><p><strong><em>活锁</em></strong>：也称饥饿。就是某线程虽有执行的资格，但由于某种原因总是得不到执行。</p><p>例如：A,B,C三个线程循环访问临界资源D，但A，B的优先级相同，但均高于C。由于Java的抢占式策略，C线程可能总得不到执行。</p><h2 id="二、同步"><a href="#二、同步" class="headerlink" title="二、同步"></a>二、同步</h2><p><strong>同步（Sync）</strong></p><p>多个线程的运行满足特定的节奏</p><p>所谓同步，就是发出一个功能调用时，在没有得到结果之前，该调用就不返回或继续执行后续操作。</p><p>根据这个定义，Java中所有方法都是同步调用，应为必须要等到结果后才会继续执行。我们在说同步、异步的时候，一般而言是特指那些需要其他端协作或者需要一定时间完成的任务。</p><p>简单来说，同步就是必须一件一件事做，等前一件做完了才能做下一件事。</p><p><strong>异步（Async）</strong></p><p>多个线程的运行相互独立，彼此间无依赖性</p><p>异步与同步相对，当一个异步过程调用发出后，调用者在没有得到结果之前，就可以继续执行后续操作。当这个调用完成后，一般通过状态、通知和回调来通知调用者。对于异步调用，调用的返回并不受调用者控制。</p><p>举个例子简单说明下两者的区别：</p><p><strong>同步</strong>：火车站多个窗口卖火车票，假设A窗口当卖第288张时，在这个短暂的过程中，其他窗口都不能卖这张票，也不能继续往下卖，必须这张票处理完其他窗口才能继续卖票。直白点说就是当你看见程序里出现synchronized这个关键字，将任务锁起来，当某个线程进来时，不能让其他线程继续进来，那就代表是同步了。</p><p><strong>异步</strong>：当我们用手机下载某个视频时，我们大多数人都不会一直等着这个视频下载完，而是在下载的过程看看手机里的其他东西，比如用qq或者是微信聊聊天，这种的就是异步，你执行你的，我执行我的，互不干扰。比如上面卖火车票，如果多个窗口之间互不影响，我行我素，A窗口卖到第288张了，B窗口不管A窗口，自己也卖第288张票，那显然会出错了。</p><p><strong>并发</strong></p><p>在操作系统中，是指一个时间段中有几个程序都处于已启动运行到运行完毕之间，且这几个程序都是在同一个<a href="http://baike.baidu.com/view/2107226.htm" target="_blank" rel="noopener">处理机</a>上运行。其中两种并发关系分别是同步和互斥。</p><p><strong>并行</strong></p><p>在单处理器中多道程序设计系统中，进程被交替执行，表现出一种并发的外部特种；在多处理器系统中，进程不仅可以交替执行，而且可以重叠执行。在多处理器上的程序才可实现并行处理。从而可知，并行是针对多处理器而言的。并行是同时发生的多个并发事件，具有并发的含义，但并发不一定并行，也亦是说并发事 件之间不一定要同一时刻发生。</p><p><strong>*<u>Java的同步机制 = 存取共享资源的互斥机制 + 线程间的通信机制</u>*</strong></p><p>用于线程通信的方法存在于Object类中，包括wait()、notify()、notifyAll()。wait()会暂停当前线程的执行，并释放所持有的锁，进入等待状态；notify()操作将唤醒一个等待的线程；notifyAll()将唤醒所有等待的进程。</p><p><strong>【注意】</strong></p><p>wait()、notify()、notifyAll()都是final方法，不允许被重写；这些方法只能直接或间接地用于临界区中，否则，将会产生非法监控锁状态异常。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;线程的互斥与同步机制&quot;&gt;&lt;a href=&quot;#线程的互斥与同步机制&quot; class=&quot;headerlink&quot; title=&quot;线程的互斥与同步机制&quot;&gt;&lt;/a&gt;线程的互斥与同步机制&lt;/h1&gt;&lt;h2 id=&quot;一、互斥&quot;&gt;&lt;a href=&quot;#一、互斥&quot; class=&quot;headerlink&quot; title=&quot;一、互斥&quot;&gt;&lt;/a&gt;一、互斥&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;为何需要引入互斥机制？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;当多个线程对同一数据并发读写（至少有一个线程执行写操作）时，这种情形被称为竞争。竞争会导致数据读或写的不确定性。而有时这种不确定性是不可容忍的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如何实现互斥？&lt;/strong&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="Java" scheme="http://1979F.github.io/tags/Java/"/>
+    
+      <category term="后端" scheme="http://1979F.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Java线程知识点（二）线程的构造和运行</title>
-    <link href="http://1979F.github.io/2019/10/07/%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%9E%84%E9%80%A0%E5%92%8C%E8%BF%90%E8%A1%8C/"/>
-    <id>http://1979F.github.io/2019/10/07/线程的构造和运行/</id>
+    <link href="http://1979F.github.io/2019/10/07/%E7%BA%BF%E7%A8%8B%E7%9F%A5%E8%AF%86%E7%82%B9%EF%BC%88%E4%BA%8C%EF%BC%89%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%9E%84%E9%80%A0%E5%92%8C%E8%BF%90%E8%A1%8C/"/>
+    <id>http://1979F.github.io/2019/10/07/线程知识点（二）线程的构造和运行/</id>
     <published>2019-10-07T13:29:22.000Z</published>
     <updated>2019-10-07T13:39:54.357Z</updated>
     
