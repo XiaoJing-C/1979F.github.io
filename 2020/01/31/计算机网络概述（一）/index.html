@@ -56,22 +56,23 @@
   };
 </script>
 
-  <meta name="description" content="1  程序、进程、线程之间的区别与联系  三者之间的形象化理解：    * 程序：代码实现了功能，就是程序，是静态的；    * 进程：执行中的程序就是进程，是动态的；     * 线程：进程内的一个执行单元,也是进程内的可调度实体，可以并发执行提高了进程的效率。">
-<meta name="keywords" content="Java,后端">
+  <meta name="description" content="计算机网络 = 通信技术 + 计算机技术 计算机网络是通信技术海域计算机技术紧密结合的产物 计算机网络就是一种通信网络什么是计算机网络？广义的计算机网络定义：在协议控制下，由一台或多台计算机、若干台终端设备、数据传输设备，以及用于终端和计算机之间、或者若干台计算机之间数据流动的通信控制处理机组成的系统的集合。计算机网络：是一个将分散的、具有独立功能的计算机系统，通过通信设备（交换机、路由器等）与线">
+<meta name="keywords" content="后端,大数据,MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java线程知识点（一）">
-<meta property="og:url" content="http://1979F.github.io/2019/10/05/线程知识点（一）—— 程序、进程、线程之间的区别与联系、Java的线程状态和生命周期/index.html">
+<meta property="og:title" content="计算机网络概述（一）">
+<meta property="og:url" content="http://1979F.github.io/2020/01/31/计算机网络概述（一）/index.html">
 <meta property="og:site_name" content="Tsundere_x">
-<meta property="og:description" content="1  程序、进程、线程之间的区别与联系  三者之间的形象化理解：    * 程序：代码实现了功能，就是程序，是静态的；    * 进程：执行中的程序就是进程，是动态的；     * 线程：进程内的一个执行单元,也是进程内的可调度实体，可以并发执行提高了进程的效率。">
+<meta property="og:description" content="计算机网络 = 通信技术 + 计算机技术 计算机网络是通信技术海域计算机技术紧密结合的产物 计算机网络就是一种通信网络什么是计算机网络？广义的计算机网络定义：在协议控制下，由一台或多台计算机、若干台终端设备、数据传输设备，以及用于终端和计算机之间、或者若干台计算机之间数据流动的通信控制处理机组成的系统的集合。计算机网络：是一个将分散的、具有独立功能的计算机系统，通过通信设备（交换机、路由器等）与线">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20191005001816162.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODE2NTU3,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20191005001825156.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODE2NTU3,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-10-06T08:13:17.053Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200131120111597.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200131120139233.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200131120151995.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2020-01-31T04:14:22.653Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java线程知识点（一）">
-<meta name="twitter:description" content="1  程序、进程、线程之间的区别与联系  三者之间的形象化理解：    * 程序：代码实现了功能，就是程序，是静态的；    * 进程：执行中的程序就是进程，是动态的；     * 线程：进程内的一个执行单元,也是进程内的可调度实体，可以并发执行提高了进程的效率。">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20191005001816162.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODE2NTU3,size_16,color_FFFFFF,t_70">
-  <link rel="canonical" href="http://1979F.github.io/2019/10/05/线程知识点（一）—— 程序、进程、线程之间的区别与联系、Java的线程状态和生命周期/">
+<meta name="twitter:title" content="计算机网络概述（一）">
+<meta name="twitter:description" content="计算机网络 = 通信技术 + 计算机技术 计算机网络是通信技术海域计算机技术紧密结合的产物 计算机网络就是一种通信网络什么是计算机网络？广义的计算机网络定义：在协议控制下，由一台或多台计算机、若干台终端设备、数据传输设备，以及用于终端和计算机之间、或者若干台计算机之间数据流动的通信控制处理机组成的系统的集合。计算机网络：是一个将分散的、具有独立功能的计算机系统，通过通信设备（交换机、路由器等）与线">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200131120111597.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70">
+  <link rel="canonical" href="http://1979F.github.io/2020/01/31/计算机网络概述（一）/">
 
 
 <script id="page-configurations">
@@ -86,7 +87,7 @@
 </script>
 
 
-  <title>Java线程知识点（一） | Tsundere_x</title>
+  <title>计算机网络概述（一） | Tsundere_x</title>
   
 
 
@@ -252,7 +253,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2019/10/05/线程知识点（一）—— 程序、进程、线程之间的区别与联系、Java的线程状态和生命周期/">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/01/31/计算机网络概述（一）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO_JING">
@@ -264,7 +265,7 @@
       <meta itemprop="name" content="Tsundere_x">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Java线程知识点（一）
+        <h1 class="post-title" itemprop="name headline">计算机网络概述（一）
 
           
         </h1>
@@ -280,19 +281,11 @@
                 
               
 
-              <time title="创建时间：2019-10-05 00:30:22" itemprop="dateCreated datePublished" datetime="2019-10-05T00:30:22+08:00">2019-10-05</time>
+              <time title="创建时间：2020-01-31 12:08:14 / 修改时间：12:14:22" itemprop="dateCreated datePublished" datetime="2020-01-31T12:08:14+08:00">2020-01-31</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-06 16:13:17" itemprop="dateModified" datetime="2019-10-06T16:13:17+08:00">2019-10-06</time>
-              </span>
             
           
 
@@ -315,25 +308,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-程序、进程、线程之间的区别与联系"><a href="#1-程序、进程、线程之间的区别与联系" class="headerlink" title="1  程序、进程、线程之间的区别与联系"></a>1  程序、进程、线程之间的区别与联系</h3><p>  三者之间的形象化理解：<br>    * 程序：代码实现了功能，就是程序，是静态的；<br>    * 进程：执行中的程序就是进程，是动态的；<br>     * 线程：进程内的一个执行单元,也是进程内的可调度实体，可以并发执行提高了进程的效率。</p>
-<a id="more"></a>
-<p><strong><em>进程和线程的关系：</em></strong><br>（1）一个线程只能属于一个进程，而一个进程可以有多个线程，但至少有一个线程。<br>（2）资源分配给进程，同一进程的所有线程共享该进程的所有资源。<br>（3）处理机分给线程，即真正在处理机上运行的是线程。<br>（4）线程在执行过程中，需要协作同步。不同进程的线程间要利用消息通信的办法实现同步。</p>
-<p><strong><em>线程与进程的区别:</em></strong><br>  (1)  调度：线程作为调度和分配的基本单位，进程作为拥有资源的基本单位 。<br>  (2)  并发性：不仅进程之间可以并发执行，同一个进程的多个线程之间也可并发执行 。<br>  (3)  拥有资源：进程是拥有资源的一个独立单位，线程不拥有系统资源，但可以访问隶属于进程的资源。<br>  (4)  系统开销：在创建或撤消进程时，由于系统都要为之分配和回收资源，导致系统的开销明显大于创建或撤消线程时的开销。但是进程有独立的地址空间，一个进程崩溃后，在保护模式下不会对其它进程产生影响，而线程只是一个进程中的不同执行路径。线程有自己的堆栈和局部变量，但线程之间没有单独的地址空间，一个线程死掉就等于整个进程死掉，所以多进程的程序要比多线程的程序健壮，但在进程切换时，耗费资源较大，效率要差一些。</p>
-<p><strong><em>程序与进程的区别：</em></strong><br>程序是指令的有序集合，其本身没有任何运行的含义，是一个静态的概念。而进程是程序在处理机上的一次执行过程，它是一个动态的概念。 </p>
-<p>程序可以作为一种软件资料长期存在，而进程是有一定生命期的。程序是永久的，进程是暂时的。 </p>
-<p>进程更能真实地描述并发，而程序不能；进程是由程序和数据两部分组成的。进程具有创建其他进程的功能，而程序没有。 </p>
-<p>同一程序同时运行于若干个数据集合上，它将属于若干个不同的进程。也就是说同一程序可以对应多个进程。</p>
-<h3 id="2-Java的线程状态和生命周期"><a href="#2-Java的线程状态和生命周期" class="headerlink" title="2  Java的线程状态和生命周期"></a>2  Java的线程状态和生命周期</h3><p><img src="https://img-blog.csdnimg.cn/20191005001816162.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODE2NTU3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)<img src="https://img-blog.csdnimg.cn/20191005001825156.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODE2NTU3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>==<strong>新建状态:</strong>==<br>使用 new 关键字和 Thread 类或其子类建立一个线程对象后，该线程对象就处于新建状态。它保持这个状态直到程序 start() 这个线程。</p>
-<p>==<strong>就绪状态:</strong>==<br>当线程对象调用了start()方法之后，该线程就进入就绪状态。就绪状态的线程处于就绪队列中，要等待JVM里线程调度器的调度。</p>
-<p>==<strong>运行状态:</strong>==<br>如果就绪状态的线程获取 CPU 资源，就可以执行 run()，此时线程便处于运行状态。处于运行状态的线程最为复杂，它可以变为阻塞状态、就绪状态和死亡状态。</p>
-<p>==<strong>阻塞状态:</strong>==<br>如果一个线程执行了sleep（睡眠）、suspend（挂起）等方法，失去所占用资源之后，该线程就从运行状态进入阻塞状态。在睡眠时间已到或获得设备资源后可以重新进入就绪状态。可以分为三种：</p>
-<ol>
-<li><em>等待阻塞</em>：运行状态中的线程执行 wait() 方法，使线程进入到等待阻塞状态。</li>
-<li><em>同步阻塞</em>：线程在获取 synchronized 同步锁失败(因为同步锁被其他线程占用)。 </li>
-<li><em>其他阻塞</em>：通过调用线程的 sleep() 或join() 发出了 I/O 请求时，线程就会进入到阻塞状态。当sleep() 状态超时，join() 等待线程终止或超时，或者 I/O处理完毕，线程重新转入就绪状态。</li>
-</ol>
-<p>==<strong>死亡状态:</strong>==<br>一个运行状态的线程完成任务或者其他终止条件发生时，该线程就切换到终止状态。</p>
+        <pre><code>计算机网络 = 通信技术 + 计算机技术
+计算机网络是通信技术海域计算机技术紧密结合的产物
+计算机网络就是一种通信网络</code></pre><p><strong>什么是计算机网络？</strong><br><code>广义的计算机网络定义</code>：在协议控制下，由一台或多台计算机、若干台终端设备、数据传输设备，以及用于终端和计算机之间、或者若干台计算机之间数据流动的通信控制处理机组成的系统的集合。<br><code>计算机网络</code>：是一个将分散的、具有独立功能的计算机系统，通过通信设备（交换机、路由器等）与线路连接起来，由功能完善的软件实现资源共享和信息传递的系统。<br><img src="https://img-blog.csdnimg.cn/20200131120111597.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>计算机网络就是互连的、自治的计算机集合（公认的概念）</p><a id="more"></a>
+<p><code>自治-无主从关系</code>   ： 一台计算机不能控制另一台计算机<br><code>互连-互联互通</code>        ：通过通信链路—》网络中两个节点之间的物理通道称为通信链路。通信链路的传输介质主要有双绞线、光纤和微波。</p>
+<p><strong>计算机网络的发展</strong><br>20世纪60年代：<code>分组交换思想</code>的提出，可能比世界上第一个网络的意义更加重大，它使得网络传输数据成为可能，并一直沿用到今天。</p>
+<p>20世纪70~80年代：<code>TCP/IP协议思想</code>的提出，提供了这样一种可能：即不同厂商生产的计算机，不同结构的网络间实现互通。所以它既是一个协议簇，更是一种标准，它使得网络飞速向前发展。</p>
+<p>20世纪90年代：<code>Web技术</code>真正把网络引入民用行业，使得网络行业生机勃勃，飞速发展。随着网络的逐步普及，网络用户在这个时期飞速增长，现如今各行各业都已经离不开网络</p>
+<p><strong>计算机网络的功能</strong><br><code>数据通信</code>：数据通信是计算机网络最基本、最重要的功能，包括连接控制，传输控制，差错控制，流量控制，路由选择，多路复用等子功能。<br><code>资源共享</code>：包括硬件资源、软件资源和数据资源。<br><code>分布式处理</code>：当计算机网络中的某个计算机负荷过重时，可以将其处理的任务传送给网络中的其他计算机系统进行处理，利用空闲计算机资源提高整个系统的利用率。典型的有Hadoop平台。<br><code>提高可靠性</code>：计算机网络中的每台计算机可以通过网络互为替代机，一台计算机宕机了可有另一台计算机替代。<br><code>负载均衡</code>：将工作任务均衡地分配给计算机网络中的各台计算机。</p>
+<p><strong>计算机网络的组成</strong><br><code>物理组成</code>（硬件、软件、协议三大部分）<br> 1、<em>硬件</em>：由主机、通信处理机、通信线路（包括有线线路和无线线路）和交换设备（交换机等连接设备）组成。<br> 2、<em>软件</em>：主要包括实现资源共享的软件和方便用户使用的各种工具软件（如QQ）。<br> 3、<em>协议</em>：就是一种规则，如汽车在道路上行驶必须遵循交通规则一样，数据在线路上传输也必须遵循一定的规则。<br><code>工作方式组成</code>（边缘部分、核心部分）<br>1、<em>边缘部分</em>：由所有链接在互联网上，供用户直接使用的主机组成，用来进行通信和资源共享—》C/S方式、P2P方式。<br>2、<em>核心部分</em>：由大量的网络和链接这些网络的路由器组成，它为边缘部分提供连通性和交换服务。<br><img src="https://img-blog.csdnimg.cn/20200131120139233.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><code>功能组成</code>（通信子网、资源子网）<br>            1、<em>通信子网</em>：由各种传输介质、通信设备和相应的网络协议组成，为网络提供数据传输、交换和控制能力，实现联网计算机之间的数据通信。包括网络层、数据链路层、物理层<br>            2、<em>资源子网</em>：由主机、终端以及各种软件资源、信息资源组成，负责全网的数据处理业务，向网络用户提供各种网络资源和服务。包括应用层、表示层、会话层</p>
+<p><img src="https://img-blog.csdnimg.cn/20200131120151995.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>局域网（Local Area Network, LAN）：</strong><br>一种覆盖一座或几座大楼、一个校园或者一个厂区等地理区域的小范围的计算机网络。包括以太网、令牌环网等。<br>当前的局域网主流是<code>以太网</code>。<br>局域网可以实现文件管理、应用软件共享、打印机共享、工作组内的日程安排、电子邮件和传真通信服务等功能。局域网是封闭型的，可以由办公室内的两台计算机组成，也可以由一个公司内的上千台计算机组成。</p>
+<p><strong>域域网（Metropolitan Area Network，MAN）：</strong><br>一种介于局域网与广域网之间，覆盖一个城市的地理范围，用来将同一区域内的多个局域网互连起来的中等范围的计算机网络。<br>这些网络通常涵盖一个大学校园或一座城市。<br>MAN的一个重要用途是用作骨干网，通过它将位于同一城市内不同地点的主机、数据库，以及LAN等互相联接起来。</p>
+<p><strong>广域网（Wide Area Network，WAN）：</strong><br>一种用来实现不同地区的局域网或域域网的互连，可提供不同地区、城市和国家之间的计算机通信的远程计算机网络。所覆盖的范围从几十公里到几千里。<br>它能连接多个城市或国家，或横跨几个洲并能提供远距离通信，形成国际性的远程网络。</p>
 
     </div>
 
@@ -350,7 +338,7 @@
     <strong>本文作者： </strong>XIAO_JING</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://1979F.github.io/2019/10/05/线程知识点（一）—— 程序、进程、线程之间的区别与联系、Java的线程状态和生命周期/" title="Java线程知识点（一）">http://1979F.github.io/2019/10/05/线程知识点（一）—— 程序、进程、线程之间的区别与联系、Java的线程状态和生命周期/</a>
+    <a href="http://1979F.github.io/2020/01/31/计算机网络概述（一）/" title="计算机网络概述（一）">http://1979F.github.io/2020/01/31/计算机网络概述（一）/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -369,25 +357,14 @@
   
 </div>
       <footer class="post-footer">
-          
-            
-          
-          <div class="post-tags">
-            
-              <a href="/tags/Java/" rel="tag"># Java</a>
-            
-              <a href="/tags/后端/" rel="tag"># 后端</a>
-            
-          </div>
-        
 
         
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/10/04/Java中this和super的用法总结/" rel="next" title="Java中this和super的用法总结">
-                  <i class="fa fa-chevron-left"></i> Java中this和super的用法总结
+                <a href="/2019/11/30/Spring中注解大全 /" rel="next" title="Spring中注解大全">
+                  <i class="fa fa-chevron-left"></i> Spring中注解大全
                 </a>
               
             </div>
@@ -395,10 +372,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/10/06/Hexo如何绑定个人域名/" rel="prev" title="3分钟教你Hexo如何绑定个人域名">
-                  3分钟教你Hexo如何绑定个人域名 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -445,8 +418,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-程序、进程、线程之间的区别与联系"><span class="nav-number">1.</span> <span class="nav-text">1  程序、进程、线程之间的区别与联系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Java的线程状态和生命周期"><span class="nav-number">2.</span> <span class="nav-text">2  Java的线程状态和生命周期</span></a></li></ol></div>
-        
         
       </div>
       
