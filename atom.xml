@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://1979F.github.io/"/>
-  <updated>2020-11-22T04:37:11.642Z</updated>
+  <updated>2020-11-22T04:38:48.552Z</updated>
   <id>http://1979F.github.io/</id>
   
   <author>
@@ -15,28 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://1979F.github.io/2020/11/22/Cisco%20Packet%20Tracer%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%B1%89%E5%8C%96/"/>
-    <id>http://1979F.github.io/2020/11/22/Cisco Packet Tracer的安装与汉化/</id>
-    <published>2020-11-22T04:37:04.389Z</published>
-    <updated>2020-11-22T04:37:11.642Z</updated>
-    
-    <content type="html"><![CDATA[<p>同个人网站 <a href="https://www.serendipper-x.cn/" target="_blank" rel="noopener">https://www.serendipper-x.cn/</a>，欢迎访问 ！<br><strong>一、下载</strong><br>1、官网下载<br>首先去<a href="https://www.netacad.com/zh-hans/courses/packet-tracer" target="_blank" rel="noopener">思科官网</a>下载对应的压缩包。<br>点击图中所示注册下载按钮按照提示步骤完成注册<br><img src="https://img-blog.csdnimg.cn/20200202095928743.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200202100117247.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>注册之后登陆，点击导航栏中资源-&gt;所有资源，即可看到各版本压缩包。<br>PTUI文件夹下有对应的汉化包，有需要的也可以自行下载。<br><img src="https://img-blog.csdnimg.cn/20200202100315657.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)<img src="https://img-blog.csdnimg.cn/20200202100402959.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">2、网盘获取<br>为方便大家下载我已经把安装包和汉化包放在了百度网盘中（7.2.1版本）<br>链接：链接：<a href="https://pan.baidu.com/s/15_HGAcYW-pfbwyyWCwVdaA" target="_blank" rel="noopener">https://pan.baidu.com/s/15_HGAcYW-pfbwyyWCwVdaA</a><br>提取码：li5u<br><strong>二、安装</strong><br>安装步骤比较简单<br>1、解压缩之后双击.exe文件开始安装软件。<br><img src="https://img-blog.csdnimg.cn/20200202101320397.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">2、一路默认next即可（中途可以更换安装目录，自己随意）<br>3、安装完成之后，点击finsh完成安装。<br><img src="https://img-blog.csdnimg.cn/20200202101448104.png" alt="在这里插入图片描述"><br><strong>三、汉化</strong><br>1、将Simplified Chinese.ptl文件复制进languages文件夹下。<br><img src="https://img-blog.csdnimg.cn/20200202101621245.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">2、菜单栏中选择<code>Option-&gt;Preferences</code>,Select Language选择对应文件后重启服务即可（我这里是已经汉化成功的界面）。大功告成！<br><img src="https://img-blog.csdnimg.cn/20200202101858825.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;同个人网站 &lt;a href=&quot;https://www.serendipper-x.cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.serendipper-x.cn/&lt;/a&gt;，欢迎访问 ！&lt;br&gt;&lt;strong&gt;一、下载&lt;/st
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
   
   <entry>
     <title>VMware安装CentOS7超详细版</title>
@@ -59,6 +37,30 @@
     
     
       <category term="Linux" scheme="http://1979F.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cisco Packet Tracer的安装与汉化</title>
+    <link href="http://1979F.github.io/2020/02/02/Cisco%20Packet%20Tracer%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%B1%89%E5%8C%96/"/>
+    <id>http://1979F.github.io/2020/02/02/Cisco Packet Tracer的安装与汉化/</id>
+    <published>2020-02-02T02:20:41.000Z</published>
+    <updated>2020-11-22T04:43:28.816Z</updated>
+    
+    <content type="html"><![CDATA[<p>同个人网站 <a href="https://www.serendipper-x.cn/" target="_blank" rel="noopener">https://www.serendipper-x.cn/</a>，欢迎访问 ！<br><strong>一、下载</strong><br>1、官网下载<br>首先去<a href="https://www.netacad.com/zh-hans/courses/packet-tracer" target="_blank" rel="noopener">思科官网</a>下载对应的压缩包。<br>点击图中所示注册下载按钮按照提示步骤完成注册<br><img src="https://img-blog.csdnimg.cn/20200202095928743.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200202100117247.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>注册之后登陆，点击导航栏中资源-&gt;所有资源，即可看到各版本压缩包。<br>PTUI文件夹下有对应的汉化包，有需要的也可以自行下载。<br><img src="https://img-blog.csdnimg.cn/20200202100315657.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)<img src="https://img-blog.csdnimg.cn/20200202100402959.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">2、网盘获取<br>为方便大家下载我已经把安装包和汉化包放在了百度网盘中（7.2.1版本）<br>链接：链接：<a href="https://pan.baidu.com/s/15_HGAcYW-pfbwyyWCwVdaA" target="_blank" rel="noopener">https://pan.baidu.com/s/15_HGAcYW-pfbwyyWCwVdaA</a><br>提取码：li5u<br><strong>二、安装</strong><br>安装步骤比较简单<br>1、解压缩之后双击.exe文件开始安装软件。<br><img src="https://img-blog.csdnimg.cn/20200202101320397.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">2、一路默认next即可（中途可以更换安装目录，自己随意）<br>3、安装完成之后，点击finsh完成安装。<br><img src="https://img-blog.csdnimg.cn/20200202101448104.png" alt="在这里插入图片描述"><br><strong>三、汉化</strong><br>1、将Simplified Chinese.ptl文件复制进languages文件夹下。<br><img src="https://img-blog.csdnimg.cn/20200202101621245.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">2、菜单栏中选择<code>Option-&gt;Preferences</code>,Select Language选择对应文件后重启服务即可（我这里是已经汉化成功的界面）。大功告成！<br><img src="https://img-blog.csdnimg.cn/20200202101858825.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;同个人网站 &lt;a href=&quot;https://www.serendipper-x.cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.serendipper-x.cn/&lt;/a&gt;，欢迎访问 ！&lt;br&gt;&lt;strong&gt;一、下载&lt;/st
+      
+    
+    </summary>
+    
+    
+    
+      <category term="计算机网络" scheme="http://1979F.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   

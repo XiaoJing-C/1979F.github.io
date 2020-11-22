@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>%2F2020%2F11%2F22%2FCisco%20Packet%20Tracer%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%B1%89%E5%8C%96%2F</url>
-    <content type="text"><![CDATA[同个人网站 https://www.serendipper-x.cn/，欢迎访问 ！一、下载1、官网下载首先去思科官网下载对应的压缩包。点击图中所示注册下载按钮按照提示步骤完成注册注册之后登陆，点击导航栏中资源-&gt;所有资源，即可看到各版本压缩包。PTUI文件夹下有对应的汉化包，有需要的也可以自行下载。)2、网盘获取为方便大家下载我已经把安装包和汉化包放在了百度网盘中（7.2.1版本）链接：链接：https://pan.baidu.com/s/15_HGAcYW-pfbwyyWCwVdaA提取码：li5u二、安装安装步骤比较简单1、解压缩之后双击.exe文件开始安装软件。2、一路默认next即可（中途可以更换安装目录，自己随意）3、安装完成之后，点击finsh完成安装。三、汉化1、将Simplified Chinese.ptl文件复制进languages文件夹下。2、菜单栏中选择Option-&gt;Preferences,Select Language选择对应文件后重启服务即可（我这里是已经汉化成功的界面）。大功告成！]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[VMware安装CentOS7超详细版]]></title>
     <url>%2F2020%2F02%2F11%2FVMware%E5%AE%89%E8%A3%85CentOS7%E8%B6%85%E8%AF%A6%E7%BB%86%E7%89%88%2F</url>
     <content type="text"><![CDATA[同个人网站 https://www.serendipper-x.cn/，欢迎访问 ！写在前面云计算与分布式这门课程的老师让我们使用vmware安装好centos7.6并配置好Java编译环境，刚好复习一波，下面是详细的安装过程。准备工作 VMware，我用的是VMware Workstation Pro 15，下载与安装方法就不提了毕竟重点在后头。 CentOS7镜像文件，由于7.6版本已经停更，这里我用的是7.7版本。下载地址 http://isoredirect.centos.org/centos/7/isos/x86_64习惯性选择阿里的镜像，点击下载即可。安装过程 打开vmware，点击创建新的虚拟机选择自定义配置，点击下一步这里直接默认下一步选择稍后安装操作系统，点击下一步客户机操作系统选择Linux，版本选择CentOS 7 64位，点击下一步虚拟机名称可以自定义，这里建议以见名知意为原则，位置尽量放在C盘外的其他盘符，这里我选择的是D盘。处理器数量和每个处理器的内核数可根据自己电脑配置进行选择。这里默认都选择1。同样的，虚拟机内存也依据自己电脑配置进行选择，由于我的电脑是8GB，所以这里我选2GB。网络连接选择NAT后两项默认推荐，点击下一步。)点击创建新虚拟磁盘最大磁盘大小按需分配，我给了20GB，选择将虚拟磁盘拆分成多个文件。默认点击下一步可以看到CentOS7已经添加进去了右键CentOS7,点击设置进入设置页面，点击CD/DVD,使用ISO映像文件，选择之前下载的文件即可。 开启虚拟机，见到如下页面，选择Install CentOS Linux 7,直接Enter滑动右侧滚动条选择中文=》简体中文，英文好的同学当然可以选择英文这里配置一些基本信息1、点击安装源，进入之后直接选择done，警告符号随即消失。2、软件选择：GNOME桌面，一个友好的图形化界面3、根据需要禁用Kdump4、自动分区，一般化为4个分区，如图所示 ))完成后点击开始安装安装过程中会弹出用户设置界面，填好并记住密码。)安装完成后点击重启，看到如下界面点击接受许可设置一下网络 点击完成配置现在可以使用之前创建的用户进行登录了登录成功后可看到图形化界面上网 开启windows下的VMnet8cmd窗口ping出主机ip地址打开有线设置网络=》开启，点击设置图标选择自动连接)打开终端，使用ifconfig命令获取ip地址在终端ping下windows 中VMnet8的IP地址，若出现下图所示信息，则表示linux的ip地址设置成功。此时，若windows能上网，则linux也能上网打开火狐浏览器，上网成功！]]></content>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Cisco Packet Tracer的安装与汉化]]></title>
+    <url>%2F2020%2F02%2F02%2FCisco%20Packet%20Tracer%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%B1%89%E5%8C%96%2F</url>
+    <content type="text"><![CDATA[同个人网站 https://www.serendipper-x.cn/，欢迎访问 ！一、下载1、官网下载首先去思科官网下载对应的压缩包。点击图中所示注册下载按钮按照提示步骤完成注册注册之后登陆，点击导航栏中资源-&gt;所有资源，即可看到各版本压缩包。PTUI文件夹下有对应的汉化包，有需要的也可以自行下载。)2、网盘获取为方便大家下载我已经把安装包和汉化包放在了百度网盘中（7.2.1版本）链接：链接：https://pan.baidu.com/s/15_HGAcYW-pfbwyyWCwVdaA提取码：li5u二、安装安装步骤比较简单1、解压缩之后双击.exe文件开始安装软件。2、一路默认next即可（中途可以更换安装目录，自己随意）3、安装完成之后，点击finsh完成安装。三、汉化1、将Simplified Chinese.ptl文件复制进languages文件夹下。2、菜单栏中选择Option-&gt;Preferences,Select Language选择对应文件后重启服务即可（我这里是已经汉化成功的界面）。大功告成！]]></content>
+      <tags>
+        <tag>计算机网络</tag>
       </tags>
   </entry>
   <entry>
