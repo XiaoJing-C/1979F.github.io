@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.1">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.1" color="#222">
+  <link rel="alternate" href="/atom.xml" title="Serendipper-x" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="一、TCP的设计理念   传输层协议 端到端控制，实现分用和复用    可靠传输机制 保证端到端数据按序正确的到达、序号机制、确认机制、差错检测机制、缓存机制、重传机制、滑动窗口机制   其他机制 流量控制机制、拥塞控制机制  TCP协议的可靠传输机制TCP的首部 源端口和目的端口字段——各占2字节。端口是传输层与应用层的服务接口，类似一个地址标识。传输层的复用和分用功能都要通过端口才能实现 序号">
+<meta name="keywords" content="计算机网络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TCP协议详解">
+<meta property="og:url" content="http://1979F.github.io/2020/06/11/TCP协议详解/index.html">
+<meta property="og:site_name" content="Serendipper-x">
+<meta property="og:description" content="一、TCP的设计理念   传输层协议 端到端控制，实现分用和复用    可靠传输机制 保证端到端数据按序正确的到达、序号机制、确认机制、差错检测机制、缓存机制、重传机制、滑动窗口机制   其他机制 流量控制机制、拥塞控制机制  TCP协议的可靠传输机制TCP的首部 源端口和目的端口字段——各占2字节。端口是传输层与应用层的服务接口，类似一个地址标识。传输层的复用和分用功能都要通过端口才能实现 序号">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020061023181263.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200611084558107.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020061111395021.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200611142439702.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200611142812953.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200611143808219.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200611144034408.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200611150001596.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200611153222785.png">
+<meta property="og:updated_time" content="2020-11-22T07:01:41.940Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TCP协议详解">
+<meta name="twitter:description" content="一、TCP的设计理念   传输层协议 端到端控制，实现分用和复用    可靠传输机制 保证端到端数据按序正确的到达、序号机制、确认机制、差错检测机制、缓存机制、重传机制、滑动窗口机制   其他机制 流量控制机制、拥塞控制机制  TCP协议的可靠传输机制TCP的首部 源端口和目的端口字段——各占2字节。端口是传输层与应用层的服务接口，类似一个地址标识。传输层的复用和分用功能都要通过端口才能实现 序号">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/2020061023181263.png">
+  <link rel="canonical" href="http://1979F.github.io/2020/06/11/TCP协议详解/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+
+  <title>TCP协议详解 | Serendipper-x</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Serendipper-x</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="fa fa-search fa-fw"></i>搜索</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/06/11/TCP协议详解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO_JING">
+      <meta itemprop="description" content="努力努力再努力">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serendipper-x">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">TCP协议详解
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-06-11 15:39:02" itemprop="dateCreated datePublished" datetime="2020-06-11T15:39:02+08:00">2020-06-11</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-22 15:01:41" itemprop="dateModified" datetime="2020-11-22T15:01:41+08:00">2020-11-22</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h5 id="一、TCP的设计理念"><a href="#一、TCP的设计理念" class="headerlink" title="一、TCP的设计理念"></a>一、TCP的设计理念</h5><table>
+<thead>
+<tr>
+<th>传输层协议</th>
+<th>端到端控制，实现分用和复用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>可靠传输机制</td>
+<td>保证端到端数据按序正确的到达、序号机制、确认机制、差错检测机制、缓存机制、重传机制、滑动窗口机制</td>
+</tr>
+<tr>
+<td>其他机制</td>
+<td>流量控制机制、拥塞控制机制</td>
+</tr>
+</tbody></table><p><strong>TCP协议的可靠传输机制</strong></p><img src="https://img-blog.csdnimg.cn/2020061023181263.png" width="50%"><p><strong>TCP的首部</strong></p><img src="https://img-blog.csdnimg.cn/20200611084558107.png" width="50%"><ul>
+<li><code>源端口和目的端口</code>字段——各占2字节。端口是传输层与应用层的服务接口，类似一个地址标识。传输层的复用和分用功能都要通过端口才能实现</li>
+<li><code>序号</code>字段——占4字节。TCP连接中传送的数据流中的每一个字节都编上一个号。序号字段的值指的是本报文段所发送的数据的第一个字节的编号</li>
+<li><code>确认号</code>字段——占4字节，是期望收到对方的下一个报文段的数据的第一个字节的序号。注意，当有数据要发送给对方时，顺便确认，当没有数据发送给对方时，单独发一个确认报文</li>
+<li>特殊标记（Flag）：每个标记占一个bit，有特殊约定</li>
+<li><code>URG</code>——紧急比特标记，当URG置为1时，表明紧急指针字段有效。通知本报文段中有紧急数据，应尽快传送，紧急数据的优先级要高。</li>
+<li><code>ACK</code>——只有当ACK置为1时，确认号字段才有效。正常情况下只有第一次握手时ACK=0</li>
+<li><code>PSH</code>（Push）——推送比特，接收方收到推送比特置为1的报文段，就尽快地将该报文段的数据交付给接收应用进程，而不再等到整个缓存都填满了后再向上交付</li>
+<li><code>RST</code>（ReSet）——复位比特，当RST=1时，表明TCP连接中出现严重差错，必须强行释放连接，属于单方面强行断开连接</li>
+<li><code>SYN</code>——同步比特，SYN置为1，表示这是一个连接请求报文。正常情况下只有第一次握手和第二次握手时SYN等于1，其余都等于0</li>
+<li><code>FIN</code>（Final）——终止比特，用来正常释放一个连接。当FIN=1时，表明此报文段的发送端的数据已发送完毕，并请求对方释放连接，当对方确认后，会释放发送缓存</li>
+<li><code>窗口</code>字段——占2字节。窗口字段是<code>流量控制</code>的关键，用来控制对方发送窗口的大小，单位为字节。接收方根据自身的缓存大小确定自己的接收窗口大小，然后通知对方以确定对方的发送窗口的上限</li>
+<li>检验和——占2字节。检验和字段检验的范围包括首部和数据这两部分，在计算检验和时，要在TCP报文段的前面加上12字节的伪首部</li>
+<li><code>紧急指针</code>字段——占16bit，紧急指针指出在本报文段中的紧急数据的最后一个字节的序号 </li>
+</ul><a id="more"></a>
+
+
+
+
+
+
+
+<p><strong>TCP的确认机制</strong><br><code>序号</code></p>
+<ul>
+<li>按字节编号</li>
+</ul>
+<p><code>确认</code></p>
+<ul>
+<li>期望确认：期待对方发送的下一个报文的序号</li>
+<li>累积确认：收到某个分组的确认意味着该分组及之前所有分组都正确收到</li>
+</ul>
+<p><code>特殊报文的确认问题</code></p>
+<ul>
+<li>对于没有包含数据的确认报文段不再确认</li>
+<li>对于含<code>特殊标记的数据段，即使没有任何的数据接收，确认号也要加1</code></li>
+</ul>
+<p><strong>TCP 建立连接的作用</strong><br><code>作用：</code></p>
+<ul>
+<li>使每一方能够确知对方的存在</li>
+<li>允许双方协议一些参数（如最大报文段长度，最大窗口大小，服务质量等）</li>
+<li>对传输实体资源进行分配</li>
+</ul>
+<p><strong>TCP的三次握手建立连接</strong></p>
+<img src="https://img-blog.csdnimg.cn/2020061111395021.png" width="50%">
+
+<p>注意：这个时候如果客户端再发请求，序号还是从x+1开始</p>
+<p><code>注意：</code></p>
+<ul>
+<li>建立连接时会初始化相关参数，分配缓存等资源</li>
+<li>服务端收到第一次握手后默认会跟踪该连接75秒</li>
+</ul>
+<img src="https://img-blog.csdnimg.cn/20200611142439702.png" width="50%">
+
+
+<p><strong>SYN Flooding攻击</strong></p>
+<ul>
+<li>攻击原理：服务器进行第二次握手之后会在超时时间内（一般为75秒）跟踪该连接，未收到第三次握手会不断重发，消耗资源</li>
+</ul>
+<img src="https://img-blog.csdnimg.cn/20200611142812953.png" width="50%">
+
+<p><strong>攻击防范</strong></p>
+<ul>
+<li>缩短TCP超时时间</li>
+<li>更改TCP的搬开连接数</li>
+<li>TCP-z，监控TCP状态</li>
+<li>通过防火墙、路由器等过滤网关防护</li>
+<li>使用SYN Cookie技术</li>
+</ul>
+<p><strong>TCP的四次挥手断开连接</strong><br><img src="https://img-blog.csdnimg.cn/20200611143808219.png" width="45%"><img src="https://img-blog.csdnimg.cn/20200611144034408.png" width="45%"></p>
+<p><strong>TCP的时间等待计时器</strong></p>
+<ul>
+<li>防止最后一个ACK丢失导致断开连接出现异常</li>
+<li>一般等于二倍报文段寿命长度</li>
+</ul>
+<img src="https://img-blog.csdnimg.cn/20200611150001596.png" width="30%">
+
+<p><strong>保活计时器</strong></p>
+<ul>
+<li>防止两个TCP之间的连接长时间的空闲</li>
+</ul>
+<p><strong>TCP的重传机制</strong></p>
+<p><code>选择性重传机制</code></p>
+<ul>
+<li>当数据超时则需要重传，需要重传定时器</li>
+<li>TCP属于使用累积确认的选择性重传协议</li>
+</ul>
+<p><code>重传超时时间的确定</code></p>
+<img src="https://img-blog.csdnimg.cn/20200611153222785.png" width="50%">
+
+<p><code>快重传机制</code></p>
+<ul>
+<li>当连续收到三个重复的确认，直接重传所需分组，提高效率</li>
+</ul>
+<p><strong>TCP的流量控制</strong><br><code>接收方</code>：明确地通过TCP首部的窗口字段发送接收窗口大小，从而限制发送方发送窗口的最大值<br><code>发送方</code>：保证发送窗口大小不超过对方发送的接收窗口的大小</p>
+
+    </div>
+
+    
+    
+    
+        
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>XIAO_JING</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://1979F.github.io/2020/06/11/TCP协议详解/" title="TCP协议详解">http://1979F.github.io/2020/06/11/TCP协议详解/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+</div>
+
+      
+      <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------　　　　本文结束　<i class="fa fa-heart"></i>　感谢您的阅读　　　　-------------</div>
+    
+</div>
+
+  
+</div>
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/计算机网络/" rel="tag"># 计算机网络</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/06/10/滑动窗口协议/" rel="next" title="滑动窗口协议">
+                  <i class="fa fa-chevron-left"></i> 滑动窗口协议
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2020/06/13/TCP的拥塞控制机制/" rel="prev" title="TCP的拥塞控制机制">
+                  TCP的拥塞控制机制 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#一、TCP的设计理念"><span class="nav-number">1.</span> <span class="nav-text">一、TCP的设计理念</span></a></li></ol></div>
+        
+        
+      </div>
+      
+      <!--/noindex-->
+      
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.png"
+      alt="XIAO_JING">
+  <p class="site-author-name" itemprop="name">XIAO_JING</p>
+  <div class="site-description" itemprop="description">努力努力再努力</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">86</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/1979F" title="GitHub &rarr; https://github.com/1979F" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="/2652266042@qq.com" title="E-Mail &rarr; 2652266042@qq.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://blog.csdn.net/tsundere_x" title="CSDN &rarr; https://blog.csdn.net/tsundere_x" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>CSDN</a>
+      </span>
+    
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://www.runoob.com/" title="http://www.runoob.com/" rel="noopener" target="_blank">菜鸟教程</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="https://www.liaoxuefeng.com/" title="https://www.liaoxuefeng.com/" rel="noopener" target="_blank">廖雪峰官网</a>
+        </li>
+      
+    </ul>
+  </div>
+
+      </div>
+<div id="music163player">
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=494992638&auto=1&height=66"></iframe>
+        </div>
+    </div>
+    
+  </aside>
+  <div id="sidebar-dimmer"></div>
+  
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        
+<div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">XIAO_JING</span>
+</div>
+
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.1</div>
+-->
+
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+
+<script>
+
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("10/03/2019 17:38:00");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = " 本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+
+</script>
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共69.7k字</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+    
+  
+  <script color='0,0,0' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.1"></script><script src="/js/motion.js?v=7.4.1"></script>
+<script src="/js/schemes/pisces.js?v=7.4.1"></script>
+<script src="/js/next-boot.js?v=7.4.1"></script>
+
+  <script defer src="/lib/three/three.min.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.4.1"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/love.js"></script>
+<!-- 样式一（鼠标点击更换样式） -->
+<script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script>
