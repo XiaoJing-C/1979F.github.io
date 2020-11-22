@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[小白 LeetCode 5605 检查两个字符串数据是否相等]]></title>
+    <url>%2F2020%2F11%2F22%2F%E5%B0%8F%E7%99%BD%20LeetCode%205605%20%E6%A3%80%E6%9F%A5%E4%B8%A4%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E6%8D%AE%E6%98%AF%E5%90%A6%E7%9B%B8%E7%AD%89%2F</url>
+    <content type="text"><![CDATA[题目：给你两个字符串数组 word1 和 word2 。如果两个数组表示的字符串相同，返回 true ；否则，返回 false 。数组表示的字符串 是由数组中的所有元素 按顺序 连接形成的字符串。示例 1：123456输入：word1 = ["ab", "c"], word2 = ["a", "bc"]输出：true解释：word1 表示的字符串为 "ab" + "c" -&gt; "abc"word2 表示的字符串为 "a" + "bc" -&gt; "abc"两个字符串相同，返回 true 示例 2： 12输入：word1 = ["a", "cb"], word2 = ["ab", "c"]输出：false 示例 3： 12输入：word1 = ["abc", "d", "defg"], word2 = ["abcddefg"]输出：true 思路：先把字符串数组合并成字符串，再比较两个字符串是否相等，若相等，则返回true；否则，返回false。 1234567891011121314151617class Solution &#123; public boolean arrayStringsAreEqual(String[] word1, String[] word2) &#123; String s1 = ""; String s2 = ""; for(int i = 0; i &lt; word1.length; i++)&#123; s1 = s1.concat(word1[i]); &#125; for(int j = 0; j &lt; word2.length; j++)&#123; s2 = s2.concat(word2[j]); &#125; if(s1.equals(s2)) return true; else return false; &#125;&#125; concat() 方法：用于将指定的字符串参数连接到字符串上。]]></content>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[小白 LeetCode 242 有效的字母异位词]]></title>
     <url>%2F2020%2F11%2F22%2F%E5%B0%8F%E7%99%BD%20LeetCode%20242%20%20%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D%2F</url>
     <content type="text"><![CDATA[字母异位词字符串由相同字母组成，但允许排列顺序不同。如“aaabbb” 与 “ababab” 是字母异位词，而“aabb” 与 “ab” 不是字母异位词。题目：给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。1234示例 1:输入: s = "anagram", t = "nagaram"输出: true 1234示例 2:输入: s = "rat", t = "car"输出: false 思路：先判断字符串长度是否相同，若不同，直接返回false；若相同则继续判断，给两个字符串排序，若排序后的字符串完全相等，那么返回true，否则，返回false。 12345678910111213141516171819class Solution &#123; public boolean isAnagram(String s, String t) &#123; int ls = s.length(); int lt = t.length(); if(ls != lt) return false; else &#123; char[] arrayS = s.toCharArray(); //把字符串转换为数组 char[] arrayT = t.toCharArray(); Arrays.sort(arrayS); //利用数组帮助类自动排序 Arrays.sort(arrayT); if(Arrays.equals(arrayS, arrayT)) return true; else return false; &#125; &#125; 字符串转为数组 .toCharArray() 数组排序：Arrays.sort(array) 判断数组是否相同：Arrays.equals(array1, array2)]]></content>

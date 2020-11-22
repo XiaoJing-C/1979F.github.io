@@ -56,22 +56,21 @@
   };
 </script>
 
-  <meta name="description" content="分类IP地址的弊端 一个物理网络不能过大，否则网络性能很差，某个B类或A类IP网络无法全部用于单个物理网络 分类IP地址分配不合理，利用率低 分类IP地址设计的弊端 —— 不灵活，IP地址利用率不高 划分子网的思路网络管理员将本应属于一个物理网段的单个分类IP网络划分成多个子网，不同的子网对应不同的物理网段，不同子网之间的通信必须要经过路由器。">
-<meta name="keywords" content="计算机网络">
+  <meta name="description" content="题目：给你两个字符串数组 word1 和 word2 。如果两个数组表示的字符串相同，返回 true ；否则，返回 false 。数组表示的字符串 是由数组中的所有元素 按顺序 连接形成的字符串。示例 1：123456输入：word1 = [&quot;ab&quot;, &quot;c&quot;], word2 = [&quot;a&quot;, &quot;bc&quot;]输出：true解释：word1 表示的字符串为 &quot;ab&quot; + &quot;c&quot; -&amp;gt; &quot;abc&quot;wo">
+<meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="利用子网掩码划分子网">
-<meta property="og:url" content="http://1979F.github.io/2020/04/14/利用子网掩码划分子网/index.html">
+<meta property="og:title" content="小白 LeetCode 5605 检查两个字符串数据是否相等">
+<meta property="og:url" content="http://1979F.github.io/2020/11/22/小白 LeetCode 5605 检查两个字符串数据是否相等/index.html">
 <meta property="og:site_name" content="Serendipper-x">
-<meta property="og:description" content="分类IP地址的弊端 一个物理网络不能过大，否则网络性能很差，某个B类或A类IP网络无法全部用于单个物理网络 分类IP地址分配不合理，利用率低 分类IP地址设计的弊端 —— 不灵活，IP地址利用率不高 划分子网的思路网络管理员将本应属于一个物理网段的单个分类IP网络划分成多个子网，不同的子网对应不同的物理网段，不同子网之间的通信必须要经过路由器。">
+<meta property="og:description" content="题目：给你两个字符串数组 word1 和 word2 。如果两个数组表示的字符串相同，返回 true ；否则，返回 false 。数组表示的字符串 是由数组中的所有元素 按顺序 连接形成的字符串。示例 1：123456输入：word1 = [&quot;ab&quot;, &quot;c&quot;], word2 = [&quot;a&quot;, &quot;bc&quot;]输出：true解释：word1 表示的字符串为 &quot;ab&quot; + &quot;c&quot; -&amp;gt; &quot;abc&quot;wo">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200414085346509.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200531160232684.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2020-11-22T07:27:31.879Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201122170548350.png#pic">
+<meta property="og:updated_time" content="2020-11-22T09:08:24.420Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="利用子网掩码划分子网">
-<meta name="twitter:description" content="分类IP地址的弊端 一个物理网络不能过大，否则网络性能很差，某个B类或A类IP网络无法全部用于单个物理网络 分类IP地址分配不合理，利用率低 分类IP地址设计的弊端 —— 不灵活，IP地址利用率不高 划分子网的思路网络管理员将本应属于一个物理网段的单个分类IP网络划分成多个子网，不同的子网对应不同的物理网段，不同子网之间的通信必须要经过路由器。">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200414085346509.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70">
-  <link rel="canonical" href="http://1979F.github.io/2020/04/14/利用子网掩码划分子网/">
+<meta name="twitter:title" content="小白 LeetCode 5605 检查两个字符串数据是否相等">
+<meta name="twitter:description" content="题目：给你两个字符串数组 word1 和 word2 。如果两个数组表示的字符串相同，返回 true ；否则，返回 false 。数组表示的字符串 是由数组中的所有元素 按顺序 连接形成的字符串。示例 1：123456输入：word1 = [&quot;ab&quot;, &quot;c&quot;], word2 = [&quot;a&quot;, &quot;bc&quot;]输出：true解释：word1 表示的字符串为 &quot;ab&quot; + &quot;c&quot; -&amp;gt; &quot;abc&quot;wo">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20201122170548350.png#pic">
+  <link rel="canonical" href="http://1979F.github.io/2020/11/22/小白 LeetCode 5605 检查两个字符串数据是否相等/">
 
 
 <script id="page-configurations">
@@ -86,7 +85,7 @@
 </script>
 
 
-  <title>利用子网掩码划分子网 | Serendipper-x</title>
+  <title>小白 LeetCode 5605 检查两个字符串数据是否相等 | Serendipper-x</title>
   
 
 
@@ -252,7 +251,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/04/14/利用子网掩码划分子网/">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/11/22/小白 LeetCode 5605 检查两个字符串数据是否相等/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO_JING">
@@ -264,7 +263,7 @@
       <meta itemprop="name" content="Serendipper-x">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">利用子网掩码划分子网
+        <h1 class="post-title" itemprop="name headline">小白 LeetCode 5605 检查两个字符串数据是否相等
 
           
         </h1>
@@ -280,19 +279,11 @@
                 
               
 
-              <time title="创建时间：2020-04-14 09:06:15" itemprop="dateCreated datePublished" datetime="2020-04-14T09:06:15+08:00">2020-04-14</time>
+              <time title="创建时间：2020-11-22 17:07:07 / 修改时间：17:08:24" itemprop="dateCreated datePublished" datetime="2020-11-22T17:07:07+08:00">2020-11-22</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:27:31" itemprop="dateModified" datetime="2020-11-22T15:27:31+08:00">2020-11-22</time>
-              </span>
             
           
 
@@ -315,99 +306,23 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><strong>分类IP地址的弊端</strong></p><ul>
-<li>一个物理网络不能过大，否则网络性能很差，某个B类或A类IP网络无法全部用于单个物理网络</li>
-<li>分类IP地址分配不合理，利用率低</li>
-<li>分类IP地址设计的弊端 —— 不灵活，IP地址利用率不高</li>
-</ul><p><strong>划分子网的思路</strong><br>网络管理员将本应属于一个物理网段的单个分类IP网络划分成多个子网，<code>不同的子网对应不同的物理网段，不同子网之间的通信必须要经过路由器。</code></p><a id="more"></a>
+        <p><strong>题目</strong>：<code>给你两个字符串数组 word1 和 word2 。如果两个数组表示的字符串相同，返回 true ；否则，返回 false 。</code></p><p><strong>数组表示的字符串</strong> 是由数组中的所有元素 按顺序 连接形成的字符串。</p><p><strong>示例 1：</strong></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：word1 = [<span class="string">"ab"</span>, <span class="string">"c"</span>], word2 = [<span class="string">"a"</span>, <span class="string">"bc"</span>]</span><br><span class="line">输出：<span class="keyword">true</span></span><br><span class="line">解释：</span><br><span class="line">word1 表示的字符串为 <span class="string">"ab"</span> + <span class="string">"c"</span> -&gt; <span class="string">"abc"</span></span><br><span class="line">word2 表示的字符串为 <span class="string">"a"</span> + <span class="string">"bc"</span> -&gt; <span class="string">"abc"</span></span><br><span class="line">两个字符串相同，返回 <span class="keyword">true</span></span><br></pre></td></tr></table></figure><a id="more"></a>
 
 
-<p><img src="https://img-blog.csdnimg.cn/20200414085346509.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>remember</strong><br>10000000 (128)<br>11000000 (192)<br>11100000 (224)<br>11110000 (240)<br>11111000 (248)<br>11111100 (252)<br>11111110 (254)<br>11111111 (255)</p>
-<p><strong>小案例</strong><br><strong>1、</strong> 网络号为192.168.1，子网掩码为255.255.255.224，可以划多少子网，每个子网多少主机？</p>
-<p>255.255.255.224（224==》11100000），这是C类网络<br>所以子网数   = 2^3^<br>子网数 = 2^5^ -2</p>
-<p><strong>2、</strong> C类IP地址192.168.5.0， 如何划分使得有20个子网，每个子网5台主机</p>
-<p>2^4^ = 16  &lt; 20    2^5^ = 32 &gt; 20<br>所以应该有五位，从上面的remember可以看出5个1对应的是248<br>这是看看主机号是不是也够，2^3^-2=6 &gt; 5 ，<br>所以最终的子网掩码就是255.255.255.248</p>
-<p><strong>子网掩码为什么如此设计？</strong><br>IP address AND subnet mask = Network address</p>
-<p><code>193.154.34.129     255.255.255.192的网络地址是？</code><br>思路：子网掩码前面24位都是1，所以193.154.34.129不变。<br>129==》10000001<br>192==》11000000，与操作（0与任何数与都得0,1与任何数与都不变）之后得到10000000，所以网络地址就是192.154.34.128</p>
-<p><strong>划分子网后的分组转发</strong><br>这里有3个子网<br><img src="https://img-blog.csdnimg.cn/20200531160232684.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><code>现在主机H1要发送分组给H2</code><br>路由器R1逐项查找路由表，决定下一跳。路由器使用每行的子网掩码与目标进行“与”操作，判断结果和目的网络地址是否相同。在这个例子中，会匹配R1路由表中的第二条路。因为H2的IP地址（目标IP地址）为128.30.33.138，128.30.33.138与路由表中的子网掩码（255.255.255.128）做与操作，得到的是128.30.33.128，匹配第二项，选择接口1转发。</p>
-<p><strong>路由转发的进一步讨论</strong></p>
+
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：word1 = [<span class="string">"a"</span>, <span class="string">"cb"</span>], word2 = [<span class="string">"ab"</span>, <span class="string">"c"</span>]</span><br><span class="line">输出：<span class="keyword">false</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：word1  = [<span class="string">"abc"</span>, <span class="string">"d"</span>, <span class="string">"defg"</span>], word2 = [<span class="string">"abcddefg"</span>]</span><br><span class="line">输出：<span class="keyword">true</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>思路</strong>：先把字符串数组合并成字符串，再比较两个字符串是否相等，若相等，则返回true；否则，返回false。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">arrayStringsAreEqual</span><span class="params">(String[] word1, String[] word2)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        String s1 = <span class="string">""</span>;</span><br><span class="line">        String s2 = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; word1.length; i++)&#123;</span><br><span class="line">            s1 = s1.concat(word1[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; word2.length; j++)&#123;</span><br><span class="line">            s2 = s2.concat(word2[j]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(s1.equals(s2))</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20201122170548350.png#pic" alt="在这里插入图片描述"></p>
 <ul>
-<li>使用子网掩码后，路由表是否可能出现多条同时匹配的路由？</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>目的网络地址</th>
-<th>子网掩码</th>
-<th>下一跳</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>128.30.33.0</td>
-<td>255.255.255.0</td>
-<td>接口0</td>
-</tr>
-<tr>
-<td>128.30.33.128</td>
-<td>255.255.255.128</td>
-<td>接口1</td>
-</tr>
-<tr>
-<td>128.30.36.0</td>
-<td>255.255.255.0</td>
-<td>R2</td>
-</tr>
-</tbody></table>
-<p>在这张路由表中，IP为128.30.33.138的地址既匹配第一条路又匹配第二条路，出现了多条同时匹配的路由。<br><code>前缀表示法</code><br>128.30.33.0/24  =&gt;  (24是因为子网掩码有24个1)<br>128.30.33.128/25 =&gt;  (25是因为子网掩码有25个1)<br>所以可以看出，下面这个网络是上面这个网络的细分子网<br><strong>结论：</strong></p>
-<ul>
-<li>可能，如果出现，采用掩码最长前缀（掩码中1的个数）匹配原则选择路径。若掩码前缀相同，则采用网络负载均衡的方式转发</li>
-<li>IP地址的前缀表示法：128.30.33.128/25表示的IP地址的掩码为255.255.255.128<br>在这个例子中，IP地址128.30.33.138同时匹配第一条和第二条路由，由于第二条路由的掩码前缀为25，长于第一条路由，因此选择第二条路由。</li>
-</ul>
-<p><strong>路由表原理</strong><br><code>3条法则</code></p>
-<ul>
-<li>每台路由器根据其自身路由表中的信息独立作出决策</li>
-<li>一台路由器的路由表中包含某些信息并不表示其他路由器也包含相同的信息</li>
-<li>有关两个网络之间的路径的路由信息并不能提供反向路径（即返回路径）的路由信息</li>
-</ul>
-<p><strong>关于路由的说明</strong><br><code>目标网络路由</code></p>
-<ul>
-<li>最常见的路由项，能匹配一个网络的IP地址</li>
-</ul>
-<p><code>特定主机路由</code></p>
-<ul>
-<li>只能匹配某个特定的主机IP的路由，优先级最高</li>
-</ul>
-<p><code>默认路由（缺省路由）</code></p>
-<ul>
-<li>可以匹配所有IP地址的路由，优先级最低</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>目的网络地址</th>
-<th>子网掩码</th>
-<th>下一跳</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>128.30.33.128</td>
-<td>255.255.255.128</td>
-<td>接口0</td>
-</tr>
-<tr>
-<td>128.30.33.111</td>
-<td>255.255.255.255</td>
-<td>接口1</td>
-</tr>
-<tr>
-<td>0.0.0.0</td>
-<td>0.0.0.0</td>
-<td>接口2</td>
-</tr>
-</tbody></table>
-<p><strong>子网掩码的作用</strong></p>
-<ul>
-<li>划分子网，便于管理，提高IP地址利用率</li>
+<li>concat() 方法：<code>用于将指定的字符串参数连接到字符串上。</code></li>
 </ul>
 
     </div>
@@ -425,7 +340,7 @@
     <strong>本文作者： </strong>XIAO_JING</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://1979F.github.io/2020/04/14/利用子网掩码划分子网/" title="利用子网掩码划分子网">http://1979F.github.io/2020/04/14/利用子网掩码划分子网/</a>
+    <a href="http://1979F.github.io/2020/11/22/小白 LeetCode 5605 检查两个字符串数据是否相等/" title="小白 LeetCode 5605 检查两个字符串数据是否相等">http://1979F.github.io/2020/11/22/小白 LeetCode 5605 检查两个字符串数据是否相等/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -449,7 +364,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/计算机网络/" rel="tag"># 计算机网络</a>
+              <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
             
           </div>
         
@@ -459,8 +374,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2020/04/13/分类的IP地址/" rel="next" title="分类的IP地址">
-                  <i class="fa fa-chevron-left"></i> 分类的IP地址
+                <a href="/2020/11/22/小白 LeetCode 242  有效的字母异位词/" rel="next" title="小白 LeetCode 242  有效的字母异位词">
+                  <i class="fa fa-chevron-left"></i> 小白 LeetCode 242  有效的字母异位词
                 </a>
               
             </div>
@@ -468,10 +383,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2020/04/17/java 搭建 web服务器 socket实现/" rel="prev" title="java 搭建 web服务器 socket实现">
-                  java 搭建 web服务器 socket实现 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
