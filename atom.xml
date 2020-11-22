@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://1979F.github.io/"/>
-  <updated>2020-11-22T05:45:15.040Z</updated>
+  <updated>2020-11-22T08:40:50.312Z</updated>
   <id>http://1979F.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>小白 LeetCode 242  有效的字母异位词</title>
+    <link href="http://1979F.github.io/2020/11/22/%E5%B0%8F%E7%99%BD%20LeetCode%20242%20%20%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D/"/>
+    <id>http://1979F.github.io/2020/11/22/小白 LeetCode 242  有效的字母异位词/</id>
+    <published>2020-11-22T08:39:27.000Z</published>
+    <updated>2020-11-22T08:40:50.312Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>字母异位词</strong></p><p>字符串由相同字母组成，但允许排列顺序不同。<br>如“aaabbb” 与 “ababab” 是字母异位词，<br>而“aabb” 与 “ab” 不是字母异位词。</p><p>题目：<code>给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">示例 1:</span><br><span class="line"></span><br><span class="line">输入: s = <span class="string">"anagram"</span>, t = <span class="string">"nagaram"</span></span><br><span class="line">输出: <span class="literal">true</span></span><br></pre></td></tr></table></figure><a id="more"></a><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">示例 2:</span><br><span class="line"></span><br><span class="line">输入: s = <span class="string">"rat"</span>, t = <span class="string">"car"</span></span><br><span class="line">输出: <span class="literal">false</span></span><br></pre></td></tr></table></figure><p>思路：先判断字符串长度是否相同，若不同，直接返回false；若相同则继续判断，给两个字符串排序，若排序后的字符串完全相等，那么返回true，否则，返回false。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isAnagram</span><span class="params">(String s, String t)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ls = s.length();</span><br><span class="line">        <span class="keyword">int</span> lt = t.length();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(ls != lt)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">char</span>[] arrayS = s.toCharArray(); <span class="comment">//把字符串转换为数组</span></span><br><span class="line">            <span class="keyword">char</span>[] arrayT = t.toCharArray();</span><br><span class="line">            Arrays.sort(arrayS); <span class="comment">//利用数组帮助类自动排序</span></span><br><span class="line">            Arrays.sort(arrayT);</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(Arrays.equals(arrayS, arrayT))</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/20201122163611486.png#pic" alt="在这里插入图片描述"></p><ul><li>字符串转为数组 <code>.toCharArray()</code></li><li>数组排序：<code>Arrays.sort(array)</code></li><li>判断数组是否相同：<code>Arrays.equals(array1, array2)</code></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;字母异位词&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;字符串由相同字母组成，但允许排列顺序不同。&lt;br&gt;如“aaabbb” 与 “ababab” 是字母异位词，&lt;br&gt;而“aabb” 与 “ab” 不是字母异位词。&lt;/p&gt;&lt;p&gt;题目：&lt;code&gt;给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。&lt;/code&gt;&lt;/p&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;示例 1:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输入: s = &lt;span class=&quot;string&quot;&gt;&quot;anagram&quot;&lt;/span&gt;, t = &lt;span class=&quot;string&quot;&gt;&quot;nagaram&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输出: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="LeetCode" scheme="http://1979F.github.io/tags/LeetCode/"/>
+    
+  </entry>
   
   <entry>
     <title>Jupyter notebook 导入和卸载 conda 虚拟环境</title>
@@ -519,33 +540,6 @@
 &lt;li&gt;使用整个因特网范围内唯一的统一资源定位符URL（Uniform Resource Locator）来标识万维网上的各种文档&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&amp;lt;URL的访问方式&amp;gt;：// &amp;lt;主机&amp;gt;：&amp;lt;端口&amp;gt;/&amp;lt;路径&amp;gt;&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="计算机网络" scheme="http://1979F.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>DNS域名系统详解</title>
-    <link href="http://1979F.github.io/2020/06/04/DNS%E5%9F%9F%E5%90%8D%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://1979F.github.io/2020/06/04/DNS域名系统详解/</id>
-    <published>2020-06-04T15:11:15.000Z</published>
-    <updated>2020-11-22T07:19:02.007Z</updated>
-    
-    <content type="html"><![CDATA[<h5 id="一、分层次的域名结构"><a href="#一、分层次的域名结构" class="headerlink" title="一、分层次的域名结构"></a>一、分层次的域名结构</h5><ul><li>顶级域名、 二级域名、 三级域名、 四级域名<img src="https://img-blog.csdnimg.cn/20200604150926531.png" width="50%"></li></ul><h5 id="二、因特网的域名结构"><a href="#二、因特网的域名结构" class="headerlink" title="二、因特网的域名结构"></a>二、因特网的域名结构</h5><ul><li>因特网采用了层次树状结构的命名方法，称为域名，如：<a href="http://www.jxnu.edu.cn" target="_blank" rel="noopener">www.jxnu.edu.cn</a><br>三级域名：如www表示万维网<br>二级域名：如jxnu表示江西师大<br>一级域名：如edu表示教育网<br>顶级域名：如cn表示中国</li></ul><p><code>一个域名可以对应多个IP吗？</code><br>可以<br><code>一个IP可以对应多个域名吗？</code><br>可以</p><a id="more"></a><h5 id="三、域名服务器的工作方式"><a href="#三、域名服务器的工作方式" class="headerlink" title="三、域名服务器的工作方式"></a>三、域名服务器的工作方式</h5><h6 id="1、域名服务器的分类"><a href="#1、域名服务器的分类" class="headerlink" title="1、域名服务器的分类"></a>1、域名服务器的分类</h6><p>域名系统是分级别的，所以域名服务器也是有层次的，域名服务器本身也有域名</p><p><code>本地域名服务器</code></p><ul><li>针对主机而言，主机首先将DNS请求发给本地的域名服务器</li></ul><p><code>根域名服务器</code></p><ul><li>用于解释.com、.net等顶级域名的服务器</li></ul><p><code>权威域名服务器</code></p><ul><li>能够权威的解释某个域名和IP对应的服务器</li></ul><h6 id="2、DNS的查询方式"><a href="#2、DNS的查询方式" class="headerlink" title="2、DNS的查询方式"></a>2、DNS的查询方式</h6><p><strong>DNS递归查询</strong><br>服务器与服务器<br><img src="https://img-blog.csdnimg.cn/20200604162731730.png" width="50%"><br><strong>DNS迭代查询</strong><br>主机与服务器<br><img src="https://img-blog.csdnimg.cn/20200604163038570.png" width="50%"></p><p><strong>DNS的查询优化</strong></p><ul><li>问题：每次访问网页都需要首先进行DNS请求，效率不高，如何能够提高效率？</li><li>使用<code>缓存机制</code>可以提高效率<br>—— 客户端短期内会将DNS映射缓存<br>—— DNS服务器从上级DNS服务器获得的DNS映射会缓存<br>—— 缓存的映射必须有生存时间</li><li>缓存的利与弊讨论<br>—— 导致有时无法及时获得更新的DNS映射<br>—— 导致DNS的负载均衡无效</li></ul><p><strong>DNS的负载均衡</strong></p><ul><li>将一个域名对应多个IP（多台相同的服务器），域名服务器收到域名查询请求时将IP<code>轮流分配</code>给不同的客户端，<code>使得不同的客户端访问不同的服务器</code>，实现服务器的负载均衡。</li></ul><p><strong>DNS的反向查询</strong></p><ul><li>DNS查询模式包括<code>正向查询</code>和<code>反向查询</code></li><li><code>正向查询根据域名找IP</code>（包括<code>递归查询</code>和<code>迭代查询</code>）</li><li>反向查询是指通过IP地址获得相应的域名</li></ul><p><strong>DNS协议格式</strong></p><p>DNS服务器使用<code>TCP/UDP</code>的53端口</p><ul><li>客户端浏览器发出的DNS查询使用UDP</li><li>DNS服务器之间同步DNS记录使用TCP</li></ul><p>DNS协议报文包括两种</p><ul><li><code>DNS请求报文</code></li><li><code>DNS响应报文</code></li></ul><p>为合理定义DNS记录，DNS协议采用<code>资源记录</code>的结构表示</p><p><strong>DNS资源记录（Resource Record）</strong></p><p><code>RR格式：（name, value, type, ttl, class）</code><br><code>name</code>：域名     <code>value</code>：根据type的不同，意义不同<br><code>ttl</code>：该记录在缓存中能停留的时间，0表示不能缓存<br><code>class</code>：RR的类别代码，默认为0001，表示因特网<br><code>type</code>：RR类型<br>|type| value |<br>|–|–|<br>| A | 域名对应的IP地址 |<br>|AAAA|域名对应的IPv6地址|<br>|NS|域名对应的权威域名服务器名称|<br>|CNAME|域名对应的别名|<br>|MX|域名对应的邮件服务器的名称|<br>|PTR|name对应的 名字（反向查询）|</p><p><strong>DNS的报文格式</strong></p><img src="https://img-blog.csdnimg.cn/20200604224423454.png" width="50%"><p><strong>hosts文件</strong><br>hosts文件的域名和IP的对应<code>优先</code>DNS查询结果</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h5 id=&quot;一、分层次的域名结构&quot;&gt;&lt;a href=&quot;#一、分层次的域名结构&quot; class=&quot;headerlink&quot; title=&quot;一、分层次的域名结构&quot;&gt;&lt;/a&gt;一、分层次的域名结构&lt;/h5&gt;&lt;ul&gt;
-&lt;li&gt;顶级域名、 二级域名、 三级域名、 四级域名&lt;img src=&quot;https://img-blog.csdnimg.cn/20200604150926531.png&quot; width=&quot;50%&quot;&gt;
-
-&lt;/li&gt;
-&lt;/ul&gt;&lt;h5 id=&quot;二、因特网的域名结构&quot;&gt;&lt;a href=&quot;#二、因特网的域名结构&quot; class=&quot;headerlink&quot; title=&quot;二、因特网的域名结构&quot;&gt;&lt;/a&gt;二、因特网的域名结构&lt;/h5&gt;&lt;ul&gt;
-&lt;li&gt;因特网采用了层次树状结构的命名方法，称为域名，如：&lt;a href=&quot;http://www.jxnu.edu.cn&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;www.jxnu.edu.cn&lt;/a&gt;&lt;br&gt;三级域名：如www表示万维网&lt;br&gt;二级域名：如jxnu表示江西师大&lt;br&gt;一级域名：如edu表示教育网&lt;br&gt;顶级域名：如cn表示中国&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;code&gt;一个域名可以对应多个IP吗？&lt;/code&gt;&lt;br&gt;可以&lt;br&gt;&lt;code&gt;一个IP可以对应多个域名吗？&lt;/code&gt;&lt;br&gt;可以&lt;/p&gt;
     
     </summary>
     
