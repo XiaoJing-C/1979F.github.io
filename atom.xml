@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://1979F.github.io/"/>
-  <updated>2020-11-22T09:31:52.040Z</updated>
+  <updated>2020-11-25T01:13:10.823Z</updated>
   <id>http://1979F.github.io/</id>
   
   <author>
@@ -15,6 +15,175 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LeetCode 1470. 重新排列数组</title>
+    <link href="http://1979F.github.io/2020/11/24/LeetCode%201470.%20%E9%87%8D%E6%96%B0%E6%8E%92%E5%88%97%E6%95%B0%E7%BB%84/"/>
+    <id>http://1979F.github.io/2020/11/24/LeetCode 1470. 重新排列数组/</id>
+    <published>2020-11-24T15:26:39.000Z</published>
+    <updated>2020-11-25T01:13:10.823Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>题目</strong>：给你一个数组 nums ，数组中有 2n 个元素，按 [x1,x2,…,xn,y1,y2,…,yn] 的格式排列。</p><p>请你将数组按 [x1,y1,x2,y2,…,xn,yn] 格式重新排列，返回重排后的数组。</p><p><strong>示例 1：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [2,5,1,3,4,7], n = 3</span><br><span class="line">输出：[2,3,5,4,1,7] </span><br><span class="line">解释：由于 x1=2, x2=5, x3=1, y1=3, y2=4, y3=7 ，所以答案为 [2,3,5,4,1,7]</span><br></pre></td></tr></table></figure><a id="more"></a><p><strong>示例 2：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [1,2,3,4,4,3,2,1], n = 4</span><br><span class="line">输出：[1,4,2,3,3,2,4,1]</span><br></pre></td></tr></table></figure><p><strong>示例 3：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [1,1,2,2], n = 2</span><br><span class="line">输出：[1,2,1,2]</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] shuffle(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> n) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] res = <span class="keyword">new</span> <span class="keyword">int</span>[nums.length];</span><br><span class="line">        <span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++)</span><br><span class="line">        &#123;</span><br><span class="line">           res[i] = nums[j];</span><br><span class="line">           <span class="keyword">if</span>(i % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">           j = j + n;</span><br><span class="line">           <span class="keyword">else</span></span><br><span class="line">           j = j - n + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;题目&lt;/strong&gt;：给你一个数组 nums ，数组中有 2n 个元素，按 [x1,x2,…,xn,y1,y2,…,yn] 的格式排列。&lt;/p&gt;&lt;p&gt;请你将数组按 [x1,y1,x2,y2,…,xn,yn] 格式重新排列，返回重排后的数组。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入：nums = [2,5,1,3,4,7], n = 3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输出：[2,3,5,4,1,7] &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;解释：由于 x1=2, x2=5, x3=1, y1=3, y2=4, y3=7 ，所以答案为 [2,3,5,4,1,7]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="LeetCode" scheme="http://1979F.github.io/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 771. 宝石与石头</title>
+    <link href="http://1979F.github.io/2020/11/24/LeetCode%20771.%20%E5%AE%9D%E7%9F%B3%E4%B8%8E%E7%9F%B3%E5%A4%B4/"/>
+    <id>http://1979F.github.io/2020/11/24/LeetCode 771. 宝石与石头/</id>
+    <published>2020-11-24T15:21:05.000Z</published>
+    <updated>2020-11-25T01:14:39.180Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>题目</strong>： 给定字符串J 代表石头中宝石的类型，和字符串 S代表你拥有的石头。 S 中每个字符代表了一种你拥有的石头的类型，你想知道你拥有的石头中有多少是宝石。</p><p>J 中的字母不重复，J 和 S中的所有字符都是字母。字母区分大小写，因此”a”和”A”是不同类型的石头。</p><p><strong>示例 1:</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: J = &quot;aA&quot;, S = &quot;aAAbbbb&quot;</span><br><span class="line">输出: 3</span><br></pre></td></tr></table></figure><a id="more"></a><p><strong>示例 2:</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: J = &quot;z&quot;, S = &quot;ZZ&quot;</span><br><span class="line">输出: 0</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numJewelsInStones</span><span class="params">(String J, String S)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> num = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">char</span>[] a = <span class="keyword">new</span> <span class="keyword">char</span>[J.length()];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; J.length(); i++)</span><br><span class="line">        &#123;</span><br><span class="line">            a[i] = J.charAt(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; S.length(); j++)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; a.length; k++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(S.charAt(j) == (a[k]))</span><br><span class="line">                    num++;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/20201124232032364.png#pic" alt="在这里插入图片描述"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;题目&lt;/strong&gt;： 给定字符串J 代表石头中宝石的类型，和字符串 S代表你拥有的石头。 S 中每个字符代表了一种你拥有的石头的类型，你想知道你拥有的石头中有多少是宝石。&lt;/p&gt;&lt;p&gt;J 中的字母不重复，J 和 S中的所有字符都是字母。字母区分大小写，因此”a”和”A”是不同类型的石头。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入: J = &amp;quot;aA&amp;quot;, S = &amp;quot;aAAbbbb&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输出: 3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="LeetCode" scheme="http://1979F.github.io/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 1486.数组异或操作</title>
+    <link href="http://1979F.github.io/2020/11/24/LeetCode%201486.%20%E6%95%B0%E7%BB%84%E5%BC%82%E6%88%96%E6%93%8D%E4%BD%9C/"/>
+    <id>http://1979F.github.io/2020/11/24/LeetCode 1486. 数组异或操作/</id>
+    <published>2020-11-24T15:18:54.000Z</published>
+    <updated>2020-11-25T01:12:42.705Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>题目</strong>：</p><p>给你两个整数，n 和 start 。</p><p>数组 nums 定义为：nums[i] = start + 2*i（下标从 0 开始）且 n == nums.length 。</p><p>请返回 nums 中所有元素按位异或（XOR）后得到的结果。</p><p><strong>示例 1：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：n = 5, start = 0</span><br><span class="line">输出：8</span><br><span class="line">解释：数组 nums 为 [0, 2, 4, 6, 8]，其中 (0 ^ 2 ^ 4 ^ 6 ^ 8) = 8 。</span><br><span class="line">     &quot;^&quot; 为按位异或 XOR 运算符。</span><br></pre></td></tr></table></figure><a id="more"></a><p><strong>示例 2：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：n = 4, start = 3</span><br><span class="line">输出：8</span><br><span class="line">解释：数组 nums 为 [3, 5, 7, 9]，其中 (3 ^ 5 ^ 7 ^ 9) = 8.</span><br></pre></td></tr></table></figure><p><strong>示例 3：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：n = 1, start = 7</span><br><span class="line">输出：7</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">xorOperation</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> start)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            a[i] = start + <span class="number">2</span> * i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> res = a[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; n; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            res = res ^ a[j];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/202011242318261.png#pic" alt="在这里插入图片描述"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;题目&lt;/strong&gt;：&lt;/p&gt;&lt;p&gt;给你两个整数，n 和 start 。&lt;/p&gt;&lt;p&gt;数组 nums 定义为：nums[i] = start + 2*i（下标从 0 开始）且 n == nums.length 。&lt;/p&gt;&lt;p&gt;请返回 nums 中所有元素按位异或（XOR）后得到的结果。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入：n = 5, start = 0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输出：8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;解释：数组 nums 为 [0, 2, 4, 6, 8]，其中 (0 ^ 2 ^ 4 ^ 6 ^ 8) = 8 。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &amp;quot;^&amp;quot; 为按位异或 XOR 运算符。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="LeetCode" scheme="http://1979F.github.io/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode LCP 06. 拿硬币</title>
+    <link href="http://1979F.github.io/2020/11/24/LeetCode%20LCP%2006.%20%E6%8B%BF%E7%A1%AC%E5%B8%81/"/>
+    <id>http://1979F.github.io/2020/11/24/LeetCode LCP 06. 拿硬币/</id>
+    <published>2020-11-24T15:16:03.000Z</published>
+    <updated>2020-11-25T01:11:58.424Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>题目</strong>：<code>桌上有 n 堆力扣币，每堆的数量保存在数组 coins 中。我们每次可以选择任意一堆，拿走其中的一枚或者两枚，求拿完所有力扣币的最少次数。</code></p><p><strong>示例 1：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：[4,2,1]</span><br><span class="line"></span><br><span class="line">输出：4</span><br><span class="line"></span><br><span class="line">解释：第一堆力扣币最少需要拿 2 次，第二堆最少需要拿 1 次，第三堆最少需要拿 1 次，总共 4 次即可拿完。</span><br></pre></td></tr></table></figure><a id="more"></a><p><strong>示例 2：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：[2,3,10]</span><br><span class="line"></span><br><span class="line">输出：8</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minCount</span><span class="params">(<span class="keyword">int</span>[] coins)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> n = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; coins.length; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> m = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span>((coins[i] % <span class="number">2</span>) != <span class="number">0</span>)</span><br><span class="line">                m = (coins[i] / <span class="number">2</span>) + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                m = coins[i] / <span class="number">2</span>;</span><br><span class="line">            n += m;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> n;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/20201124231526717.png#pic" alt="在这里插入图片描述"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;题目&lt;/strong&gt;：&lt;code&gt;桌上有 n 堆力扣币，每堆的数量保存在数组 coins 中。我们每次可以选择任意一堆，拿走其中的一枚或者两枚，求拿完所有力扣币的最少次数。&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入：[4,2,1]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输出：4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;解释：第一堆力扣币最少需要拿 2 次，第二堆最少需要拿 1 次，第三堆最少需要拿 1 次，总共 4 次即可拿完。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="LeetCode" scheme="http://1979F.github.io/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 222. 完全二叉树的节点个数</title>
+    <link href="http://1979F.github.io/2020/11/24/LeetCode%20222.%20%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%8A%82%E7%82%B9%E4%B8%AA%E6%95%B0/"/>
+    <id>http://1979F.github.io/2020/11/24/LeetCode 222. 完全二叉树的节点个数/</id>
+    <published>2020-11-24T15:12:52.000Z</published>
+    <updated>2020-11-25T01:15:28.951Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>题目</strong>：<code>给出一个完全二叉树，求出该树的节点个数。</code></p><p><strong>说明：</strong></p><p>完全二叉树的定义如下：在完全二叉树中，除了最底层节点可能没填满外，其余每层节点数都达到最大值，并且最下面一层的节点都集中在该层最左边的若干位置。若最底层为第 h 层，则该层包含 1~ 2h 个节点。</p><p><strong>示例:</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入: </span><br><span class="line">    1</span><br><span class="line">   / \</span><br><span class="line">  2   3</span><br><span class="line"> / \  /</span><br><span class="line">4  5 6</span><br><span class="line"></span><br><span class="line">输出: 6</span><br></pre></td></tr></table></figure><a id="more"></a><p><strong>思路</strong>：分为两种情况，第一种是左子树的高度 n 与右子树的高度 m 相同，说明左子树已经填满了，左子树的节点数加上根节点的总数为 2^n，只需遍历右子树的节点个数即可；第二种是 n 与 m 不相等，说明右子树已经填满了，右子树的节点数加上根节点的总数为 2^m，只需遍历左子树的节点个数即可。这里计算节点个数要用到递归的思想。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * public class TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode left;</span></span><br><span class="line"><span class="comment"> *     TreeNode right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">countNodes</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> n = countLevel(root.left);</span><br><span class="line">        <span class="keyword">int</span> m = countLevel(root.right);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(n == m)&#123;</span><br><span class="line">            <span class="keyword">return</span> (countNodes(root.right) + (<span class="number">1</span>&lt;&lt;n));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> (countNodes(root.left) + (<span class="number">1</span>&lt;&lt;m));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">countLevel</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> Math.max(countLevel(root.left), countLevel(root.right)) + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/20201124231235254.png#pic" alt="在这里插入图片描述"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;题目&lt;/strong&gt;：&lt;code&gt;给出一个完全二叉树，求出该树的节点个数。&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;完全二叉树的定义如下：在完全二叉树中，除了最底层节点可能没填满外，其余每层节点数都达到最大值，并且最下面一层的节点都集中在该层最左边的若干位置。若最底层为第 h 层，则该层包含 1~ 2h 个节点。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;示例:&lt;/strong&gt;&lt;/p&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入: &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   / \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  2   3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; / \  /&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4  5 6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输出: 6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="LeetCode" scheme="http://1979F.github.io/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 1108. IP地址无效化</title>
+    <link href="http://1979F.github.io/2020/11/24/LeetCode%201108.%20IP%20%E5%9C%B0%E5%9D%80%E6%97%A0%E6%95%88%E5%8C%96/"/>
+    <id>http://1979F.github.io/2020/11/24/LeetCode 1108. IP 地址无效化/</id>
+    <published>2020-11-24T15:06:59.000Z</published>
+    <updated>2020-11-25T01:14:14.722Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>题目</strong>：</p><p><code>给你一个有效的 IPv4 地址 address，返回这个 IP 地址的无效化版本。所谓无效化 IP 地址，其实就是用 &quot;[.]&quot; 代替了每个 &quot;.&quot;。</code></p><p><strong>示例 1：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：address = &quot;1.1.1.1&quot;</span><br><span class="line">输出：&quot;1[.]1[.]1[.]1&quot;</span><br></pre></td></tr></table></figure><a id="more"></a><p><strong>示例 2：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：address = &quot;255.100.50.0&quot;</span><br><span class="line">输出：&quot;255[.]100[.]50[.]0&quot;</span><br></pre></td></tr></table></figure><p><strong>思路</strong>：直接使用Java的替换函数。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">defangIPaddr</span><span class="params">(String address)</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">return</span> address.replace(<span class="string">"."</span>, <span class="string">"[.]"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/20201124230621696.png#pic" alt="在这里插入图片描述"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;题目&lt;/strong&gt;：&lt;/p&gt;&lt;p&gt;&lt;code&gt;给你一个有效的 IPv4 地址 address，返回这个 IP 地址的无效化版本。
+所谓无效化 IP 地址，其实就是用 &amp;quot;[.]&amp;quot; 代替了每个 &amp;quot;.&amp;quot;。&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入：address = &amp;quot;1.1.1.1&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输出：&amp;quot;1[.]1[.]1[.]1&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="LeetCode" scheme="http://1979F.github.io/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 237. 删除链表中的节点</title>
+    <link href="http://1979F.github.io/2020/11/24/LeetCode%20237.%20%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/"/>
+    <id>http://1979F.github.io/2020/11/24/LeetCode 237. 删除链表中的节点/</id>
+    <published>2020-11-24T15:03:51.000Z</published>
+    <updated>2020-11-25T01:15:07.050Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>题目</strong>：<img src="https://img-blog.csdnimg.cn/20201124230138838.png#pic" alt="在这里插入图片描述"><br><strong>示例 1：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [4,5,1,9], node = 5</span><br><span class="line">输出：[4,1,9]</span><br><span class="line">解释：给定你链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 1 -&gt; 9.</span><br></pre></td></tr></table></figure><p><strong>示例 2：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [4,5,1,9], node = 1</span><br><span class="line">输出：[4,5,9]</span><br><span class="line">解释：给定你链表中值为 1 的第三个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 5 -&gt; 9.</span><br></pre></td></tr></table></figure><a id="more"></a><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteNode</span><span class="params">(ListNode node)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        node.val = node.next.val;</span><br><span class="line">        node.next = node.next.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/20201124230329670.png#pic" alt="在这里插入图片描述"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;题目&lt;/strong&gt;：&lt;img src=&quot;https://img-blog.csdnimg.cn/20201124230138838.png#pic&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;br&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入：head = [4,5,1,9], node = 5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输出：[4,1,9]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;解释：给定你链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -&amp;gt; 1 -&amp;gt; 9.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入：head = [4,5,1,9], node = 1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输出：[4,5,9]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;解释：给定你链表中值为 1 的第三个节点，那么在调用了你的函数之后，该链表应变为 4 -&amp;gt; 5 -&amp;gt; 9.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="LeetCode" scheme="http://1979F.github.io/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 1281. 整数的各位积和之差</title>
+    <link href="http://1979F.github.io/2020/11/24/LeetCode%201281.%20%E6%95%B4%E6%95%B0%E7%9A%84%E5%90%84%E4%BD%8D%E7%A7%AF%E5%92%8C%E4%B9%8B%E5%B7%AE/"/>
+    <id>http://1979F.github.io/2020/11/24/LeetCode 1281. 整数的各位积和之差/</id>
+    <published>2020-11-24T15:00:40.000Z</published>
+    <updated>2020-11-25T01:13:48.642Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>题目</strong>：<code>给你一个整数 n，请你帮忙计算并返回该整数「各位数字之积」与「各位数字之和」的差。</code></p><p><strong>示例 1：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：n = 234</span><br><span class="line">输出：15 </span><br><span class="line">解释：</span><br><span class="line">各位数之积 = 2 * 3 * 4 = 24 </span><br><span class="line">各位数之和 = 2 + 3 + 4 = 9 </span><br><span class="line">结果 = 24 - 9 = 15</span><br></pre></td></tr></table></figure><p><strong>示例 2：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：n = 4421</span><br><span class="line">输出：21</span><br><span class="line">解释： </span><br><span class="line">各位数之积 = 4 * 4 * 2 * 1 = 32 </span><br><span class="line">各位数之和 = 4 + 4 + 2 + 1 = 11 </span><br><span class="line">结果 = 32 - 11 = 21</span><br></pre></td></tr></table></figure><a id="more"></a><p><strong>思路</strong>：先将 int 类型转换为 String 类型，获取到每一位的值，然后计算和与乘积，返回题目所需的结果。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">subtractProductAndSum</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        String s = String.valueOf(n);</span><br><span class="line">        <span class="keyword">int</span> x = s.length();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] t = <span class="keyword">new</span> <span class="keyword">int</span>[x];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> mul = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; x; i++)&#123;</span><br><span class="line">            t[i] = s.charAt(i) - <span class="number">48</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; x; j++)&#123;</span><br><span class="line">            sum += t[j];</span><br><span class="line">            mul *= t[j];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span>  mul - sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/20201124230023297.png#pic" alt="在这里插入图片描述"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;题目&lt;/strong&gt;：&lt;code&gt;给你一个整数 n，请你帮忙计算并返回该整数「各位数字之积」与「各位数字之和」的差。&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入：n = 234&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输出：15 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;解释：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;各位数之积 = 2 * 3 * 4 = 24 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;各位数之和 = 2 + 3 + 4 = 9 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;结果 = 24 - 9 = 15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入：n = 4421&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输出：21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;解释： &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;各位数之积 = 4 * 4 * 2 * 1 = 32 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;各位数之和 = 4 + 4 + 2 + 1 = 11 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;结果 = 32 - 11 = 21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="LeetCode" scheme="http://1979F.github.io/tags/LeetCode/"/>
+    
+  </entry>
   
   <entry>
     <title>LeetCode 1480 一维数组的动态和</title>
@@ -284,252 +453,6 @@
     
     
       <category term="深度学习" scheme="http://1979F.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深度学习环境搭建之Anaconda安装keras</title>
-    <link href="http://1979F.github.io/2020/07/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B9%8BAnaconda%E5%AE%89%E8%A3%85keras/"/>
-    <id>http://1979F.github.io/2020/07/29/深度学习环境搭建之Anaconda安装keras/</id>
-    <published>2020-07-29T07:43:11.000Z</published>
-    <updated>2020-11-22T07:26:32.928Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>一、确定安装版本号</strong><br>搭环境遇到一堆坑，总结一点最重要的就是要选择好版本。<br>  这里我们要注意tensorflow与keras的版本对应关系。见下图<br>  <img src="https://img-blog.csdnimg.cn/20200729154029110.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>二、使用pip进行安装</strong></p><p>这里注意首先要激活对应的环境</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install keras==版本号</span><br></pre></td></tr></table></figure><p>后续有时间再补充安装tensorflow-gpu以及pytorch的教程</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;strong&gt;一、确定安装版本号&lt;/strong&gt;&lt;br&gt;搭环境遇到一堆坑，总结一点最重要的就是要选择好版本。&lt;br&gt;  这里我们要注意tensorflow与keras的版本对应关系。见下图&lt;br&gt;  &lt;img src=&quot;https://img-blog.csdnimg.
-      
-    
-    </summary>
-    
-    
-    
-      <category term="深度学习" scheme="http://1979F.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux下进入Anaconda Prompt以及Navigator</title>
-    <link href="http://1979F.github.io/2020/07/29/Linux%E4%B8%8B%E8%BF%9B%E5%85%A5Anaconda%20Prompt%E4%BB%A5%E5%8F%8ANavigator/"/>
-    <id>http://1979F.github.io/2020/07/29/Linux下进入Anaconda Prompt以及Navigator/</id>
-    <published>2020-07-29T07:36:49.000Z</published>
-    <updated>2020-11-22T07:10:30.672Z</updated>
-    
-    <content type="html"><![CDATA[<p><code>一、进入Anaconda Promp</code></p><p>打开终端，cd 进Anaconda下的bin目录</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda activate</span><br></pre></td></tr></table></figure><p>退出</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda deactivate</span><br></pre></td></tr></table></figure><p><code>二、进入Anaconda Navigator</code></p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">anaconda-navigator</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;code&gt;一、进入Anaconda Promp&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;打开终端，cd 进Anaconda下的bin目录&lt;/p&gt;
-&lt;figure class=&quot;highlight powershell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;p
-      
-    
-    </summary>
-    
-    
-    
-      <category term="深度学习" scheme="http://1979F.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>哔哩哔哩n倍速播放视频</title>
-    <link href="http://1979F.github.io/2020/07/15/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9n%E5%80%8D%E9%80%9F%E6%92%AD%E6%94%BE%E8%A7%86%E9%A2%91/"/>
-    <id>http://1979F.github.io/2020/07/15/哔哩哔哩n倍速播放视频/</id>
-    <published>2020-07-15T09:05:06.000Z</published>
-    <updated>2020-11-22T07:32:11.483Z</updated>
-    
-    <content type="html"><![CDATA[<p>在b站看一些学习视频的时候，有时候2倍速满足不了我们的需求，可以在控制台键入以下命令实现n倍速播放视频<br><img src="https://img-blog.csdnimg.cn/20200715170441296.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">'video'</span>).playbackRate = <span class="number">3</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;在b站看一些学习视频的时候，有时候2倍速满足不了我们的需求，可以在控制台键入以下命令实现n倍速播放视频&lt;br&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200715170441296.png?x-oss-process=image/wa
-      
-    
-    </summary>
-    
-    
-    
-      <category term="工具" scheme="http://1979F.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络层的基本概念</title>
-    <link href="http://1979F.github.io/2020/06/13/%E7%BD%91%E7%BB%9C%E5%B1%82%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
-    <id>http://1979F.github.io/2020/06/13/网络层的基本概念/</id>
-    <published>2020-06-13T08:14:56.000Z</published>
-    <updated>2020-11-22T07:25:43.456Z</updated>
-    
-    <content type="html"><![CDATA[<h5 id="网络层的功能"><a href="#网络层的功能" class="headerlink" title="网络层的功能"></a>网络层的功能</h5><p><code>网络层负责实现各种不一样的物理网络的互联</code></p><ul><li>网络层采用分组交换技术</li><li>网络层应当使用统一编址</li><li>路由器使用存储转发实现异构网络的互联</li><li>网络层关注分组从一个网络到达另一个网络的选路问题</li></ul><h5 id="资源子网与通信子网"><a href="#资源子网与通信子网" class="headerlink" title="资源子网与通信子网"></a>资源子网与通信子网</h5><p><code>资源子网</code></p><ul><li>负责全网的数据处理业务，向网络用户提供各种网络资源与网络服务。</li><li>传输层应用层属于资源子网，关注端到端通信</li></ul><a id="more"></a><p><code>通信子网</code></p><ul><li>完成网络数据传输转发等通信处理任务</li><li>网络层、数据链路层和物理层属于通信子网，负责网络通信转发</li></ul><p><strong>分组交换网络的路由模式</strong><br><code>路由模式的概念</code></p><ul><li>分组选路的方式</li></ul><p><code>网络根据路由模式分类</code></p><ul><li>数据报网络：无连接不可靠的网络</li><li>虚电路网络：面向连接可靠的网络</li></ul><h5 id="数据报网络"><a href="#数据报网络" class="headerlink" title="数据报网络"></a>数据报网络</h5><p><code>特点：</code></p><ul><li>在网络层没有连接建立过程</li><li>路由器不维护端对端的连接状态</li><li>一般分组使用目标主机的ID（即IP地址）进行路由选择</li><li>同样的收发双方的不同分组可能经由的路径可能不同</li></ul><img src="https://img-blog.csdnimg.cn/20200613155359734.png" width="50%"><h5 id="虚电路网络"><a href="#虚电路网络" class="headerlink" title="虚电路网络"></a>虚电路网络</h5><p><code>特点：</code></p><ul><li>发送分组之前会建立一条虚拟的电路（永久PVC或临时SVC）；</li><li>每个分组携有标签（虚电路ID），由标签来确定下一跳；</li><li>在连接建立阶段确定固定的路由，全部数据通过同一条路传递；</li><li>路由器为每个正在通信中的连接维持状态</li></ul><img src="https://img-blog.csdnimg.cn/20200613155644122.png" width="50%"><h5 id="QoS的基本概念"><a href="#QoS的基本概念" class="headerlink" title="QoS的基本概念"></a>QoS的基本概念</h5><ul><li>QoS（Quality of Service）服务质量是指允许用户在带宽、延迟、抖动、可靠性（丢包率）等方面获得可预期的服务水平的一系列技术的集合。</li><li>抖动：延迟的变化程度</li></ul><h5 id="数据报网络和虚电路网络比较"><a href="#数据报网络和虚电路网络比较" class="headerlink" title="数据报网络和虚电路网络比较"></a>数据报网络和虚电路网络比较</h5><img src="https://img-blog.csdnimg.cn/20200613160811576.png" width="60%"><p><code>数据报网络</code>：无连接，可靠性不强，可能形成环路，但是速度快，路由器的工作相对小，不容易实现QoS（服务质量保证）<br><code>虚电路网络</code>：面向连接可靠性较好，路由器需要为每个虚电路维护状态，代价较高，建立虚电路需要时间，容易实现QoS</p><h5 id="网络层提供的服务"><a href="#网络层提供的服务" class="headerlink" title="网络层提供的服务"></a>网络层提供的服务</h5><ul><li><code>因特网模型</code>：无连接不可靠灵活的数据包网络传输服务</li><li><code>ATM网络</code>：面向连接可靠的虚电路传输服务</li></ul><h5 id="因特网的选择"><a href="#因特网的选择" class="headerlink" title="因特网的选择"></a>因特网的选择</h5><ul><li>网络层向上只提供简单灵活的、无连接的、尽最大努力交付的数据包服务</li><li>网络在发送分组时不需要先建立连接。每一个分组（即IP数据报）独立发送，与其前后的分组无关（不进行编号）</li><li>网络层不提供服务质量的承诺。即所传送的分组可能出错、丢失、重复和失序，当然也不保证分组传送的时限</li><li>因特网特点：灵活、适应性强、网络成本相对低</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h5 id=&quot;网络层的功能&quot;&gt;&lt;a href=&quot;#网络层的功能&quot; class=&quot;headerlink&quot; title=&quot;网络层的功能&quot;&gt;&lt;/a&gt;网络层的功能&lt;/h5&gt;&lt;p&gt;&lt;code&gt;网络层负责实现各种不一样的物理网络的互联&lt;/code&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;网络层采用分组交换技术&lt;/li&gt;
-&lt;li&gt;网络层应当使用统一编址&lt;/li&gt;
-&lt;li&gt;路由器使用存储转发实现异构网络的互联&lt;/li&gt;
-&lt;li&gt;网络层关注分组从一个网络到达另一个网络的选路问题&lt;/li&gt;
-&lt;/ul&gt;&lt;h5 id=&quot;资源子网与通信子网&quot;&gt;&lt;a href=&quot;#资源子网与通信子网&quot; class=&quot;headerlink&quot; title=&quot;资源子网与通信子网&quot;&gt;&lt;/a&gt;资源子网与通信子网&lt;/h5&gt;&lt;p&gt;&lt;code&gt;资源子网&lt;/code&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;负责全网的数据处理业务，向网络用户提供各种网络资源与网络服务。&lt;/li&gt;
-&lt;li&gt;传输层应用层属于资源子网，关注端到端通信&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="计算机网络" scheme="http://1979F.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TCP的拥塞控制机制</title>
-    <link href="http://1979F.github.io/2020/06/13/TCP%E7%9A%84%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6%E6%9C%BA%E5%88%B6/"/>
-    <id>http://1979F.github.io/2020/06/13/TCP的拥塞控制机制/</id>
-    <published>2020-06-13T03:18:19.000Z</published>
-    <updated>2020-11-22T07:02:25.236Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>拥塞：</strong></p><ul><li>在某段时间，若对网络中某资源的需求超过了该资源所能提供的可用部分，网络的性能就要变坏，产生拥塞</li><li>若网络中有许多资源同时产生拥塞，网络的性能就要明显变坏，整个网络的吞吐量将随输入负荷的增大而下降</li></ul><p><strong>拥塞控制：</strong></p><ul><li>保证网络能够承受现有的网络负荷</li></ul><p><strong>开环控制和闭环控制</strong></p><p><code>开环控制</code></p><ul><li>在设计网络时事先将有关发生的拥塞的因素考虑周到，力求网络在工作时不产生拥塞</li></ul><a id="more"></a><p><code>闭环控制</code></p><ul><li>基于<code>反馈环路</code>的概念</li><li>监测网络系统以便检测到拥塞在何时、何处发生</li><li>将拥塞发生的信息传送到可采取行动的地方</li><li>调整网络系统的运行以解决出现的问题</li></ul><p><strong>TCP拥塞控制思想</strong><br><code>特性</code></p><ul><li>使用拥塞窗口cwnd控制发送窗口大小</li><li>发送窗口的上限值 = Min [rwnd，cwnd]</li><li>分组超时意味着拥塞，分组收到确认则意味着网络未拥塞</li><li>拥塞则少发（拥塞窗口减小），没拥塞则多发（拥塞窗口增加）</li><li>在网络未知的情况下拥塞窗口从最小开始</li><li>收到确认拥塞窗口大小增加</li><li>为提高效率，开始窗口增加速度快，到了一定阶段窗口增加速度变慢</li></ul><p><code>举例</code></p><img src="https://img-blog.csdnimg.cn/20200613111041597.png" width="50%"><p><code>总结</code><br><strong>两个阶段</strong></p><ul><li>慢启动阶段 - - - 乘法增</li><li>拥塞避免阶段 - - - 加法增</li></ul><p><strong>一个阈值</strong></p><ul><li>定义了慢启动阶段和拥塞避免阶段的分界点</li></ul><p><strong>超时发生时</strong></p><ul><li>阈值变成超时的窗口大小的一半</li><li>回到慢启动</li></ul><p><strong>快恢复算法</strong></p><ul><li>当发送端收到连续3个重复的确认时，就执行“乘法减小”算法，把慢开始门限ssthresh减半，直接进入拥塞避免阶段</li></ul><img src="https://img-blog.csdnimg.cn/20200613111515917.png" width="50%"><p><strong>LAND攻击</strong><br><code>攻击方法及原理</code></p><ul><li>方法：将TCP包的源地址和目的地址，源端口和目的端口都设置成相同，导致对方死机</li><li>原理：TCP连接管理的实现存在漏洞</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;拥塞：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;在某段时间，若对网络中某资源的需求超过了该资源所能提供的可用部分，网络的性能就要变坏，产生拥塞&lt;/li&gt;
-&lt;li&gt;若网络中有许多资源同时产生拥塞，网络的性能就要明显变坏，整个网络的吞吐量将随输入负荷的增大而下降&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;拥塞控制：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;保证网络能够承受现有的网络负荷&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;开环控制和闭环控制&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;开环控制&lt;/code&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;在设计网络时事先将有关发生的拥塞的因素考虑周到，力求网络在工作时不产生拥塞&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="计算机网络" scheme="http://1979F.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TCP协议详解</title>
-    <link href="http://1979F.github.io/2020/06/11/TCP%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://1979F.github.io/2020/06/11/TCP协议详解/</id>
-    <published>2020-06-11T07:39:02.000Z</published>
-    <updated>2020-11-22T07:01:41.940Z</updated>
-    
-    <content type="html"><![CDATA[<h5 id="一、TCP的设计理念"><a href="#一、TCP的设计理念" class="headerlink" title="一、TCP的设计理念"></a>一、TCP的设计理念</h5><table><thead><tr><th>传输层协议</th><th>端到端控制，实现分用和复用</th></tr></thead><tbody><tr><td>可靠传输机制</td><td>保证端到端数据按序正确的到达、序号机制、确认机制、差错检测机制、缓存机制、重传机制、滑动窗口机制</td></tr><tr><td>其他机制</td><td>流量控制机制、拥塞控制机制</td></tr></tbody></table><p><strong>TCP协议的可靠传输机制</strong></p><img src="https://img-blog.csdnimg.cn/2020061023181263.png" width="50%"><p><strong>TCP的首部</strong></p><img src="https://img-blog.csdnimg.cn/20200611084558107.png" width="50%"><ul><li><code>源端口和目的端口</code>字段——各占2字节。端口是传输层与应用层的服务接口，类似一个地址标识。传输层的复用和分用功能都要通过端口才能实现</li><li><code>序号</code>字段——占4字节。TCP连接中传送的数据流中的每一个字节都编上一个号。序号字段的值指的是本报文段所发送的数据的第一个字节的编号</li><li><code>确认号</code>字段——占4字节，是期望收到对方的下一个报文段的数据的第一个字节的序号。注意，当有数据要发送给对方时，顺便确认，当没有数据发送给对方时，单独发一个确认报文</li><li>特殊标记（Flag）：每个标记占一个bit，有特殊约定</li><li><code>URG</code>——紧急比特标记，当URG置为1时，表明紧急指针字段有效。通知本报文段中有紧急数据，应尽快传送，紧急数据的优先级要高。</li><li><code>ACK</code>——只有当ACK置为1时，确认号字段才有效。正常情况下只有第一次握手时ACK=0</li><li><code>PSH</code>（Push）——推送比特，接收方收到推送比特置为1的报文段，就尽快地将该报文段的数据交付给接收应用进程，而不再等到整个缓存都填满了后再向上交付</li><li><code>RST</code>（ReSet）——复位比特，当RST=1时，表明TCP连接中出现严重差错，必须强行释放连接，属于单方面强行断开连接</li><li><code>SYN</code>——同步比特，SYN置为1，表示这是一个连接请求报文。正常情况下只有第一次握手和第二次握手时SYN等于1，其余都等于0</li><li><code>FIN</code>（Final）——终止比特，用来正常释放一个连接。当FIN=1时，表明此报文段的发送端的数据已发送完毕，并请求对方释放连接，当对方确认后，会释放发送缓存</li><li><code>窗口</code>字段——占2字节。窗口字段是<code>流量控制</code>的关键，用来控制对方发送窗口的大小，单位为字节。接收方根据自身的缓存大小确定自己的接收窗口大小，然后通知对方以确定对方的发送窗口的上限</li><li>检验和——占2字节。检验和字段检验的范围包括首部和数据这两部分，在计算检验和时，要在TCP报文段的前面加上12字节的伪首部</li><li><code>紧急指针</code>字段——占16bit，紧急指针指出在本报文段中的紧急数据的最后一个字节的序号 </li></ul><a id="more"></a><p><strong>TCP的确认机制</strong><br><code>序号</code></p><ul><li>按字节编号</li></ul><p><code>确认</code></p><ul><li>期望确认：期待对方发送的下一个报文的序号</li><li>累积确认：收到某个分组的确认意味着该分组及之前所有分组都正确收到</li></ul><p><code>特殊报文的确认问题</code></p><ul><li>对于没有包含数据的确认报文段不再确认</li><li>对于含<code>特殊标记的数据段，即使没有任何的数据接收，确认号也要加1</code></li></ul><p><strong>TCP 建立连接的作用</strong><br><code>作用：</code></p><ul><li>使每一方能够确知对方的存在</li><li>允许双方协议一些参数（如最大报文段长度，最大窗口大小，服务质量等）</li><li>对传输实体资源进行分配</li></ul><p><strong>TCP的三次握手建立连接</strong></p><img src="https://img-blog.csdnimg.cn/2020061111395021.png" width="50%"><p>注意：这个时候如果客户端再发请求，序号还是从x+1开始</p><p><code>注意：</code></p><ul><li>建立连接时会初始化相关参数，分配缓存等资源</li><li>服务端收到第一次握手后默认会跟踪该连接75秒</li></ul><img src="https://img-blog.csdnimg.cn/20200611142439702.png" width="50%"><p><strong>SYN Flooding攻击</strong></p><ul><li>攻击原理：服务器进行第二次握手之后会在超时时间内（一般为75秒）跟踪该连接，未收到第三次握手会不断重发，消耗资源</li></ul><img src="https://img-blog.csdnimg.cn/20200611142812953.png" width="50%"><p><strong>攻击防范</strong></p><ul><li>缩短TCP超时时间</li><li>更改TCP的搬开连接数</li><li>TCP-z，监控TCP状态</li><li>通过防火墙、路由器等过滤网关防护</li><li>使用SYN Cookie技术</li></ul><p><strong>TCP的四次挥手断开连接</strong><br><img src="https://img-blog.csdnimg.cn/20200611143808219.png" width="45%"><img src="https://img-blog.csdnimg.cn/20200611144034408.png" width="45%"></p><p><strong>TCP的时间等待计时器</strong></p><ul><li>防止最后一个ACK丢失导致断开连接出现异常</li><li>一般等于二倍报文段寿命长度</li></ul><img src="https://img-blog.csdnimg.cn/20200611150001596.png" width="30%"><p><strong>保活计时器</strong></p><ul><li>防止两个TCP之间的连接长时间的空闲</li></ul><p><strong>TCP的重传机制</strong></p><p><code>选择性重传机制</code></p><ul><li>当数据超时则需要重传，需要重传定时器</li><li>TCP属于使用累积确认的选择性重传协议</li></ul><p><code>重传超时时间的确定</code></p><img src="https://img-blog.csdnimg.cn/20200611153222785.png" width="50%"><p><code>快重传机制</code></p><ul><li>当连续收到三个重复的确认，直接重传所需分组，提高效率</li></ul><p><strong>TCP的流量控制</strong><br><code>接收方</code>：明确地通过TCP首部的窗口字段发送接收窗口大小，从而限制发送方发送窗口的最大值<br><code>发送方</code>：保证发送窗口大小不超过对方发送的接收窗口的大小</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h5 id=&quot;一、TCP的设计理念&quot;&gt;&lt;a href=&quot;#一、TCP的设计理念&quot; class=&quot;headerlink&quot; title=&quot;一、TCP的设计理念&quot;&gt;&lt;/a&gt;一、TCP的设计理念&lt;/h5&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;传输层协议&lt;/th&gt;
-&lt;th&gt;端到端控制，实现分用和复用&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td&gt;可靠传输机制&lt;/td&gt;
-&lt;td&gt;保证端到端数据按序正确的到达、序号机制、确认机制、差错检测机制、缓存机制、重传机制、滑动窗口机制&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;其他机制&lt;/td&gt;
-&lt;td&gt;流量控制机制、拥塞控制机制&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;strong&gt;TCP协议的可靠传输机制&lt;/strong&gt;&lt;/p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/2020061023181263.png&quot; width=&quot;50%&quot;&gt;&lt;p&gt;&lt;strong&gt;TCP的首部&lt;/strong&gt;&lt;/p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200611084558107.png&quot; width=&quot;50%&quot;&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;源端口和目的端口&lt;/code&gt;字段——各占2字节。端口是传输层与应用层的服务接口，类似一个地址标识。传输层的复用和分用功能都要通过端口才能实现&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;序号&lt;/code&gt;字段——占4字节。TCP连接中传送的数据流中的每一个字节都编上一个号。序号字段的值指的是本报文段所发送的数据的第一个字节的编号&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;确认号&lt;/code&gt;字段——占4字节，是期望收到对方的下一个报文段的数据的第一个字节的序号。注意，当有数据要发送给对方时，顺便确认，当没有数据发送给对方时，单独发一个确认报文&lt;/li&gt;
-&lt;li&gt;特殊标记（Flag）：每个标记占一个bit，有特殊约定&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;URG&lt;/code&gt;——紧急比特标记，当URG置为1时，表明紧急指针字段有效。通知本报文段中有紧急数据，应尽快传送，紧急数据的优先级要高。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ACK&lt;/code&gt;——只有当ACK置为1时，确认号字段才有效。正常情况下只有第一次握手时ACK=0&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;PSH&lt;/code&gt;（Push）——推送比特，接收方收到推送比特置为1的报文段，就尽快地将该报文段的数据交付给接收应用进程，而不再等到整个缓存都填满了后再向上交付&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;RST&lt;/code&gt;（ReSet）——复位比特，当RST=1时，表明TCP连接中出现严重差错，必须强行释放连接，属于单方面强行断开连接&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;SYN&lt;/code&gt;——同步比特，SYN置为1，表示这是一个连接请求报文。正常情况下只有第一次握手和第二次握手时SYN等于1，其余都等于0&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;FIN&lt;/code&gt;（Final）——终止比特，用来正常释放一个连接。当FIN=1时，表明此报文段的发送端的数据已发送完毕，并请求对方释放连接，当对方确认后，会释放发送缓存&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;窗口&lt;/code&gt;字段——占2字节。窗口字段是&lt;code&gt;流量控制&lt;/code&gt;的关键，用来控制对方发送窗口的大小，单位为字节。接收方根据自身的缓存大小确定自己的接收窗口大小，然后通知对方以确定对方的发送窗口的上限&lt;/li&gt;
-&lt;li&gt;检验和——占2字节。检验和字段检验的范围包括首部和数据这两部分，在计算检验和时，要在TCP报文段的前面加上12字节的伪首部&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;紧急指针&lt;/code&gt;字段——占16bit，紧急指针指出在本报文段中的紧急数据的最后一个字节的序号 &lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="计算机网络" scheme="http://1979F.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>滑动窗口协议</title>
-    <link href="http://1979F.github.io/2020/06/10/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E5%8D%8F%E8%AE%AE/"/>
-    <id>http://1979F.github.io/2020/06/10/滑动窗口协议/</id>
-    <published>2020-06-10T15:10:42.000Z</published>
-    <updated>2020-11-22T07:30:32.766Z</updated>
-    
-    <content type="html"><![CDATA[<h5 id="滑动窗口协议"><a href="#滑动窗口协议" class="headerlink" title="滑动窗口协议"></a>滑动窗口协议</h5><img src="https://img-blog.csdnimg.cn/20200610212224143.png" width="50%"><p><strong>核心思想：</strong></p><ul><li>发送方在没有收到对方的ACK的时候可以发送多个数据包</li></ul><p><strong>特性</strong></p><ul><li>发送方使用<code>发送窗口</code>限制没收到确认时允许发送的数据量</li><li>必须<code>增加序号的个数</code>，发送方和接收方需要增加缓存</li><li>常见的两种滑动窗口协议：<code>GBN（回退N步）和SR（选择性重传）</code><img src="https://img-blog.csdnimg.cn/20200610212709893.png" width="50%"></li></ul><p><strong>GBN的工作方式</strong></p><ul><li>发送方：窗口不满则发送至窗口满，窗口满则等待，收到确认窗口向后移动，<code>某个分组出错或丢失则重传该分组及其后面所有已发送但未被确认的分组</code></li><li>接收方：<code>对按序正确到达的分组确认，乱序或错误的分组丢弃且发送最后一次正确收到的分组的确认</code></li></ul><a id="more"></a><p><strong>累计确认机制</strong></p><ul><li>发送方收到某个分组的确认意味着该分组及之前所有分组接收方都正确收到</li></ul><p><strong>GBN协议演示</strong><br><img src="https://img-blog.csdnimg.cn/20200610212912234.png" width="50%"></p><p><strong>SR的工作方式</strong><br>SR（selective repeat）选择性重传</p><ul><li>发送方<code>某个分组出错或丢失只重传该分组</code></li><li>接收方<code>增加接收窗口（接收缓存）</code>，若收到的分组<code>在接受窗口内且乱序，缓存该分组</code>，等到分组按序后一起提交，接收窗口的大小一般等于发送方发送窗口的大小</li><li>也是累计确认</li></ul><p><strong>SR的演示</strong></p><img src="https://img-blog.csdnimg.cn/20200610223252831.png" width="50%"><p><strong>窗口大小和序号的关系</strong></p><ul><li>GBN窗口的最大值等于序号的个数-1</li><li>SR窗口的最大值等于序号的一半</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h5 id=&quot;滑动窗口协议&quot;&gt;&lt;a href=&quot;#滑动窗口协议&quot; class=&quot;headerlink&quot; title=&quot;滑动窗口协议&quot;&gt;&lt;/a&gt;滑动窗口协议&lt;/h5&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200610212224143.png&quot; width=&quot;50%&quot;&gt;&lt;p&gt;&lt;strong&gt;核心思想：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;发送方在没有收到对方的ACK的时候可以发送多个数据包&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;特性&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;发送方使用&lt;code&gt;发送窗口&lt;/code&gt;限制没收到确认时允许发送的数据量&lt;/li&gt;
-&lt;li&gt;必须&lt;code&gt;增加序号的个数&lt;/code&gt;，发送方和接收方需要增加缓存&lt;/li&gt;
-&lt;li&gt;常见的两种滑动窗口协议：&lt;code&gt;GBN（回退N步）和SR（选择性重传）&lt;/code&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200610212709893.png&quot; width=&quot;50%&quot;&gt;
-
-&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;GBN的工作方式&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;发送方：窗口不满则发送至窗口满，窗口满则等待，收到确认窗口向后移动，&lt;code&gt;某个分组出错或丢失则重传该分组及其后面所有已发送但未被确认的分组&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;接收方：&lt;code&gt;对按序正确到达的分组确认，乱序或错误的分组丢弃且发送最后一次正确收到的分组的确认&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="计算机网络" scheme="http://1979F.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>FTP协议、电子邮件系统与Telnet远程控制</title>
-    <link href="http://1979F.github.io/2020/06/08/FTP%E5%8D%8F%E8%AE%AE%E3%80%81%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%8ETelnet%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6/"/>
-    <id>http://1979F.github.io/2020/06/08/FTP协议、电子邮件系统与Telnet远程控制/</id>
-    <published>2020-06-08T02:01:54.000Z</published>
-    <updated>2020-11-22T07:18:15.576Z</updated>
-    
-    <content type="html"><![CDATA[<h5 id="一、FTP协议概述"><a href="#一、FTP协议概述" class="headerlink" title="一、FTP协议概述"></a>一、FTP协议概述</h5><p><strong>FTP定义</strong></p><ul><li>文件传输协议</li><li>用于因特网文件传输</li></ul><p><strong>FTP特性</strong></p><ul><li>使用客户端/服务器模式</li><li>使用TCP提供可靠的传输</li><li>FTP属于维护状态的协议</li><li>FTP使用<code>两条TCP连接</code>完成数据传输</li></ul><p><strong>FTP的两条连接</strong></p><img src="https://img-blog.csdnimg.cn/20200608092104764.png" width="60%"><p><code>数据连接问题</code></p><ul><li>当有具体文件或目录内容传输时，临时建立数据连接</li><li>主动模式下由服务器方发起，服务器端口号20</li><li>被动模式下由客户端发起，服务器端口号不确定</li></ul><a id="more"></a><h5 id="二、电子邮件系统的组成"><a href="#二、电子邮件系统的组成" class="headerlink" title="二、电子邮件系统的组成"></a>二、电子邮件系统的组成</h5><p><strong>电子邮件系统的组成</strong><br><code>用户代理</code></p><ul><li>电子邮件客户端软件，如浏览器，Outlook，Outlook Express，Foxmail等</li></ul><p><code>邮件服务器</code></p><ul><li>提供邮件服务的主机，如sina邮件服务器sina.com，google的邮件服务器gmail.com</li></ul><p><code>邮件发送和接收协议</code></p><ul><li>HTTP，SMTP，POP，IMAP等<img src="https://img-blog.csdnimg.cn/20200608093026432.png" width="60%"></li></ul><p><strong>SMTP协议</strong><br><code>SMTP协议定义</code></p><ul><li>Simple Mail Transfer Protocol：简单邮件传输协议</li><li>用于使用邮件代理发给邮件服务器或邮件服务器之间转发邮件</li></ul><p><code>SMTP特性</code></p><ul><li>使用TCP可靠的传送邮件报文，服务器监听端口号为25</li><li>使用命令/响应代码完成邮件传输的控制交互</li><li>SMTP只能传送7bit的ASCII码的邮件报文</li><li>SMTP采用持续连接的方式发邮件</li></ul><p><code>问题1：SMTP无认证</code></p><ul><li>将导致大量的垃圾邮件</li><li>ESMTP：增强型SMTP，发邮件需要用户名密码验证</li></ul><p><code>问题2：SMTP只能传输ASCII码的文本文件</code></p><ul><li>使用MIME多目标邮件拓展协议</li><li>MIME使用BASE64编码或QP编码将非ASCII码转为ASCII码</li></ul><p><strong>邮件接收协议简介</strong></p><p><code>用户收取邮件常用的协议</code></p><ul><li>POP（Post Office Protocol邮局协议）：服务器端口默认110</li><li>IMAP（Internet Mail Access Protocol）【因特网邮件访问协议】：服务器默认端口143</li><li>HTTP</li></ul><p><code>POP3协议</code><br><img src="https://img-blog.csdnimg.cn/20200608095407547.png" width="60%"></p><p><code>IMAP协议</code></p><ul><li>IMAP具备和POP一样的邮件下载功能</li><li>IMAP允许只读取邮件中的某一个部分</li><li>IMAP提供操作的三种模式<br>1、在线方式：邮件保留在Mail服务器端，客户端可以对其进行管理。其使用方式与WebMail相类似<br>2、离线方式：邮件保留在客户端，客户端可以对其进行管理<br>3、分离方式：邮件的一部分在Mail服务器端，一部分在客户端</li></ul><h5 id="三、Telnet远程控制"><a href="#三、Telnet远程控制" class="headerlink" title="三、Telnet远程控制"></a>三、Telnet远程控制</h5><ul><li>Telnet用于终端使用命令行方式对服务器进行远程控制。端口号为TCP的23</li><li>Telnet的客户端称为VTY（虚拟终端），<code>Telnet不安全</code>，明文传输，可以用更安全的SSH协议替代</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h5 id=&quot;一、FTP协议概述&quot;&gt;&lt;a href=&quot;#一、FTP协议概述&quot; class=&quot;headerlink&quot; title=&quot;一、FTP协议概述&quot;&gt;&lt;/a&gt;一、FTP协议概述&lt;/h5&gt;&lt;p&gt;&lt;strong&gt;FTP定义&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;文件传输协议&lt;/li&gt;
-&lt;li&gt;用于因特网文件传输&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;FTP特性&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;使用客户端/服务器模式&lt;/li&gt;
-&lt;li&gt;使用TCP提供可靠的传输&lt;/li&gt;
-&lt;li&gt;FTP属于维护状态的协议&lt;/li&gt;
-&lt;li&gt;FTP使用&lt;code&gt;两条TCP连接&lt;/code&gt;完成数据传输&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;FTP的两条连接&lt;/strong&gt;&lt;/p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200608092104764.png&quot; width=&quot;60%&quot;&gt;&lt;p&gt;&lt;code&gt;数据连接问题&lt;/code&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;当有具体文件或目录内容传输时，临时建立数据连接&lt;/li&gt;
-&lt;li&gt;主动模式下由服务器方发起，服务器端口号20&lt;/li&gt;
-&lt;li&gt;被动模式下由客户端发起，服务器端口号不确定&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="计算机网络" scheme="http://1979F.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   

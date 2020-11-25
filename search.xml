@@ -1,6 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[LeetCode 1470. 重新排列数组]]></title>
+    <url>%2F2020%2F11%2F24%2FLeetCode%201470.%20%E9%87%8D%E6%96%B0%E6%8E%92%E5%88%97%E6%95%B0%E7%BB%84%2F</url>
+    <content type="text"><![CDATA[题目：给你一个数组 nums ，数组中有 2n 个元素，按 [x1,x2,…,xn,y1,y2,…,yn] 的格式排列。请你将数组按 [x1,y1,x2,y2,…,xn,yn] 格式重新排列，返回重排后的数组。示例 1：123输入：nums = [2,5,1,3,4,7], n = 3输出：[2,3,5,4,1,7] 解释：由于 x1=2, x2=5, x3=1, y1=3, y2=4, y3=7 ，所以答案为 [2,3,5,4,1,7] 示例 2： 12输入：nums = [1,2,3,4,4,3,2,1], n = 4输出：[1,4,2,3,3,2,4,1] 示例 3： 12输入：nums = [1,1,2,2], n = 2输出：[1,2,1,2] 12345678910111213141516class Solution &#123; public int[] shuffle(int[] nums, int n) &#123; int[] res = new int[nums.length]; int j = 0; for(int i = 0; i &lt; nums.length; i++) &#123; res[i] = nums[j]; if(i % 2 == 0) j = j + n; else j = j - n + 1; &#125; return res; &#125;&#125;]]></content>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode 771. 宝石与石头]]></title>
+    <url>%2F2020%2F11%2F24%2FLeetCode%20771.%20%E5%AE%9D%E7%9F%B3%E4%B8%8E%E7%9F%B3%E5%A4%B4%2F</url>
+    <content type="text"><![CDATA[题目： 给定字符串J 代表石头中宝石的类型，和字符串 S代表你拥有的石头。 S 中每个字符代表了一种你拥有的石头的类型，你想知道你拥有的石头中有多少是宝石。J 中的字母不重复，J 和 S中的所有字符都是字母。字母区分大小写，因此”a”和”A”是不同类型的石头。示例 1:12输入: J = &quot;aA&quot;, S = &quot;aAAbbbb&quot;输出: 3 示例 2: 12输入: J = &quot;z&quot;, S = &quot;ZZ&quot;输出: 0 123456789101112131415161718class Solution &#123; public int numJewelsInStones(String J, String S) &#123; int num = 0; char[] a = new char[J.length()]; for(int i = 0; i &lt; J.length(); i++) &#123; a[i] = J.charAt(i); &#125; for(int j = 0; j &lt; S.length(); j++) for(int k = 0; k &lt; a.length; k++) &#123; if(S.charAt(j) == (a[k])) num++; &#125; return num; &#125;&#125;]]></content>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode 1486.数组异或操作]]></title>
+    <url>%2F2020%2F11%2F24%2FLeetCode%201486.%20%E6%95%B0%E7%BB%84%E5%BC%82%E6%88%96%E6%93%8D%E4%BD%9C%2F</url>
+    <content type="text"><![CDATA[题目：给你两个整数，n 和 start 。数组 nums 定义为：nums[i] = start + 2*i（下标从 0 开始）且 n == nums.length 。请返回 nums 中所有元素按位异或（XOR）后得到的结果。示例 1：1234输入：n = 5, start = 0输出：8解释：数组 nums 为 [0, 2, 4, 6, 8]，其中 (0 ^ 2 ^ 4 ^ 6 ^ 8) = 8 。 &quot;^&quot; 为按位异或 XOR 运算符。 示例 2： 123输入：n = 4, start = 3输出：8解释：数组 nums 为 [3, 5, 7, 9]，其中 (3 ^ 5 ^ 7 ^ 9) = 8. 示例 3： 12输入：n = 1, start = 7输出：7 1234567891011121314151617class Solution &#123; public int xorOperation(int n, int start) &#123; int[] a = new int[n]; for(int i = 0; i &lt; n; i++) &#123; a[i] = start + 2 * i; &#125; int res = a[0]; for(int j = 1; j &lt; n; j++) &#123; res = res ^ a[j]; &#125; return res; &#125;&#125;]]></content>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode LCP 06. 拿硬币]]></title>
+    <url>%2F2020%2F11%2F24%2FLeetCode%20LCP%2006.%20%E6%8B%BF%E7%A1%AC%E5%B8%81%2F</url>
+    <content type="text"><![CDATA[题目：桌上有 n 堆力扣币，每堆的数量保存在数组 coins 中。我们每次可以选择任意一堆，拿走其中的一枚或者两枚，求拿完所有力扣币的最少次数。示例 1：12345输入：[4,2,1]输出：4解释：第一堆力扣币最少需要拿 2 次，第二堆最少需要拿 1 次，第三堆最少需要拿 1 次，总共 4 次即可拿完。 示例 2： 123输入：[2,3,10]输出：8 12345678910111213141516class Solution &#123; public int minCount(int[] coins) &#123; int n = 0; for(int i = 0; i &lt; coins.length; i++) &#123; int m = 0; if((coins[i] % 2) != 0) m = (coins[i] / 2) + 1; else m = coins[i] / 2; n += m; &#125; return n; &#125;&#125;]]></content>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode 222. 完全二叉树的节点个数]]></title>
+    <url>%2F2020%2F11%2F24%2FLeetCode%20222.%20%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%8A%82%E7%82%B9%E4%B8%AA%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[题目：给出一个完全二叉树，求出该树的节点个数。说明：完全二叉树的定义如下：在完全二叉树中，除了最底层节点可能没填满外，其余每层节点数都达到最大值，并且最下面一层的节点都集中在该层最左边的若干位置。若最底层为第 h 层，则该层包含 1~ 2h 个节点。示例:12345678输入: 1 / \ 2 3 / \ /4 5 6输出: 6 思路：分为两种情况，第一种是左子树的高度 n 与右子树的高度 m 相同，说明左子树已经填满了，左子树的节点数加上根节点的总数为 2^n，只需遍历右子树的节点个数即可；第二种是 n 与 m 不相等，说明右子树已经填满了，右子树的节点数加上根节点的总数为 2^m，只需遍历左子树的节点个数即可。这里计算节点个数要用到递归的思想。 123456789101112131415161718192021222324252627282930313233/** * Definition for a binary tree node. * public class TreeNode &#123; * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) &#123; val = x; &#125; * &#125; */class Solution &#123; public int countNodes(TreeNode root) &#123; if(root == null) return 0; int n = countLevel(root.left); int m = countLevel(root.right); if(n == m)&#123; return (countNodes(root.right) + (1&lt;&lt;n)); &#125; else&#123; return (countNodes(root.left) + (1&lt;&lt;m)); &#125; &#125; private int countLevel(TreeNode root)&#123; if(root == null)&#123; return 0; &#125; return Math.max(countLevel(root.left), countLevel(root.right)) + 1; &#125;&#125;]]></content>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode 1108. IP地址无效化]]></title>
+    <url>%2F2020%2F11%2F24%2FLeetCode%201108.%20IP%20%E5%9C%B0%E5%9D%80%E6%97%A0%E6%95%88%E5%8C%96%2F</url>
+    <content type="text"><![CDATA[题目：给你一个有效的 IPv4 地址 address，返回这个 IP 地址的无效化版本。 所谓无效化 IP 地址，其实就是用 &quot;[.]&quot; 代替了每个 &quot;.&quot;。示例 1：12输入：address = &quot;1.1.1.1&quot;输出：&quot;1[.]1[.]1[.]1&quot; 示例 2： 12输入：address = &quot;255.100.50.0&quot;输出：&quot;255[.]100[.]50[.]0&quot; 思路：直接使用Java的替换函数。 123456class Solution &#123; public String defangIPaddr(String address) &#123; return address.replace(".", "[.]"); &#125;&#125;]]></content>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode 237. 删除链表中的节点]]></title>
+    <url>%2F2020%2F11%2F24%2FLeetCode%20237.%20%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9%2F</url>
+    <content type="text"><![CDATA[题目：示例 1：123输入：head = [4,5,1,9], node = 5输出：[4,1,9]解释：给定你链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 1 -&gt; 9.示例 2：123输入：head = [4,5,1,9], node = 1输出：[4,5,9]解释：给定你链表中值为 1 的第三个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 5 -&gt; 9. 123456789101112131415/** * Definition for singly-linked list. * public class ListNode &#123; * int val; * ListNode next; * ListNode(int x) &#123; val = x; &#125; * &#125; */class Solution &#123; public void deleteNode(ListNode node) &#123; node.val = node.next.val; node.next = node.next.next; &#125;&#125;]]></content>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode 1281. 整数的各位积和之差]]></title>
+    <url>%2F2020%2F11%2F24%2FLeetCode%201281.%20%E6%95%B4%E6%95%B0%E7%9A%84%E5%90%84%E4%BD%8D%E7%A7%AF%E5%92%8C%E4%B9%8B%E5%B7%AE%2F</url>
+    <content type="text"><![CDATA[题目：给你一个整数 n，请你帮忙计算并返回该整数「各位数字之积」与「各位数字之和」的差。示例 1：123456输入：n = 234输出：15 解释：各位数之积 = 2 * 3 * 4 = 24 各位数之和 = 2 + 3 + 4 = 9 结果 = 24 - 9 = 15示例 2：123456输入：n = 4421输出：21解释： 各位数之积 = 4 * 4 * 2 * 1 = 32 各位数之和 = 4 + 4 + 2 + 1 = 11 结果 = 32 - 11 = 21 思路：先将 int 类型转换为 String 类型，获取到每一位的值，然后计算和与乘积，返回题目所需的结果。 12345678910111213141516171819202122class Solution &#123; public int subtractProductAndSum(int n) &#123; String s = String.valueOf(n); int x = s.length(); int[] t = new int[x]; int sum = 0; int mul = 1; for(int i = 0; i &lt; x; i++)&#123; t[i] = s.charAt(i) - 48; &#125; for(int j = 0; j &lt; x; j++)&#123; sum += t[j]; mul *= t[j]; &#125; return mul - sum; &#125;&#125;]]></content>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[LeetCode 1480 一维数组的动态和]]></title>
     <url>%2F2020%2F11%2F22%2FLeetCode%201480%20%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84%E7%9A%84%E5%8A%A8%E6%80%81%E5%92%8C%2F</url>
     <content type="text"><![CDATA[题目：给你一个数组 nums 。数组「动态和」的计算公式为：runningSum[i] = sum(nums[0]…nums[i]) 。请返回 nums 的动态和。示例 1：123输入：nums = [1,2,3,4]输出：[1,3,6,10]解释：动态和计算过程为 [1, 1+2, 1+2+3, 1+2+3+4] 。 示例 2： 123输入：nums = [1,1,1,1,1]输出：[1,2,3,4,5]解释：动态和计算过程为 [1, 1+1, 1+1+1, 1+1+1+1, 1+1+1+1+1] 。 示例 3： 12输入：nums = [3,1,2,10,1]输出：[3,4,6,16,17] 思路：遍历相加 1234567891011class Solution &#123; public int[] runningSum(int[] nums) &#123; int[] s = new int[nums.length]; s[0] = nums[0]; for(int i = 1; i &lt; nums.length; i++) s[i] = s[i-1]+nums[i]; // System.out.println(s); return s; &#125;&#125;]]></content>

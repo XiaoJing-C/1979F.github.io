@@ -247,6 +247,766 @@
   
   
   <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/06/04/DNS域名系统详解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO_JING">
+      <meta itemprop="description" content="努力努力再努力">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serendipper-x">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/06/04/DNS域名系统详解/" class="post-title-link" itemprop="url">DNS域名系统详解</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-06-04 23:11:15" itemprop="dateCreated datePublished" datetime="2020-06-04T23:11:15+08:00">2020-06-04</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-22 15:19:02" itemprop="dateModified" datetime="2020-11-22T15:19:02+08:00">2020-11-22</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="一、分层次的域名结构"><a href="#一、分层次的域名结构" class="headerlink" title="一、分层次的域名结构"></a>一、分层次的域名结构</h5><ul>
+<li>顶级域名、 二级域名、 三级域名、 四级域名<img src="https://img-blog.csdnimg.cn/20200604150926531.png" width="50%">
+
+</li>
+</ul><h5 id="二、因特网的域名结构"><a href="#二、因特网的域名结构" class="headerlink" title="二、因特网的域名结构"></a>二、因特网的域名结构</h5><ul>
+<li>因特网采用了层次树状结构的命名方法，称为域名，如：<a href="http://www.jxnu.edu.cn" target="_blank" rel="noopener">www.jxnu.edu.cn</a><br>三级域名：如www表示万维网<br>二级域名：如jxnu表示江西师大<br>一级域名：如edu表示教育网<br>顶级域名：如cn表示中国</li>
+</ul><p><code>一个域名可以对应多个IP吗？</code><br>可以<br><code>一个IP可以对应多个域名吗？</code><br>可以</p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/06/04/DNS域名系统详解/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/06/04/应用层相关概念/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO_JING">
+      <meta itemprop="description" content="努力努力再努力">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serendipper-x">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/06/04/应用层相关概念/" class="post-title-link" itemprop="url">应用层相关概念</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-06-04 14:58:13" itemprop="dateCreated datePublished" datetime="2020-06-04T14:58:13+08:00">2020-06-04</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-22 15:23:01" itemprop="dateModified" datetime="2020-11-22T15:23:01+08:00">2020-11-22</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="一、应用层概述"><a href="#一、应用层概述" class="headerlink" title="一、应用层概述"></a>一、应用层概述</h5><h6 id="1、应用层协议基本概念"><a href="#1、应用层协议基本概念" class="headerlink" title="1、应用层协议基本概念"></a>1、应用层协议基本概念</h6><p><code>应用层的功能</code></p><ul>
+<li>应用层协议定义了应用程序需交换的报文、所需采取的动作和最终通信数据的应用</li>
+<li>应用层位于协议栈的最高层次</li>
+<li>应用层协议提供不同主机之间<code>进程</code>与进程之间的通信</li>
+<li>用户代理实现应用层协议</li>
+</ul><p><strong>套接字</strong><br>IP+端口号，唯一确定某台主机某个进程<br><strong>IP地址</strong><br>唯一确定某主机在因特网上的位置，32位二进制，采用点分十进制表示，例如192.168.1.1<br><strong>端口号</strong><br>唯一确定某台主机的某个通信进程，16位二进制，一般用十进制表示，例如80端口<br>端口号是应用进程的入口标识，是一个存放在<code>传输层首部</code>的一个字段的值（2^16 - 1 = 65535）</p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/06/04/应用层相关概念/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/06/03/教学5层网络体系结构——分层之后数据的发送和接收/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO_JING">
+      <meta itemprop="description" content="努力努力再努力">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serendipper-x">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/06/03/教学5层网络体系结构——分层之后数据的发送和接收/" class="post-title-link" itemprop="url">教学5层网络体系结构——分层之后数据的发送和接收</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-06-03 22:13:06" itemprop="dateCreated datePublished" datetime="2020-06-03T22:13:06+08:00">2020-06-03</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-22 15:28:29" itemprop="dateModified" datetime="2020-11-22T15:28:29+08:00">2020-11-22</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="协议分层后数据发送过程"><a href="#协议分层后数据发送过程" class="headerlink" title="协议分层后数据发送过程"></a>协议分层后数据发送过程</h5><p>发送方层层封装<br><img src="https://img-blog.csdnimg.cn/20200603214115871.png" width="50%"><br>接收方层层解封装<br><img src="https://img-blog.csdnimg.cn/20200603215220523.png" width="50%"></p><ul>
+<li>唯一加尾部的是数据链路层</li>
+</ul><p><strong>思考</strong></p><p><code>发送方某层封装完如何知道该交给哪个下层封装？</code></p><ul>
+<li>应用层选择传输层由应用程序决定，传输层选择网络层由固定的搭配，例如因特网只有IP协议，网络层选择数据链路层由网卡的类型决定。</li>
+</ul><p><code>接收方某层解封装后如何知道该交给上层哪个协议处理？</code></p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/06/03/教学5层网络体系结构——分层之后数据的发送和接收/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/06/03/计算机网络——因特网的接入技术/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO_JING">
+      <meta itemprop="description" content="努力努力再努力">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serendipper-x">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/06/03/计算机网络——因特网的接入技术/" class="post-title-link" itemprop="url">计算机网络——因特网的接入技术</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-06-03 18:20:21" itemprop="dateCreated datePublished" datetime="2020-06-03T18:20:21+08:00">2020-06-03</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-22 15:30:06" itemprop="dateModified" datetime="2020-11-22T15:30:06+08:00">2020-11-22</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="因特网接入与ISP"><a href="#因特网接入与ISP" class="headerlink" title="因特网接入与ISP"></a>因特网接入与ISP</h5><p>ISP：Internet服务供应商，为接入Internet提供基本的服务</p><h6 id="一、模拟拨号"><a href="#一、模拟拨号" class="headerlink" title="一、模拟拨号"></a>一、模拟拨号</h6><ul>
+<li>早期使用调制解调器（Modem）和常规的语音级电话线路</li>
+<li>早期使用最为广泛，最大带宽56Kb/s【下一首歌差不多要30分钟、上网就不能打电话】</li>
+<li>拨号调制解调器的作用：数字信号和模拟信号的转换</li>
+</ul><p><strong>二、综合业务数字网络（ISDN）</strong></p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/06/03/计算机网络——因特网的接入技术/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/06/03/因特网的硬件组成/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO_JING">
+      <meta itemprop="description" content="努力努力再努力">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serendipper-x">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/06/03/因特网的硬件组成/" class="post-title-link" itemprop="url">因特网的硬件组成</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-06-03 08:48:55" itemprop="dateCreated datePublished" datetime="2020-06-03T08:48:55+08:00">2020-06-03</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-22 15:23:27" itemprop="dateModified" datetime="2020-11-22T15:23:27+08:00">2020-11-22</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="终端系统"><a href="#终端系统" class="headerlink" title="终端系统"></a>终端系统</h5><ul>
+<li>主机、服务器、PDA</li>
+</ul><h5 id="通信介质"><a href="#通信介质" class="headerlink" title="通信介质"></a>通信介质</h5><ul>
+<li>有线介质：<code>双绞线</code>、同轴电缆、<code>光纤</code></li>
+<li>无线介质：无线电波、卫星</li>
+</ul><h5 id="中间设备"><a href="#中间设备" class="headerlink" title="中间设备"></a>中间设备</h5><ul>
+<li><code>路由器、交换机</code>等</li>
+</ul><p><strong>路由器</strong><br><code>路由器的产生</code></p><ul>
+<li>由思科公司创始人伯塞克发明</li>
+</ul><p><code>路由器的特性和作用</code></p><ul>
+<li>存储转发机制</li>
+<li>连接异构的网络</li>
+</ul><p><strong>交换机</strong><br><code>交换机的特性</code></p><ul>
+<li>交换机一般都指以太网交换机</li>
+<li>存储转发机制和其他转发机制</li>
+</ul>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/06/03/因特网的硬件组成/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/06/01/网络基本概念/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO_JING">
+      <meta itemprop="description" content="努力努力再努力">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serendipper-x">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/06/01/网络基本概念/" class="post-title-link" itemprop="url">网络基本概念</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-06-01 15:20:15" itemprop="dateCreated datePublished" datetime="2020-06-01T15:20:15+08:00">2020-06-01</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-22 15:25:17" itemprop="dateModified" datetime="2020-11-22T15:25:17+08:00">2020-11-22</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="计算机网络的分类"><a href="#计算机网络的分类" class="headerlink" title="计算机网络的分类"></a>计算机网络的分类</h5><p><strong>按照网络拓扑结构划分</strong><br>计算机网络拓扑结构是指网络中各个站点相互连接的形式<br>星型、环型、总线型、树型、网状型、无限蜂窝型<br><img src="https://img-blog.csdnimg.cn/20200601144107244.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br> <strong>按照网络作用范围划分</strong><br><img src="https://img-blog.csdnimg.cn/20200601144612866.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><code>广域网WAN</code>（Wide Area Network）：作用范围通常为几十到几千公里</p><ul>
+<li>一种用来实现不同地区的局域网或城域网的互连，可提供不同地区、城市和国家之间的计算机通信的远程计算机网络。所覆盖的<code>范围从几十公里到几千公里</code>。</li>
+</ul>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/06/01/网络基本概念/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/05/31/无类别地址CIDR概述/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO_JING">
+      <meta itemprop="description" content="努力努力再努力">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serendipper-x">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/05/31/无类别地址CIDR概述/" class="post-title-link" itemprop="url">无类别地址CIDR概述</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-05-31 19:52:36" itemprop="dateCreated datePublished" datetime="2020-05-31T19:52:36+08:00">2020-05-31</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-22 15:24:28" itemprop="dateModified" datetime="2020-11-22T15:24:28+08:00">2020-11-22</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>问题</strong></p><ul>
+<li>IPv4的地址空间最终将全部耗尽</li>
+<li>子网掩码无法改变IP地址的分配方式，无法缓解IP地址危机</li>
+</ul><p><strong>CIDR概述</strong></p><ul>
+<li>CIDR是<code>无类别域间路由</code></li>
+<li><code>CIDR取消了IP地址的分类限制，可以取IP地址的任意前缀作为网络号</code></li>
+<li>CIDR改善了IP地址的分配方式，缓解了IP地址危机</li>
+<li>CIDR可以利用<code>层次网络</code>和<code>路由汇总</code>减小路由器中路由表的规模，提高转发速度</li>
+</ul>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/05/31/无类别地址CIDR概述/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/05/31/定长掩码地址划分与VLSM子网划分/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO_JING">
+      <meta itemprop="description" content="努力努力再努力">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serendipper-x">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/05/31/定长掩码地址划分与VLSM子网划分/" class="post-title-link" itemprop="url">定长掩码地址划分与VLSM子网划分</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-05-31 19:37:15" itemprop="dateCreated datePublished" datetime="2020-05-31T19:37:15+08:00">2020-05-31</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-22 15:31:35" itemprop="dateModified" datetime="2020-11-22T15:31:35+08:00">2020-11-22</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="定长掩码地址划分"><a href="#定长掩码地址划分" class="headerlink" title="定长掩码地址划分"></a>定长掩码地址划分</h5><p><code>案例</code><br>若某个公司得到一个C类网络地址210.33.15.0，假如所有子网的掩码都一样，该如何划分子网？<br><img src="https://img-blog.csdnimg.cn/20200531172116200.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_8,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><code>步骤一</code>：确定子网个数<br>7个子网，其中4个局域网，3个广域网<br><code>步骤2</code>：确定每个子网所需IP个数<br><code>步骤3</code>：确定子网掩码</p><ul>
+<li>过去规定不能使用子网号全0和全1的子网</li>
+<li>C类网络，7个子网，需要借4位作为子网号，掩码为255.255.255.240，该掩码下每个子网可以使用14个IP地址</li>
+<li>总部需要25个IP，出现子网和主机数的矛盾</li>
+</ul>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/05/31/定长掩码地址划分与VLSM子网划分/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/05/31/NAT与DHCP协议/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -428,728 +1188,11 @@
   </article>
 
     
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/05/26/链路状态路由协议与OSPF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO_JING">
-      <meta itemprop="description" content="努力努力再努力">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Serendipper-x">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/05/26/链路状态路由协议与OSPF/" class="post-title-link" itemprop="url">链路状态路由协议与OSPF</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-05-26 11:21:59" itemprop="dateCreated datePublished" datetime="2020-05-26T11:21:59+08:00">2020-05-26</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:27:06" itemprop="dateModified" datetime="2020-11-22T15:27:06+08:00">2020-11-22</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h5 id="链路状态路由算法（LS算法）"><a href="#链路状态路由算法（LS算法）" class="headerlink" title="链路状态路由算法（LS算法）"></a>链路状态路由算法（LS算法）</h5><p><strong>工作原理</strong></p><ul>
-<li>每个路由器<code>将自己的链路状态信息洪泛</code>到网络上的<code>所有路由器</code>。tips:（每个路由器都洪泛会给网络带来负担）</li>
-<li>每个路由器最终会知道<code>整个网络的拓扑结构</code>（LSDB）。</li>
-<li>每个路由器<code>使用Dijkstra最短路径算法计算本路由器到其他路由器的最短路径</code>，更新路由表。</li>
-<li>路由器的<code>链路状态发生变化时会继续洪泛自身的链路状态信息</code>到其他路由器。</li>
-</ul>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/2020/05/26/链路状态路由协议与OSPF/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/04/26/理解云计算三种服务模式——IaaS、PaaS和SaaS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO_JING">
-      <meta itemprop="description" content="努力努力再努力">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Serendipper-x">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/04/26/理解云计算三种服务模式——IaaS、PaaS和SaaS/" class="post-title-link" itemprop="url">理解云计算三种服务模式——IaaS、PaaS和SaaS</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-04-26 15:08:29" itemprop="dateCreated datePublished" datetime="2020-04-26T15:08:29+08:00">2020-04-26</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:28:01" itemprop="dateModified" datetime="2020-11-22T15:28:01+08:00">2020-11-22</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p style="color:rgb(79,79,79);font-size:16px;font-weight:400;line-height:26px;margin-left:0px;text-align:justify;"></p><div>云计算的服务模式仍在不断进化，但业界普遍接受将云计算按照服务的提供方式划分为三个大类：</div><div>SaaS（Software as a Service–软件即服务） <br>PaaS（Platform as a Service–平台即服务） <br>IaaS（Infrastructure as a Service–基础架构即服务）。 </div>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/2020/04/26/理解云计算三种服务模式——IaaS、PaaS和SaaS/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/04/17/java socket 实现增删改查 + 在线答题小案例/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO_JING">
-      <meta itemprop="description" content="努力努力再努力">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Serendipper-x">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/04/17/java socket 实现增删改查 + 在线答题小案例/" class="post-title-link" itemprop="url">java socket 实现增删改查 + 在线答题小案例</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-04-17 12:53:15" itemprop="dateCreated datePublished" datetime="2020-04-17T12:53:15+08:00">2020-04-17</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:14:13" itemprop="dateModified" datetime="2020-11-22T15:14:13+08:00">2020-11-22</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h6 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h6><p> （1） 在client端可以实现对数据库的操作（Select，Insert，Update，Delete）<br> （2）数据库中创建一个考试表和学生表，考试表中问题是四项选择题（10道以上），client端做题，成绩存入学生表<br> （3）实现多个Client程序对server端的访问 Hint：Java程序中会使用多个class，server端使用thread监听多个client 。</p>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/2020/04/17/java socket 实现增删改查 + 在线答题小案例/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/04/17/虚拟机 NAT模式与桥接模式的区别/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO_JING">
-      <meta itemprop="description" content="努力努力再努力">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Serendipper-x">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/04/17/虚拟机 NAT模式与桥接模式的区别/" class="post-title-link" itemprop="url">虚拟机 NAT模式与桥接模式的区别</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-04-17 12:20:41" itemprop="dateCreated datePublished" datetime="2020-04-17T12:20:41+08:00">2020-04-17</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:23:56" itemprop="dateModified" datetime="2020-11-22T15:23:56+08:00">2020-11-22</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>NAT模式</strong>：相当于宿主机再构建一个局域网，虚拟机无法和本局域网中的其他真实主机进行通讯。只需要宿主机器能访问互联网，那么虚拟机就能上网，不需要再去配置IP地址，子网掩码，网关。虚拟机和主机能够互相ping通。<br><img src="https://img-blog.csdnimg.cn/20200417121711767.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200417121936853.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200417122010686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200417121947380.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>桥接模式</strong>：VMWare虚拟出来的操作系统就像是局域网中的一台独立的主机，它可以访问网内任何一台机器。但是需要我们手动去配置IP地址和网关，IP地址要与主机的无线网的IP段对应，子网掩码，网关，DNS都需要与宿主机保持一致。下面是我将虚拟机从NAT模式换成桥接模式对配置文件做的一些改动，重启网络后，虚拟机可以访问自身静态IP，访问公网，宿主机和虚拟机也可以相互ping通。<br><img src="https://img-blog.csdnimg.cn/20200417121820198.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200417121828642.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200417121842612.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/04/17/java 搭建 web服务器 socket实现/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO_JING">
-      <meta itemprop="description" content="努力努力再努力">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Serendipper-x">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/04/17/java 搭建 web服务器 socket实现/" class="post-title-link" itemprop="url">java 搭建 web服务器 socket实现</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-04-17 11:58:15" itemprop="dateCreated datePublished" datetime="2020-04-17T11:58:15+08:00">2020-04-17</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:14:54" itemprop="dateModified" datetime="2020-11-22T15:14:54+08:00">2020-11-22</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>【写在前面】</strong><br>云计算的第n个java作业，开始一直不懂为什么老师一直让我们写java web的小demo，不应该是hadoop啥的直接上框架嘛。后来慢慢了解到，其实java web 的一些内容确实是云计算的基础。这个demo是用java socket 来搭建一个web服务器，以前确实没有接触过，所以这里记录一下。</p>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/2020/04/17/java 搭建 web服务器 socket实现/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/04/14/利用子网掩码划分子网/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO_JING">
-      <meta itemprop="description" content="努力努力再努力">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Serendipper-x">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/04/14/利用子网掩码划分子网/" class="post-title-link" itemprop="url">利用子网掩码划分子网</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-04-14 09:06:15" itemprop="dateCreated datePublished" datetime="2020-04-14T09:06:15+08:00">2020-04-14</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:27:31" itemprop="dateModified" datetime="2020-11-22T15:27:31+08:00">2020-11-22</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>分类IP地址的弊端</strong></p><ul>
-<li>一个物理网络不能过大，否则网络性能很差，某个B类或A类IP网络无法全部用于单个物理网络</li>
-<li>分类IP地址分配不合理，利用率低</li>
-<li>分类IP地址设计的弊端 —— 不灵活，IP地址利用率不高</li>
-</ul><p><strong>划分子网的思路</strong><br>网络管理员将本应属于一个物理网段的单个分类IP网络划分成多个子网，<code>不同的子网对应不同的物理网段，不同子网之间的通信必须要经过路由器。</code></p>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/2020/04/14/利用子网掩码划分子网/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/04/13/分类的IP地址/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO_JING">
-      <meta itemprop="description" content="努力努力再努力">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Serendipper-x">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/04/13/分类的IP地址/" class="post-title-link" itemprop="url">分类的IP地址</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-04-13 23:36:58" itemprop="dateCreated datePublished" datetime="2020-04-13T23:36:58+08:00">2020-04-13</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:30:57" itemprop="dateModified" datetime="2020-11-22T15:30:57+08:00">2020-11-22</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li>现有物理地址再有IP地址</li>
-<li>IP地址的表示方法为点分十进制法</li>
-<li>IP地址的设计思想：网络部分 + 主机部分</li>
-</ul><h5 id="分类的IP地址"><a href="#分类的IP地址" class="headerlink" title="分类的IP地址"></a>分类的IP地址</h5><p><code>特征：</code>根据不同特征的IP地址，事先约定好网络号所占的位数和主机号所占的位数。</p><p><strong>A类地址</strong><br>全球一共有2^7^-2 个A类网络，每个A类网络共有2^24^-2个主机地址，地址范围是<code>1.0.0.0 — 126.255.255</code>, 网络号全0是没有地址，而<code>127开头的地址保留为本机回环地址</code>（浪费很大，IPV6进行了改进，只用了一个地址表示本机回环地址）。 有两个主机号被保留，主机号全0，如126.0.0.0，表示这个网络地址；主机号全1，如126.255.255.255 ，是广播地址。<br><img src="https://img-blog.csdnimg.cn/20200413173732912.png" alt="在这里插入图片描述"><br><strong>B类地址</strong><br>全球共有 2^14^  个B类网络，每个B类网络共有2^16^-2个主机地址，地址范围是：<code>128.0.0.0 — 191.255.255.255</code><br><img src="https://img-blog.csdnimg.cn/20200413175421275.png" alt="在这里插入图片描述"><br><strong>C类地址</strong><br>全球共有2^21^个C类网络，每个C类网络共有2^8^-2个主机地址，地址范围是：<code>192.0.0.0 — 223.255.255.255</code><br><img src="https://img-blog.csdnimg.cn/20200413175827755.png" alt="在这里插入图片描述"><br>此外还有<strong>D类地址</strong>和<strong>E类地址</strong><br><img src="https://img-blog.csdnimg.cn/20200413181004990.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/2020/04/13/分类的IP地址/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/04/08/hadoop 重新格式化 NameNode/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO_JING">
-      <meta itemprop="description" content="努力努力再努力">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Serendipper-x">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/04/08/hadoop 重新格式化 NameNode/" class="post-title-link" itemprop="url">hadoop 重新格式化 NameNode</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-04-08 16:57:32" itemprop="dateCreated datePublished" datetime="2020-04-08T16:57:32+08:00">2020-04-08</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:17:38" itemprop="dateModified" datetime="2020-11-22T15:17:38+08:00">2020-11-22</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>【问题描述】</strong> 在安装配置hadoop的过程中，很可能发生错误导致datanode或者namenode 启动失败，这时我们可以选择重新格式化 namenode。</p><p>一、删除data数据和log日志</p><p>二 、使用命令 <code>bin/dfs namenode -format</code> 重新格式化</p><p><strong>【注意事项】</strong><br>为什么不能一直格式化NameNode，格式化NameNode需要注意什么？</p>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/2020/04/08/hadoop 重新格式化 NameNode/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </div>
   
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1198,7 +1241,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">88</span>
+          <span class="site-state-item-count">96</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1329,7 +1372,7 @@ setInterval("createtime()",250);
 </script>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共67.1k字</span>
+  <span class="post-count">博客全站共68.7k字</span>
 </div>
 
         
