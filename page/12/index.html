@@ -247,7 +247,7 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/03/19/CentOS 7 安装并启动Nginx/">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/05/26/链路状态路由协议与OSPF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO_JING">
@@ -261,7 +261,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/03/19/CentOS 7 安装并启动Nginx/" class="post-title-link" itemprop="url">CentOS 7 安装并启动 Nginx</a>
+            <a href="/2020/05/26/链路状态路由协议与OSPF/" class="post-title-link" itemprop="url">链路状态路由协议与OSPF</a>
           
         </h1>
 
@@ -276,7 +276,7 @@
                 
               
 
-              <time title="创建时间：2020-03-19 20:10:31" itemprop="dateCreated datePublished" datetime="2020-03-19T20:10:31+08:00">2020-03-19</time>
+              <time title="创建时间：2020-05-26 11:21:59" itemprop="dateCreated datePublished" datetime="2020-05-26T11:21:59+08:00">2020-05-26</time>
             </span>
           
             
@@ -287,7 +287,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:20:20" itemprop="dateModified" datetime="2020-11-22T15:20:20+08:00">2020-11-22</time>
+                <time title="修改时间：2020-11-22 15:27:06" itemprop="dateModified" datetime="2020-11-22T15:27:06+08:00">2020-11-22</time>
               </span>
             
           
@@ -303,374 +303,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h5 id="一、安装必要的库"><a href="#一、安装必要的库" class="headerlink" title="一、安装必要的库"></a>一、安装必要的库</h5><p>1、安装<code>gcc</code> <code>gcc-c ++</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y gcc gcc-c ++</span><br></pre></td></tr></table></figure><p>2、gzip模块需要 <code>zlib</code> 库</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local</span><br><span class="line">wget http://zlib.net/zlib-1.2.11.tar.gz</span><br><span class="line">tar -zxvf zlib-1.2.11.tar.gz</span><br><span class="line">cd zlib-1.2.11</span><br><span class="line">./config</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/2020/03/19/CentOS 7 安装并启动Nginx/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/03/14/SpringBoot集成MyBatis的分页插件PageHelper/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO_JING">
-      <meta itemprop="description" content="努力努力再努力">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Serendipper-x">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/03/14/SpringBoot集成MyBatis的分页插件PageHelper/" class="post-title-link" itemprop="url">SpringBoot集成MyBatis的分页插件PageHelper</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-03-14 13:23:13" itemprop="dateCreated datePublished" datetime="2020-03-14T13:23:13+08:00">2020-03-14</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:04:43" itemprop="dateModified" datetime="2020-11-22T15:04:43+08:00">2020-11-22</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h5 id="【写在前面】"><a href="#【写在前面】" class="headerlink" title="【写在前面】"></a>【写在前面】</h5><p>项目的后台管理系统需要展示所有资源信息，<code>select *</code> 虽然方便但数据量过于庞大会严重降低查找效率，页面加载慢，用户体验差。分页自然是必要选择，但原生的方法过于繁杂。MyBatis的分页插件<code>PageHelper</code>和SpringBoot的集成是更好的选择，它的使用非常简单，开发更为高效。</p><h5 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h5>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/2020/03/14/SpringBoot集成MyBatis的分页插件PageHelper/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/03/14/springboot前后端分离项目MultipartFile获取前端传的file为null问题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO_JING">
-      <meta itemprop="description" content="努力努力再努力">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Serendipper-x">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/03/14/springboot前后端分离项目MultipartFile获取前端传的file为null问题/" class="post-title-link" itemprop="url">springboot前后端分离项目MultipartFile获取前端传的file为null问题</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-03-14 13:03:01" itemprop="dateCreated datePublished" datetime="2020-03-14T13:03:01+08:00">2020-03-14</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:03:14" itemprop="dateModified" datetime="2020-11-22T15:03:14+08:00">2020-11-22</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h5 id="【问题描述】"><a href="#【问题描述】" class="headerlink" title="【问题描述】"></a>【问题描述】</h5><p><code>springboot+vue</code> 前后端分离项目，在对接上传文件功能时，一直显示文件为空。<br><img src="https://img-blog.csdnimg.cn/20200314124845296.png" alt="在这里插入图片描述"></p><h5 id="【分析】"><a href="#【分析】" class="headerlink" title="【分析】"></a>【分析】</h5><p>查找了很多博客，解决方法五花八门，但原因应该还是 springboot自带的org.springframework.web.multipart.MultipartFile和Multipart冲突。<br>所以使用  @EnableAutoConfiguration 注解的exclude属性 进行排除。</p>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/2020/03/14/springboot前后端分离项目MultipartFile获取前端传的file为null问题/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/03/11/分布式——ACID原则  CAP理论/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO_JING">
-      <meta itemprop="description" content="努力努力再努力">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Serendipper-x">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/03/11/分布式——ACID原则  CAP理论/" class="post-title-link" itemprop="url">分布式——ACID原则 CAP理论</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-03-11 12:53:15" itemprop="dateCreated datePublished" datetime="2020-03-11T12:53:15+08:00">2020-03-11</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:31:15" itemprop="dateModified" datetime="2020-11-22T15:31:15+08:00">2020-11-22</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="分布式计算的原理"><a href="#分布式计算的原理" class="headerlink" title="分布式计算的原理"></a>分布式计算的原理</h4><p>分布式计算就是将计算任务分摊到大量的计算节点上，一 起完成海量的计算任务。而分布式计算的原理和并行计算 类似，就是将一个复杂庞大的计算任务适当划分为一个个 小任务，任务并行执行，只不过分布式计算会将这些任务 分配到不同的计算节点上，每个计算节点只需要完成自己 的计算任务即可，可以有效分担海量的计算任务。而每个 计算节点也可以并行处理自身的任务，更加充分利用机器 的CPU资源。最后再将每个节点的计算结果汇总，得到最 后的计算结果。</p>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/2020/03/11/分布式——ACID原则  CAP理论/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/03/05/Java继承与多态/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO_JING">
-      <meta itemprop="description" content="努力努力再努力">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Serendipper-x">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/03/05/Java继承与多态/" class="post-title-link" itemprop="url">Java继承与多态</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-03-05 13:51:15" itemprop="dateCreated datePublished" datetime="2020-03-05T13:51:15+08:00">2020-03-05</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:13:06" itemprop="dateModified" datetime="2020-11-22T15:13:06+08:00">2020-11-22</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="☆-继承-☆"><a href="#☆-继承-☆" class="headerlink" title="☆  继承 ☆"></a>☆  继承 ☆</h4><ul>
-<li>继承是面向对象思想的三大特性之一，使类与类之间产生特殊 - 一般的关系，即is-a关系。</li>
-<li>继承是从已有类中派生出新的类，新的类能吸收已有类的属性和方法，并且能拓展新的属性和行为。</li>
-<li>在Java中使用extends关键字表示继承，语法表示为: class 子类 extends 父类{}。</li>
-<li>子类被称为派生类，父类又被称为超类。</li>
-<li>子类继承父类，表明子类是一种特殊的父类，子类拥有父类的属性和方法，并且子类可以拓展具有父类所没有的一些属性和方法。</li>
-<li>子类即使不扩展父类，也能维持拥有父类的操作。</li>
+          <h5 id="链路状态路由算法（LS算法）"><a href="#链路状态路由算法（LS算法）" class="headerlink" title="链路状态路由算法（LS算法）"></a>链路状态路由算法（LS算法）</h5><p><strong>工作原理</strong></p><ul>
+<li>每个路由器<code>将自己的链路状态信息洪泛</code>到网络上的<code>所有路由器</code>。tips:（每个路由器都洪泛会给网络带来负担）</li>
+<li>每个路由器最终会知道<code>整个网络的拓扑结构</code>（LSDB）。</li>
+<li>每个路由器<code>使用Dijkstra最短路径算法计算本路由器到其他路由器的最短路径</code>，更新路由表。</li>
+<li>路由器的<code>链路状态发生变化时会继续洪泛自身的链路状态信息</code>到其他路由器。</li>
 </ul>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2020/03/05/Java继承与多态/#more" rel="contents">
+              <a class="btn" href="/2020/05/26/链路状态路由协议与OSPF/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -699,7 +341,7 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/03/05/Java抽象类、接口、类的特殊成员/">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/04/26/理解云计算三种服务模式——IaaS、PaaS和SaaS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO_JING">
@@ -713,7 +355,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/03/05/Java抽象类、接口、类的特殊成员/" class="post-title-link" itemprop="url">Java抽象类、接口、类的特殊成员</a>
+            <a href="/2020/04/26/理解云计算三种服务模式——IaaS、PaaS和SaaS/" class="post-title-link" itemprop="url">理解云计算三种服务模式——IaaS、PaaS和SaaS</a>
           
         </h1>
 
@@ -728,7 +370,7 @@
                 
               
 
-              <time title="创建时间：2020-03-05 13:46:15" itemprop="dateCreated datePublished" datetime="2020-03-05T13:46:15+08:00">2020-03-05</time>
+              <time title="创建时间：2020-04-26 15:08:29" itemprop="dateCreated datePublished" datetime="2020-04-26T15:08:29+08:00">2020-04-26</time>
             </span>
           
             
@@ -739,7 +381,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:13:22" itemprop="dateModified" datetime="2020-11-22T15:13:22+08:00">2020-11-22</time>
+                <time title="修改时间：2020-11-22 15:28:01" itemprop="dateModified" datetime="2020-11-22T15:28:01+08:00">2020-11-22</time>
               </span>
             
           
@@ -755,11 +397,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h4><p>在面向对象的概念中，所有的对象都是通过类来描绘的，但是并不是所有的类都是用来描绘对象的.<br>如果一个类中没有包含足够的信息来描绘一个具体的对象，这样的类就是抽象类。<br><em>抽象类往往用来表征我们在对问题领域进行分析、设计中得出的抽象概念，是对一系列看上去不同，但是本质上相同的具体概念的抽象。</em><br>比如：如果我们进行一个图形编辑软件的开发，就会发现问题领域存在着圆、三角形 这样一些具体概念，它们是不同的，但是它们又都属于形状这样一个概念，形状这个概念在问题领域是不存在的，它就是一个抽象概念。<em>正是因为抽象的概念在问题领域没有对应的具体概念，所以用以表征抽象概念的抽象类是不能够实例化的。</em></p>
+          <p style="color:rgb(79,79,79);font-size:16px;font-weight:400;line-height:26px;margin-left:0px;text-align:justify;"></p><div>云计算的服务模式仍在不断进化，但业界普遍接受将云计算按照服务的提供方式划分为三个大类：</div><div>SaaS（Software as a Service–软件即服务） <br>PaaS（Platform as a Service–平台即服务） <br>IaaS（Infrastructure as a Service–基础架构即服务）。 </div>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2020/03/05/Java抽象类、接口、类的特殊成员/#more" rel="contents">
+              <a class="btn" href="/2020/04/26/理解云计算三种服务模式——IaaS、PaaS和SaaS/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -788,7 +430,7 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/03/05/成员变量、局部变量、实例变量、静态变量、类变量、常量/">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/04/17/java socket 实现增删改查 + 在线答题小案例/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO_JING">
@@ -802,7 +444,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/03/05/成员变量、局部变量、实例变量、静态变量、类变量、常量/" class="post-title-link" itemprop="url">成员变量、局部变量、实例变量、静态变量、类变量、常量</a>
+            <a href="/2020/04/17/java socket 实现增删改查 + 在线答题小案例/" class="post-title-link" itemprop="url">java socket 实现增删改查 + 在线答题小案例</a>
           
         </h1>
 
@@ -817,7 +459,7 @@
                 
               
 
-              <time title="创建时间：2020-03-05 12:53:15" itemprop="dateCreated datePublished" datetime="2020-03-05T12:53:15+08:00">2020-03-05</time>
+              <time title="创建时间：2020-04-17 12:53:15" itemprop="dateCreated datePublished" datetime="2020-04-17T12:53:15+08:00">2020-04-17</time>
             </span>
           
             
@@ -828,7 +470,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 14:51:22" itemprop="dateModified" datetime="2020-11-22T14:51:22+08:00">2020-11-22</time>
+                <time title="修改时间：2020-11-22 15:14:13" itemprop="dateModified" datetime="2020-11-22T15:14:13+08:00">2020-11-22</time>
               </span>
             
           
@@ -844,11 +486,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><img src="https://img-blog.csdnimg.cn/20200305125033404.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p><code>成员变量：</code><br>直接在类中声明的变量叫成员变量(又称全局变量)<br>▲ 初始化：<br>如果未对成员变量设置初始值，则系统会根据成员变量的类型自动分配初始值：int分配初始值0、boolean分配初始值false，而自定义类型则分配初始值null<br>▲作用范围：<br>成员变量定义后，其作用域是其所在的整个类。且成员变量的定义没有先后顺序，但是最好将成员变量的定义集中在类的顶部。</p>
+          <h6 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h6><p> （1） 在client端可以实现对数据库的操作（Select，Insert，Update，Delete）<br> （2）数据库中创建一个考试表和学生表，考试表中问题是四项选择题（10道以上），client端做题，成绩存入学生表<br> （3）实现多个Client程序对server端的访问 Hint：Java程序中会使用多个class，server端使用thread监听多个client 。</p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2020/03/05/成员变量、局部变量、实例变量、静态变量、类变量、常量/#more" rel="contents">
+              <a class="btn" href="/2020/04/17/java socket 实现增删改查 + 在线答题小案例/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -877,7 +519,7 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/03/05/Java 面向对象语言基础/">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/04/17/虚拟机 NAT模式与桥接模式的区别/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO_JING">
@@ -891,7 +533,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/03/05/Java 面向对象语言基础/" class="post-title-link" itemprop="url">Java 面向对象语言基础</a>
+            <a href="/2020/04/17/虚拟机 NAT模式与桥接模式的区别/" class="post-title-link" itemprop="url">虚拟机 NAT模式与桥接模式的区别</a>
           
         </h1>
 
@@ -906,7 +548,7 @@
                 
               
 
-              <time title="创建时间：2020-03-05 12:48:44" itemprop="dateCreated datePublished" datetime="2020-03-05T12:48:44+08:00">2020-03-05</time>
+              <time title="创建时间：2020-04-17 12:20:41" itemprop="dateCreated datePublished" datetime="2020-04-17T12:20:41+08:00">2020-04-17</time>
             </span>
           
             
@@ -917,7 +559,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:14:31" itemprop="dateModified" datetime="2020-11-22T15:14:31+08:00">2020-11-22</time>
+                <time title="修改时间：2020-11-22 15:23:56" itemprop="dateModified" datetime="2020-11-22T15:23:56+08:00">2020-11-22</time>
               </span>
             
           
@@ -933,11 +575,92 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><code>面向过程</code>  就是分析出解决问题所需要的步骤，然后用函数把这些步骤一步一步实现，使用的时候一个一个依次调用就可以了。<br><code>面向对象</code> 是把构成问题事务分解成各个对象，建立对象的目的不是为了完成一个步骤，而是为了描叙某个事物在整个解决问题的步骤中的行为。<br><img src="https://img-blog.csdnimg.cn/20200305123320868.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h4 id="1、-区分类、对象和对象的引用"><a href="#1、-区分类、对象和对象的引用" class="headerlink" title="1、  区分类、对象和对象的引用"></a>1、  区分类、对象和对象的引用</h4><p><code>对象</code>：对象是类的一个实例，有状态和行为。例如，一条狗是一个对象，它的状态有：颜色、名字、品种；行为有：摇尾巴、叫、吃等。</p>
+          <p><strong>NAT模式</strong>：相当于宿主机再构建一个局域网，虚拟机无法和本局域网中的其他真实主机进行通讯。只需要宿主机器能访问互联网，那么虚拟机就能上网，不需要再去配置IP地址，子网掩码，网关。虚拟机和主机能够互相ping通。<br><img src="https://img-blog.csdnimg.cn/20200417121711767.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200417121936853.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200417122010686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200417121947380.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>桥接模式</strong>：VMWare虚拟出来的操作系统就像是局域网中的一台独立的主机，它可以访问网内任何一台机器。但是需要我们手动去配置IP地址和网关，IP地址要与主机的无线网的IP段对应，子网掩码，网关，DNS都需要与宿主机保持一致。下面是我将虚拟机从NAT模式换成桥接模式对配置文件做的一些改动，重启网络后，虚拟机可以访问自身静态IP，访问公网，宿主机和虚拟机也可以相互ping通。<br><img src="https://img-blog.csdnimg.cn/20200417121820198.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200417121828642.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200417121842612.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/04/17/java 搭建 web服务器 socket实现/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO_JING">
+      <meta itemprop="description" content="努力努力再努力">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serendipper-x">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/04/17/java 搭建 web服务器 socket实现/" class="post-title-link" itemprop="url">java 搭建 web服务器 socket实现</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-04-17 11:58:15" itemprop="dateCreated datePublished" datetime="2020-04-17T11:58:15+08:00">2020-04-17</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-22 15:14:54" itemprop="dateModified" datetime="2020-11-22T15:14:54+08:00">2020-11-22</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>【写在前面】</strong><br>云计算的第n个java作业，开始一直不懂为什么老师一直让我们写java web的小demo，不应该是hadoop啥的直接上框架嘛。后来慢慢了解到，其实java web 的一些内容确实是云计算的基础。这个demo是用java socket 来搭建一个web服务器，以前确实没有接触过，所以这里记录一下。</p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2020/03/05/Java 面向对象语言基础/#more" rel="contents">
+              <a class="btn" href="/2020/04/17/java 搭建 web服务器 socket实现/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -966,7 +689,7 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/03/03/SpringBoot笔记整理（四）/">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/04/14/利用子网掩码划分子网/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO_JING">
@@ -980,7 +703,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/03/03/SpringBoot笔记整理（四）/" class="post-title-link" itemprop="url">SpringBoot笔记整理（四）</a>
+            <a href="/2020/04/14/利用子网掩码划分子网/" class="post-title-link" itemprop="url">利用子网掩码划分子网</a>
           
         </h1>
 
@@ -995,7 +718,7 @@
                 
               
 
-              <time title="创建时间：2020-03-03 21:29:23" itemprop="dateCreated datePublished" datetime="2020-03-03T21:29:23+08:00">2020-03-03</time>
+              <time title="创建时间：2020-04-14 09:06:15" itemprop="dateCreated datePublished" datetime="2020-04-14T09:06:15+08:00">2020-04-14</time>
             </span>
           
             
@@ -1006,7 +729,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:05:51" itemprop="dateModified" datetime="2020-11-22T15:05:51+08:00">2020-11-22</time>
+                <time title="修改时间：2020-11-22 15:27:31" itemprop="dateModified" datetime="2020-11-22T15:27:31+08:00">2020-11-22</time>
               </span>
             
           
@@ -1022,28 +745,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><a href="https://blog.csdn.net/tsundere_x/article/details/104641031" target="_blank" rel="noopener">SpringBoot笔记整理（一）</a><br><a href="https://blog.csdn.net/tsundere_x/article/details/104641502" target="_blank" rel="noopener">SpringBoot笔记整理（二）</a><br><a href="https://blog.csdn.net/tsundere_x/article/details/104641843" target="_blank" rel="noopener">SpringBoot笔记整理（三）</a><br><a href="https://blog.csdn.net/tsundere_x/article/details/104641997" target="_blank" rel="noopener">SpringBoot笔记整理（四）</a></p><h4 id="1、SpringMVC自动配置"><a href="#1、SpringMVC自动配置" class="headerlink" title="1、SpringMVC自动配置"></a>1、SpringMVC自动配置</h4><p>以下是SpringBoot对SpringMVC</p><ul>
-<li><p>nclusion of ContentNegotiatingViewResolver and BeanNameViewResolver beans.<br>自动配置了ViewResolver</p>
-</li>
-<li><p>Support for serving static resources, including support for WebJars .</p>
-</li>
-<li><p>registration of Converter, GenericConverter, and Formatter beans.</p>
-</li>
-<li><p>Support for HttpMessageConverters .</p>
-</li>
-<li><p>Automatic registration of MessageCodesResolver .</p>
-</li>
-<li><p>Static index.html support.</p>
-</li>
-<li><p>Custom Favicon support .</p>
-</li>
-<li><p>Automatic use of a ConfigurableWebindingInitializer bean .</p>
-</li>
-</ul>
+          <p><strong>分类IP地址的弊端</strong></p><ul>
+<li>一个物理网络不能过大，否则网络性能很差，某个B类或A类IP网络无法全部用于单个物理网络</li>
+<li>分类IP地址分配不合理，利用率低</li>
+<li>分类IP地址设计的弊端 —— 不灵活，IP地址利用率不高</li>
+</ul><p><strong>划分子网的思路</strong><br>网络管理员将本应属于一个物理网段的单个分类IP网络划分成多个子网，<code>不同的子网对应不同的物理网段，不同子网之间的通信必须要经过路由器。</code></p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2020/03/03/SpringBoot笔记整理（四）/#more" rel="contents">
+              <a class="btn" href="/2020/04/14/利用子网掩码划分子网/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1072,7 +782,7 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/03/03/SpringBoot笔记整理（三）/">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/04/13/分类的IP地址/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO_JING">
@@ -1086,7 +796,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/03/03/SpringBoot笔记整理（三）/" class="post-title-link" itemprop="url">SpringBoot笔记整理（三）</a>
+            <a href="/2020/04/13/分类的IP地址/" class="post-title-link" itemprop="url">分类的IP地址</a>
           
         </h1>
 
@@ -1101,7 +811,7 @@
                 
               
 
-              <time title="创建时间：2020-03-03 21:25:15" itemprop="dateCreated datePublished" datetime="2020-03-03T21:25:15+08:00">2020-03-03</time>
+              <time title="创建时间：2020-04-13 23:36:58" itemprop="dateCreated datePublished" datetime="2020-04-13T23:36:58+08:00">2020-04-13</time>
             </span>
           
             
@@ -1112,7 +822,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:06:09" itemprop="dateModified" datetime="2020-11-22T15:06:09+08:00">2020-11-22</time>
+                <time title="修改时间：2020-11-22 15:30:57" itemprop="dateModified" datetime="2020-11-22T15:30:57+08:00">2020-11-22</time>
               </span>
             
           
@@ -1128,11 +838,282 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><a href="https://blog.csdn.net/tsundere_x/article/details/104641031" target="_blank" rel="noopener">SpringBoot笔记整理（一）</a><br><a href="https://blog.csdn.net/tsundere_x/article/details/104641502" target="_blank" rel="noopener">SpringBoot笔记整理（二）</a><br><a href="https://blog.csdn.net/tsundere_x/article/details/104641843" target="_blank" rel="noopener">SpringBoot笔记整理（三）</a><br><a href="https://blog.csdn.net/tsundere_x/article/details/104641997" target="_blank" rel="noopener">SpringBoot笔记整理（四）</a></p><h3 id="Web开发"><a href="#Web开发" class="headerlink" title="Web开发"></a>Web开发</h3><h4 id="1、使用SpringBoot："><a href="#1、使用SpringBoot：" class="headerlink" title="1、使用SpringBoot："></a>1、使用SpringBoot：</h4><p>1）创建SpringBoot应用，选中需要的模块<br>2）SpringBoot已经默认将这些场景配置好了，只需要在配置文件中指定少量配置就可以运行起来<br>3）自己编写业务代码</p>
+          <ul>
+<li>现有物理地址再有IP地址</li>
+<li>IP地址的表示方法为点分十进制法</li>
+<li>IP地址的设计思想：网络部分 + 主机部分</li>
+</ul><h5 id="分类的IP地址"><a href="#分类的IP地址" class="headerlink" title="分类的IP地址"></a>分类的IP地址</h5><p><code>特征：</code>根据不同特征的IP地址，事先约定好网络号所占的位数和主机号所占的位数。</p><p><strong>A类地址</strong><br>全球一共有2^7^-2 个A类网络，每个A类网络共有2^24^-2个主机地址，地址范围是<code>1.0.0.0 — 126.255.255</code>, 网络号全0是没有地址，而<code>127开头的地址保留为本机回环地址</code>（浪费很大，IPV6进行了改进，只用了一个地址表示本机回环地址）。 有两个主机号被保留，主机号全0，如126.0.0.0，表示这个网络地址；主机号全1，如126.255.255.255 ，是广播地址。<br><img src="https://img-blog.csdnimg.cn/20200413173732912.png" alt="在这里插入图片描述"><br><strong>B类地址</strong><br>全球共有 2^14^  个B类网络，每个B类网络共有2^16^-2个主机地址，地址范围是：<code>128.0.0.0 — 191.255.255.255</code><br><img src="https://img-blog.csdnimg.cn/20200413175421275.png" alt="在这里插入图片描述"><br><strong>C类地址</strong><br>全球共有2^21^个C类网络，每个C类网络共有2^8^-2个主机地址，地址范围是：<code>192.0.0.0 — 223.255.255.255</code><br><img src="https://img-blog.csdnimg.cn/20200413175827755.png" alt="在这里插入图片描述"><br>此外还有<strong>D类地址</strong>和<strong>E类地址</strong><br><img src="https://img-blog.csdnimg.cn/20200413181004990.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2020/03/03/SpringBoot笔记整理（三）/#more" rel="contents">
+              <a class="btn" href="/2020/04/13/分类的IP地址/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/04/08/hadoop 重新格式化 NameNode/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO_JING">
+      <meta itemprop="description" content="努力努力再努力">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serendipper-x">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/04/08/hadoop 重新格式化 NameNode/" class="post-title-link" itemprop="url">hadoop 重新格式化 NameNode</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-04-08 16:57:32" itemprop="dateCreated datePublished" datetime="2020-04-08T16:57:32+08:00">2020-04-08</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-22 15:17:38" itemprop="dateModified" datetime="2020-11-22T15:17:38+08:00">2020-11-22</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>【问题描述】</strong> 在安装配置hadoop的过程中，很可能发生错误导致datanode或者namenode 启动失败，这时我们可以选择重新格式化 namenode。</p><p>一、删除data数据和log日志</p><p>二 、使用命令 <code>bin/dfs namenode -format</code> 重新格式化</p><p><strong>【注意事项】</strong><br>为什么不能一直格式化NameNode，格式化NameNode需要注意什么？</p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/04/08/hadoop 重新格式化 NameNode/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/04/03/Linux命令整理 —— vi 和 vim 编辑器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO_JING">
+      <meta itemprop="description" content="努力努力再努力">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serendipper-x">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/04/03/Linux命令整理 —— vi 和 vim 编辑器/" class="post-title-link" itemprop="url">Linux命令整理 —— vi 和 vim 编辑器</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-04-03 14:41:45" itemprop="dateCreated datePublished" datetime="2020-04-03T14:41:45+08:00">2020-04-03</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-22 15:11:07" itemprop="dateModified" datetime="2020-11-22T15:11:07+08:00">2020-11-22</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://blog.csdn.net/tsundere_x/article/details/105116886" target="_blank" rel="noopener">一、目录结构</a></p><h5 id="二-、vim-和-vim-编辑器"><a href="#二-、vim-和-vim-编辑器" class="headerlink" title="二 、vim 和 vim 编辑器"></a>二 、vim 和 vim 编辑器</h5><p><strong>2.1【基本介绍】</strong><br>所有的 Linux 系统都会内建 vi 文本编辑器。</p><p>vim 具有程序编辑的能力，可以看做是 vi 的增强版本，可以主动的以字体颜色辨别语法的正确性，方便程序设计。代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用。</p><p><strong>2.2 三种常见模式</strong></p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/04/03/Linux命令整理 —— vi 和 vim 编辑器/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/03/26/Linux命令整理 —— 目录结构/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO_JING">
+      <meta itemprop="description" content="努力努力再努力">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serendipper-x">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/03/26/Linux命令整理 —— 目录结构/" class="post-title-link" itemprop="url">Linux命令整理 —— 目录结构</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-03-26 12:53:15" itemprop="dateCreated datePublished" datetime="2020-03-26T12:53:15+08:00">2020-03-26</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-22 15:11:26" itemprop="dateModified" datetime="2020-11-22T15:11:26+08:00">2020-11-22</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://blog.csdn.net/tsundere_x/article/details/105292714" target="_blank" rel="noopener">二 、vi 和 vim 编辑器</a><br><strong>【写在前面】</strong></p><p>云计算与分布式这门课程的实验都是在Linux下完成的，虽然之前也一直也学习过Linux，但是一直没有系统的过一遍。这周花了两天的时间看完了尚硅谷的Linux教程，在这里记录一下学习过程，也方便自己以后的学习。</p><h5 id="一、目录结构"><a href="#一、目录结构" class="headerlink" title="一、目录结构"></a>一、目录结构</h5><p><code>在 Linux 世界里，一切皆文件</code><br>linux 的文件系统是采用级层式的树状目录结构，在此结构中的最上层是根目录“/”，然后在此目录下再创建其他的目录。<br><img src="https://img-blog.csdnimg.cn/20200326133458870.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>具体目录结构<br><code>➢/bin</code>（/usr/bin、/usr/local/bin）</p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/03/26/Linux命令整理 —— 目录结构/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1160,7 +1141,7 @@
   
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/11/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/13/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/11/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/13/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1209,7 +1190,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">150</span>
+          <span class="site-state-item-count">166</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1222,7 +1203,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -1340,7 +1321,7 @@ setInterval("createtime()",250);
 </script>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共96.3k字</span>
+  <span class="post-count">博客全站共104k字</span>
 </div>
 
         

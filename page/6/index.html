@@ -247,7 +247,7 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/12/05/决策树简介与入门/">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2021/01/21/牛客16785  Cantor表/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO_JING">
@@ -261,7 +261,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/12/05/决策树简介与入门/" class="post-title-link" itemprop="url">决策树简介与入门</a>
+            <a href="/2021/01/21/牛客16785  Cantor表/" class="post-title-link" itemprop="url">牛客16785 Cantor表</a>
           
         </h1>
 
@@ -276,7 +276,7 @@
                 
               
 
-              <time title="创建时间：2020-12-05 15:39:32" itemprop="dateCreated datePublished" datetime="2020-12-05T15:39:32+08:00">2020-12-05</time>
+              <time title="创建时间：2021-01-21 11:44:12" itemprop="dateCreated datePublished" datetime="2021-01-21T11:44:12+08:00">2021-01-21</time>
             </span>
           
             
@@ -287,7 +287,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-17 12:07:17" itemprop="dateModified" datetime="2021-02-17T12:07:17+08:00">2021-02-17</time>
+                <time title="修改时间：2021-02-17 12:29:31" itemprop="dateModified" datetime="2021-02-17T12:29:31+08:00">2021-02-17</time>
               </span>
             
           
@@ -303,11 +303,94 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>决策树表示对象属性（比如贷款用户的年龄、是否有工作、是否有房产、信用评分等）和对象类别（是否批准其贷款申请）之间的一种映射。使用层层推理来实现最终的分类。</p><p>    根节点：包含样本的全集<br>    内部节点：对应特征属性测试<br>    叶节点：代表决策的结果</p><p>预测时，在树的内部节点处用某一属性值进行判断，根据判断结果决定进入哪个分支节点，直到到达叶节点处，得到分类结果。</p>
+          <p><img src="https://img-blog.csdnimg.cn/20210121114034498.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>先找到第N个数在第几行第几列，然后根据规律进行计算</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">N = int(input())</span><br><span class="line"></span><br><span class="line">t = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> N-t &gt; <span class="number">0</span>:</span><br><span class="line">    N = N-t</span><br><span class="line">    t += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> t%<span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">    print(<span class="string">"%d/%d"</span>%(N,t-N+<span class="number">1</span>))</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"%d/%d"</span>%(t-N+<span class="number">1</span>,N))</span><br></pre></td></tr></table></figure>
+
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2021/01/21/牛客16662  津津的储蓄计划/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO_JING">
+      <meta itemprop="description" content="努力努力再努力">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serendipper-x">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2021/01/21/牛客16662  津津的储蓄计划/" class="post-title-link" itemprop="url">牛客16662 津津的储蓄计划</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2021-01-21 11:44:12" itemprop="dateCreated datePublished" datetime="2021-01-21T11:44:12+08:00">2021-01-21</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-17 12:30:10" itemprop="dateModified" datetime="2021-02-17T12:30:10+08:00">2021-02-17</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>题目描述</strong><br>     津津的零花钱一直都是自己管理。每个月的月初妈妈给津津300元钱，津津会预算这个月的花销，并且总能做到实际花销和预算的相同。<br>    为了让津津学习如何储蓄，妈妈提出，津津可以随时把整百的钱存在她那里，到了年末她会加上20％还给津津。因此津津制定了一个储蓄计划：每个月的月初，在得到妈妈给的零花钱后，如果她预计到这个月的月末手中还会有多于100元或恰好100元，她就会把整百的钱存在妈妈那里，剩余的钱留在自己手中。</p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2020/12/05/决策树简介与入门/#more" rel="contents">
+              <a class="btn" href="/2021/01/21/牛客16662  津津的储蓄计划/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -336,7 +419,7 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/12/05/机器学习与数据挖掘简介/">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2021/01/19/牛客21297  手机号码/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO_JING">
@@ -350,7 +433,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/12/05/机器学习与数据挖掘简介/" class="post-title-link" itemprop="url">机器学习与数据挖掘简介</a>
+            <a href="/2021/01/19/牛客21297  手机号码/" class="post-title-link" itemprop="url">牛客21297 手机号码</a>
           
         </h1>
 
@@ -365,7 +448,7 @@
                 
               
 
-              <time title="创建时间：2020-12-05 15:35:02" itemprop="dateCreated datePublished" datetime="2020-12-05T15:35:02+08:00">2020-12-05</time>
+              <time title="创建时间：2021-01-19 23:52:34" itemprop="dateCreated datePublished" datetime="2021-01-19T23:52:34+08:00">2021-01-19</time>
             </span>
           
             
@@ -376,7 +459,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-17 12:07:34" itemprop="dateModified" datetime="2021-02-17T12:07:34+08:00">2021-02-17</time>
+                <time title="修改时间：2021-02-17 12:28:57" itemprop="dateModified" datetime="2021-02-17T12:28:57+08:00">2021-02-17</time>
               </span>
             
           
@@ -392,20 +475,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <ul>
-<li>机器学习的目的是<strong>预测</strong>（包括<strong>分类</strong>和<strong>回归</strong>）。</li>
-</ul>
-<p><strong>分类</strong>是根据输入数据，判别这些数据隶属于哪个类别。<br><strong>回归</strong>则是根据输入数据，计算出一个输出值。输入数据一般为一个向量，向量的各个分量也称为特征（Feature），输出则是一个类别或者一个数值。</p>
-<ul>
-<li><p>机器学习方法分为<strong>有监督学习</strong>（Supervised Learning）、<strong>无监督学习</strong>（Unsupervised Learning）和<strong>半监督学习</strong>（Semi- Supervised Learning）。</p>
-</li>
-<li><p><code>有监督学习</code>：是机器学习的一种类别，训练数据由输入特征和预期的输出构成，输出可以是一个连续的值（称为回归分析），或者是一个分类的类别标签（称为分类）。如：决策树、支持向量机（SVM）、K最近邻（KNN）算法。</p>
-</li>
-<li><p><code>无监督学习</code>：没有训练样本，直接对数据进行建模。K-Means聚类算法就是典型的无监督学习算法，它的目的是把相似的对象聚集在一起。还包含：主成分分析（PCA）等。</p>
-</li>
-<li><p><code>半监督学习</code>：是有监督学习和无监督学习相结合的一种学习方法。它研究如何利用少量的标注（Annotated）样本和大量的未标注样本进行训练和预测问题。如：半监督分类、半监督回归、半监督聚类和半监督降维算法。</p>
-</li>
-</ul>
+          <p><strong>题目描述</strong><br>给你一个整数n表示手机号码的位数<br>再给你m个字符串表示保留的号码,比如911 110 120等<br>问你一共有多少的手机号码不以保留号码开头</p>
+<p><img src="https://img-blog.csdnimg.cn/20210119235314428.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">n, m = map(int, input().split())</span><br><span class="line">s = []</span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> range(m):</span><br><span class="line">    s.append(input())</span><br><span class="line"></span><br><span class="line">sum = pow(<span class="number">10</span>, n)</span><br><span class="line">num = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(m):</span><br><span class="line">    flag = <span class="literal">False</span></span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(m):</span><br><span class="line">        <span class="keyword">if</span> s[i].startswith(s[j]) <span class="keyword">and</span> i!=j:</span><br><span class="line">            flag = <span class="literal">True</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">    <span class="keyword">if</span> flag == <span class="literal">False</span>:</span><br><span class="line">        num += pow(<span class="number">10</span>, n - len(s[i]))</span><br><span class="line">print(sum - num)</span><br></pre></td></tr></table></figure>
+
 
         
       
@@ -430,7 +503,7 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/11/26/torchvision包的主要构成/">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2021/01/19/牛客21312  神秘餐馆/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO_JING">
@@ -444,7 +517,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/11/26/torchvision包的主要构成/" class="post-title-link" itemprop="url">torchvision包的主要构成</a>
+            <a href="/2021/01/19/牛客21312  神秘餐馆/" class="post-title-link" itemprop="url">牛客21312 神秘餐馆</a>
           
         </h1>
 
@@ -459,7 +532,7 @@
                 
               
 
-              <time title="创建时间：2020-11-26 09:06:09" itemprop="dateCreated datePublished" datetime="2020-11-26T09:06:09+08:00">2020-11-26</time>
+              <time title="创建时间：2021-01-19 23:52:14" itemprop="dateCreated datePublished" datetime="2021-01-19T23:52:14+08:00">2021-01-19</time>
             </span>
           
             
@@ -470,7 +543,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-17 12:05:29" itemprop="dateModified" datetime="2021-02-17T12:05:29+08:00">2021-02-17</time>
+                <time title="修改时间：2021-02-17 12:20:02" itemprop="dateModified" datetime="2021-02-17T12:20:02+08:00">2021-02-17</time>
               </span>
             
           
@@ -486,99 +559,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p> torchvision包是服务于PyTorch深度学习框架的，主要用来构建计算机视觉模型。</p>
-<p>torchvision 主要由以下几部分构成：</p>
-<ul>
-<li><code>torchvision.datasets</code>：一些加载数据的函数及常用的数据集接口；</li>
-<li><code>torchvision.models</code>：包含常用的模型结构（含预训练模型），例如AlexNet，VGG，ResNet等；</li>
-<li><code>torchvision.transforms</code>：常用的图片变换，例如裁剪、旋转等；</li>
-<li><code>torchvision.utils</code>：其他的一些有用的方法；</li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/11/24/LeetCode 1470. 重新排列数组/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO_JING">
-      <meta itemprop="description" content="努力努力再努力">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Serendipper-x">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/11/24/LeetCode 1470. 重新排列数组/" class="post-title-link" itemprop="url">LeetCode 1470. 重新排列数组</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-11-24 23:26:39" itemprop="dateCreated datePublished" datetime="2020-11-24T23:26:39+08:00">2020-11-24</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-25 09:13:10" itemprop="dateModified" datetime="2020-11-25T09:13:10+08:00">2020-11-25</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>题目</strong>：给你一个数组 nums ，数组中有 2n 个元素，按 [x1,x2,…,xn,y1,y2,…,yn] 的格式排列。</p><p>请你将数组按 [x1,y1,x2,y2,…,xn,yn] 格式重新排列，返回重排后的数组。</p><p><strong>示例 1：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [2,5,1,3,4,7], n = 3</span><br><span class="line">输出：[2,3,5,4,1,7] </span><br><span class="line">解释：由于 x1=2, x2=5, x3=1, y1=3, y2=4, y3=7 ，所以答案为 [2,3,5,4,1,7]</span><br></pre></td></tr></table></figure>
+          <p><strong>题目描述</strong><br>一家神秘餐馆准备开放N天，牛牛 和 牛妹听到这个消息后，准备尽可能多的一起去吃午饭</p><p>餐馆有M道菜，牛牛和牛妹每次来只允许点一道菜，如果在第i天买了第j道菜<br>那么第i+7天也只能买第j道菜<br>第i天第j道菜的价格为price[i][j]<br>‘0’-‘9’代表0-9美元<br>‘A’-‘Z’代表10-35美元<br>‘a’-‘z’代表36-61美元</p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2020/11/24/LeetCode 1470. 重新排列数组/#more" rel="contents">
+              <a class="btn" href="/2021/01/19/牛客21312  神秘餐馆/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -607,7 +592,7 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/11/24/LeetCode 1431. 拥有最多糖果的孩子/">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2021/01/18/牛客16585   统计单词数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO_JING">
@@ -621,7 +606,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/11/24/LeetCode 1431. 拥有最多糖果的孩子/" class="post-title-link" itemprop="url">LeetCode 1431. 拥有最多糖果的孩子</a>
+            <a href="/2021/01/18/牛客16585   统计单词数/" class="post-title-link" itemprop="url">牛客16585 统计单词数</a>
           
         </h1>
 
@@ -636,7 +621,7 @@
                 
               
 
-              <time title="创建时间：2020-11-24 23:24:14" itemprop="dateCreated datePublished" datetime="2020-11-24T23:24:14+08:00">2020-11-24</time>
+              <time title="创建时间：2021-01-18 17:17:39" itemprop="dateCreated datePublished" datetime="2021-01-18T17:17:39+08:00">2021-01-18</time>
             </span>
           
             
@@ -647,7 +632,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-17 12:04:25" itemprop="dateModified" datetime="2021-02-17T12:04:25+08:00">2021-02-17</time>
+                <time title="修改时间：2021-02-17 12:19:31" itemprop="dateModified" datetime="2021-02-17T12:19:31+08:00">2021-02-17</time>
               </span>
             
           
@@ -663,11 +648,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><strong>题目</strong>：给你一个数组 candies 和一个整数 extraCandies ，其中 candies[i] 代表第 i 个孩子拥有的糖果数目。</p><p>对每一个孩子，检查是否存在一种方案，将额外的 extraCandies 个糖果分配给孩子们之后，此孩子有 最多 的糖果。注意，允许有多个孩子同时拥有 最多 的糖果数目。</p>
+          <p><strong>题目描述</strong><br>一般的文本编辑器都有查找单词的功能，该功能可以快速定位特定单词在文章中的位置，有的还能统计出特定单词在文章中出现的次数。<br>现在，请你编程实现这一功能，具体要求是：给定一个单词，请你输出它在给定的文章中出现的次数和第一次出现的位置。注意：匹配单词时，不区分大小写，但要求完全匹配，即给定单词必须与文章<br>中的某一独立单词在不区分大小写的情况下完全相同（参见样例1 ），如果给定单词仅是文章中某一单词的一部分则不算匹配</p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2020/11/24/LeetCode 1431. 拥有最多糖果的孩子/#more" rel="contents">
+              <a class="btn" href="/2021/01/18/牛客16585   统计单词数/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -696,7 +681,7 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/11/24/LeetCode 771. 宝石与石头/">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2021/01/18/牛客16500  珠心算测试/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO_JING">
@@ -710,7 +695,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/11/24/LeetCode 771. 宝石与石头/" class="post-title-link" itemprop="url">LeetCode 771. 宝石与石头</a>
+            <a href="/2021/01/18/牛客16500  珠心算测试/" class="post-title-link" itemprop="url">牛客16500 珠心算测试</a>
           
         </h1>
 
@@ -725,7 +710,7 @@
                 
               
 
-              <time title="创建时间：2020-11-24 23:21:05" itemprop="dateCreated datePublished" datetime="2020-11-24T23:21:05+08:00">2020-11-24</time>
+              <time title="创建时间：2021-01-18 17:13:47" itemprop="dateCreated datePublished" datetime="2021-01-18T17:13:47+08:00">2021-01-18</time>
             </span>
           
             
@@ -736,7 +721,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-25 09:14:39" itemprop="dateModified" datetime="2020-11-25T09:14:39+08:00">2020-11-25</time>
+                <time title="修改时间：2021-02-17 12:18:58" itemprop="dateModified" datetime="2021-02-17T12:18:58+08:00">2021-02-17</time>
               </span>
             
           
@@ -752,11 +737,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><strong>题目</strong>： 给定字符串J 代表石头中宝石的类型，和字符串 S代表你拥有的石头。 S 中每个字符代表了一种你拥有的石头的类型，你想知道你拥有的石头中有多少是宝石。</p><p>J 中的字母不重复，J 和 S中的所有字符都是字母。字母区分大小写，因此”a”和”A”是不同类型的石头。</p><p><strong>示例 1:</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: J = &quot;aA&quot;, S = &quot;aAAbbbb&quot;</span><br><span class="line">输出: 3</span><br></pre></td></tr></table></figure>
+          <p><strong>题目描述</strong><br>珠心算是一种通过在脑中模拟算盘变化来完成快速运算的一种计算技术。珠心算训练，既能够开发智力，又能够为日常生活带来很多便利，因而在很多学校得到普及。<br>某学校的珠心算老师采用一种快速考察珠心算加法能力的测验方法。他随机生成一个正整数集合，集合中的数各不相同，然后要求学生回答：其中有多少个数，恰好等于集合中另外两个（不同的）数之和？<br>最近老师出了一些测验题，请你帮忙求出答案<br><img src="https://img-blog.csdnimg.cn/20210118171315641.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2020/11/24/LeetCode 771. 宝石与石头/#more" rel="contents">
+              <a class="btn" href="/2021/01/18/牛客16500  珠心算测试/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -785,7 +770,7 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/11/24/LeetCode 1486. 数组异或操作/">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2021/01/18/牛客16494  生活大爆炸版石头剪刀布/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO_JING">
@@ -799,7 +784,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/11/24/LeetCode 1486. 数组异或操作/" class="post-title-link" itemprop="url">LeetCode 1486.数组异或操作</a>
+            <a href="/2021/01/18/牛客16494  生活大爆炸版石头剪刀布/" class="post-title-link" itemprop="url">牛客16494 生活大爆炸版石头剪刀布</a>
           
         </h1>
 
@@ -814,7 +799,7 @@
                 
               
 
-              <time title="创建时间：2020-11-24 23:18:54" itemprop="dateCreated datePublished" datetime="2020-11-24T23:18:54+08:00">2020-11-24</time>
+              <time title="创建时间：2021-01-18 17:12:05" itemprop="dateCreated datePublished" datetime="2021-01-18T17:12:05+08:00">2021-01-18</time>
             </span>
           
             
@@ -825,7 +810,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-25 09:12:42" itemprop="dateModified" datetime="2020-11-25T09:12:42+08:00">2020-11-25</time>
+                <time title="修改时间：2021-02-17 12:18:30" itemprop="dateModified" datetime="2021-02-17T12:18:30+08:00">2021-02-17</time>
               </span>
             
           
@@ -841,11 +826,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><strong>题目</strong>：</p><p>给你两个整数，n 和 start 。</p><p>数组 nums 定义为：nums[i] = start + 2*i（下标从 0 开始）且 n == nums.length 。</p><p>请返回 nums 中所有元素按位异或（XOR）后得到的结果。</p><p><strong>示例 1：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：n = 5, start = 0</span><br><span class="line">输出：8</span><br><span class="line">解释：数组 nums 为 [0, 2, 4, 6, 8]，其中 (0 ^ 2 ^ 4 ^ 6 ^ 8) = 8 。</span><br><span class="line">     &quot;^&quot; 为按位异或 XOR 运算符。</span><br></pre></td></tr></table></figure>
+          <p><strong>题目描述</strong><br>    石头剪刀布是常见的猜拳游戏：石头胜剪刀，剪刀胜布，布胜石头。如果两个人出拳一样，则不分胜负。在《生活大爆炸》第二季第8集中出现了一种石头剪刀布的升级版游戏。升级版游戏在传统的石头剪刀布游戏的基础上，增加了两个新手势：</p><p>   斯波克：《星际迷航》主角之一。</p><p>   蜥蜴人：《星际迷航》中的反面角色。</p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2020/11/24/LeetCode 1486. 数组异或操作/#more" rel="contents">
+              <a class="btn" href="/2021/01/18/牛客16494  生活大爆炸版石头剪刀布/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -874,7 +859,7 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/11/24/LeetCode LCP 06. 拿硬币/">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2021/01/14/牛客16438  回文日期/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO_JING">
@@ -888,7 +873,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/11/24/LeetCode LCP 06. 拿硬币/" class="post-title-link" itemprop="url">LeetCode LCP 06. 拿硬币</a>
+            <a href="/2021/01/14/牛客16438  回文日期/" class="post-title-link" itemprop="url">牛客16438 回文日期</a>
           
         </h1>
 
@@ -903,7 +888,7 @@
                 
               
 
-              <time title="创建时间：2020-11-24 23:16:03" itemprop="dateCreated datePublished" datetime="2020-11-24T23:16:03+08:00">2020-11-24</time>
+              <time title="创建时间：2021-01-14 13:09:51" itemprop="dateCreated datePublished" datetime="2021-01-14T13:09:51+08:00">2021-01-14</time>
             </span>
           
             
@@ -914,7 +899,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-25 09:11:58" itemprop="dateModified" datetime="2020-11-25T09:11:58+08:00">2020-11-25</time>
+                <time title="修改时间：2021-02-17 12:17:50" itemprop="dateModified" datetime="2021-02-17T12:17:50+08:00">2021-02-17</time>
               </span>
             
           
@@ -930,11 +915,94 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><strong>题目</strong>：<code>桌上有 n 堆力扣币，每堆的数量保存在数组 coins 中。我们每次可以选择任意一堆，拿走其中的一枚或者两枚，求拿完所有力扣币的最少次数。</code></p><p><strong>示例 1：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：[4,2,1]</span><br><span class="line"></span><br><span class="line">输出：4</span><br><span class="line"></span><br><span class="line">解释：第一堆力扣币最少需要拿 2 次，第二堆最少需要拿 1 次，第三堆最少需要拿 1 次，总共 4 次即可拿完。</span><br></pre></td></tr></table></figure>
+          <p><img src="https://img-blog.csdnimg.cn/20210114130936378.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">date1 = input()</span><br><span class="line">date2 = input()</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">判断是否是闰年</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isLeap</span><span class="params">(year)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> (year%<span class="number">4</span> == <span class="number">0</span> <span class="keyword">and</span> year%<span class="number">100</span> != <span class="number">0</span>) <span class="keyword">or</span> (year%<span class="number">400</span> == <span class="number">0</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">判断是否是回文数</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isPalindrome</span><span class="params">(year)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">4</span>):</span><br><span class="line">        <span class="keyword">if</span> year[<span class="number">7</span>-i] != year[i]:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">ans = <span class="number">0</span></span><br><span class="line">y1 = int(date1[<span class="number">0</span>:<span class="number">4</span>])</span><br><span class="line">y2 = int(date2[<span class="number">0</span>:<span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> year <span class="keyword">in</span> range(y1, y2+<span class="number">1</span>):</span><br><span class="line">    <span class="keyword">if</span> isLeap(year):</span><br><span class="line">        D = [<span class="number">31</span>, <span class="number">29</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        D = [<span class="number">31</span>, <span class="number">28</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>] </span><br><span class="line">    y = str(year)</span><br><span class="line">    date = int(y + y[::<span class="number">-1</span>])</span><br><span class="line">    <span class="comment">#date = year*10000 + year%10*1000 + year%100//10*100 + year%1000//100*10 + year//1000;</span></span><br><span class="line">    <span class="comment">#date = int(year*10000 + int(y[3])*1000 + int(y[2])*100 + int(y[1])*10 + int(y[0]))</span></span><br><span class="line">    <span class="comment">#print(date)</span></span><br><span class="line">    <span class="keyword">if</span>(int(date1) &lt;= date &lt;= int(date2) <span class="keyword">and</span> <span class="number">0</span> &lt; (date%<span class="number">10000</span>//<span class="number">100</span>) &lt;= <span class="number">12</span> <span class="keyword">and</span> isPalindrome(str(date)) <span class="keyword">and</span> date%<span class="number">100</span> &lt;= D[date%<span class="number">10000</span>//<span class="number">100</span><span class="number">-1</span>]):</span><br><span class="line">        ans = ans + <span class="number">1</span>;</span><br><span class="line">print(ans)</span><br></pre></td></tr></table></figure>
+
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2021/01/14/牛客16426  玩具谜题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO_JING">
+      <meta itemprop="description" content="努力努力再努力">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serendipper-x">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2021/01/14/牛客16426  玩具谜题/" class="post-title-link" itemprop="url">牛客16426 玩具谜题</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2021-01-14 10:07:13" itemprop="dateCreated datePublished" datetime="2021-01-14T10:07:13+08:00">2021-01-14</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-17 12:16:48" itemprop="dateModified" datetime="2021-02-17T12:16:48+08:00">2021-02-17</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>题目描述</strong> </p><p>南有一套可爱的玩具小人，它们各有不同的职业。<br>有一天，这些玩具小人把小南的眼镜藏了起来。小南发现玩具小人们围成了一个圈，它们有的面朝圈内，有的面朝圈外，如下图：<img src="https://img-blog.csdnimg.cn/20210114100343682.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p>这时 <code>singer</code> 告诉小南一个谜题：「眼镜藏在我左数第 3 个玩具小人的右数第 1 个玩具小人的左数第 2 个玩具小人那里。」</p><p>小南发现，这个谜题中玩具小人的朝向非常关键， 因为朝内和朝外的玩具小人的左右方向是相反的：面朝圈内的玩具小人，它的左边是顺时针方向，右边是逆时针方向；而面向圈外的玩具小人，它的左边是逆时针方向，右边是顺时针方向。<br>小南一边艰难地辨认着玩具小人，一边数着：<br><code>singer</code> 朝内，左数第 3 个是 <code>archer</code>。<br><code>archer</code> 朝外，右数第 1 个是 <code>thinker</code>。<br><code>thinker</code> 朝外，左数第 2 个是 <code>writer</code>。<br>所以眼镜藏在 <code>writer</code> 这里！<br>虽然成功找回了眼镜，但小南并没有放心。如果下次有更多的玩具小人藏他的眼镜，或是谜题的长度更长，他可能就无法找到眼镜了。所以小南希望你写程序帮他解决类似的谜题。这样的谜题具体可以描述为：<br>有 n 个玩具小人围成一圈，已知它们的职业和朝向。现在第 1 个玩具小人告诉小南一个包含 m 条指令的谜题。其中第 i 条指令形如「左数/右数第 si 个玩具小人」。你需要输出依次数完这些指令后，到达的玩具小人的职业。</p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2020/11/24/LeetCode LCP 06. 拿硬币/#more" rel="contents">
+              <a class="btn" href="/2021/01/14/牛客16426  玩具谜题/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -963,7 +1031,7 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/11/24/LeetCode 222. 完全二叉树的节点个数/">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2021/01/14/牛客16437 买铅笔/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO_JING">
@@ -977,7 +1045,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/11/24/LeetCode 222. 完全二叉树的节点个数/" class="post-title-link" itemprop="url">LeetCode 222. 完全二叉树的节点个数</a>
+            <a href="/2021/01/14/牛客16437 买铅笔/" class="post-title-link" itemprop="url">牛客16437 买铅笔</a>
           
         </h1>
 
@@ -992,7 +1060,7 @@
                 
               
 
-              <time title="创建时间：2020-11-24 23:12:52" itemprop="dateCreated datePublished" datetime="2020-11-24T23:12:52+08:00">2020-11-24</time>
+              <time title="创建时间：2021-01-14 10:03:01" itemprop="dateCreated datePublished" datetime="2021-01-14T10:03:01+08:00">2021-01-14</time>
             </span>
           
             
@@ -1003,7 +1071,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-25 09:15:28" itemprop="dateModified" datetime="2020-11-25T09:15:28+08:00">2020-11-25</time>
+                <time title="修改时间：2021-02-17 12:17:20" itemprop="dateModified" datetime="2021-02-17T12:17:20+08:00">2021-02-17</time>
               </span>
             
           
@@ -1019,101 +1087,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><strong>题目</strong>：<code>给出一个完全二叉树，求出该树的节点个数。</code></p><p><strong>说明：</strong></p><p>完全二叉树的定义如下：在完全二叉树中，除了最底层节点可能没填满外，其余每层节点数都达到最大值，并且最下面一层的节点都集中在该层最左边的若干位置。若最底层为第 h 层，则该层包含 1~ 2h 个节点。</p><p><strong>示例:</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入: </span><br><span class="line">    1</span><br><span class="line">   / \</span><br><span class="line">  2   3</span><br><span class="line"> / \  /</span><br><span class="line">4  5 6</span><br><span class="line"></span><br><span class="line">输出: 6</span><br></pre></td></tr></table></figure>
+          <p><strong>题目描述</strong><br>P老师需要去商店买n支铅笔作为小朋友们参加NOIP的礼物。她发现商店一共有 3 种包装的铅笔，不同包装内的铅笔数量有可能不同，价格也有可能不同。为了公平起见，P老师决定只买同一种包装的铅笔。<br>商店不允许将铅笔的包装拆开，因此P老师可能需要购买超过 n 支铅笔才够给小朋友们发礼物。<br>现在P老师想知道，在商店每种包装的数量都足够的情况下，要买够至少 n 支铅笔最少需要花费多少钱。</p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2020/11/24/LeetCode 222. 完全二叉树的节点个数/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/11/24/LeetCode 1108. IP 地址无效化/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO_JING">
-      <meta itemprop="description" content="努力努力再努力">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Serendipper-x">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/11/24/LeetCode 1108. IP 地址无效化/" class="post-title-link" itemprop="url">LeetCode 1108. IP地址无效化</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-11-24 23:06:59" itemprop="dateCreated datePublished" datetime="2020-11-24T23:06:59+08:00">2020-11-24</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-25 09:14:14" itemprop="dateModified" datetime="2020-11-25T09:14:14+08:00">2020-11-25</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>题目</strong>：</p><p><code>给你一个有效的 IPv4 地址 address，返回这个 IP 地址的无效化版本。
-所谓无效化 IP 地址，其实就是用 &quot;[.]&quot; 代替了每个 &quot;.&quot;。</code></p><p><strong>示例 1：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：address = &quot;1.1.1.1&quot;</span><br><span class="line">输出：&quot;1[.]1[.]1[.]1&quot;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/2020/11/24/LeetCode 1108. IP 地址无效化/#more" rel="contents">
+              <a class="btn" href="/2021/01/14/牛客16437 买铅笔/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1141,7 +1119,7 @@
   
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1190,7 +1168,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">150</span>
+          <span class="site-state-item-count">166</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1203,7 +1181,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -1321,7 +1299,7 @@ setInterval("createtime()",250);
 </script>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共96.3k字</span>
+  <span class="post-count">博客全站共104k字</span>
 </div>
 
         

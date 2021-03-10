@@ -247,7 +247,7 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/10/05/torch.randn与torch.rand的区别/">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/11/24/LeetCode 1431. 拥有最多糖果的孩子/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO_JING">
@@ -261,7 +261,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/10/05/torch.randn与torch.rand的区别/" class="post-title-link" itemprop="url">torch.randn与torch.rand的区别</a>
+            <a href="/2020/11/24/LeetCode 1431. 拥有最多糖果的孩子/" class="post-title-link" itemprop="url">LeetCode 1431. 拥有最多糖果的孩子</a>
           
         </h1>
 
@@ -276,7 +276,7 @@
                 
               
 
-              <time title="创建时间：2020-10-05 12:53:15" itemprop="dateCreated datePublished" datetime="2020-10-05T12:53:15+08:00">2020-10-05</time>
+              <time title="创建时间：2020-11-24 23:24:14" itemprop="dateCreated datePublished" datetime="2020-11-24T23:24:14+08:00">2020-11-24</time>
             </span>
           
             
@@ -287,7 +287,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:01:48" itemprop="dateModified" datetime="2020-11-22T15:01:48+08:00">2020-11-22</time>
+                <time title="修改时间：2021-02-17 12:04:25" itemprop="dateModified" datetime="2021-02-17T12:04:25+08:00">2021-02-17</time>
               </span>
             
           
@@ -303,192 +303,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="randn"><a href="#randn" class="headerlink" title="randn"></a>randn</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">torch.randn(*sizes, out=<span class="literal">None</span>) → Tensor</span><br></pre></td></tr></table></figure>
-
-<p>返回一个包含了从标准正态分布中抽取的一组随机数的张量</p>
-<p><code>size</code>：张量的形状</p>
-<p><code>out</code>：结果张量</p>
-<h4 id="rand"><a href="#rand" class="headerlink" title="rand"></a>rand</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">torch.rand(*sizes, out=<span class="literal">None</span>) → Tensor</span><br></pre></td></tr></table></figure>
-
-<p>[0,1)之间的均匀分布</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/10/04/PyTorch 之 requires_grad，requires_grad_()，grad_fn/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO_JING">
-      <meta itemprop="description" content="努力努力再努力">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Serendipper-x">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/10/04/PyTorch 之 requires_grad，requires_grad_()，grad_fn/" class="post-title-link" itemprop="url">PyTorch 之 requires_grad，requires_grad_()，grad_fn</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-10-04 19:33:52" itemprop="dateCreated datePublished" datetime="2020-10-04T19:33:52+08:00">2020-10-04</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:07:05" itemprop="dateModified" datetime="2020-11-22T15:07:05+08:00">2020-11-22</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li>x.grad_fn和x.requires_grad为x的属性</li>
-<li>x.grad_fn：积分方法名，默认为None</li>
-<li>x.requires_grad：是否积分的属性，默认为False</li>
-<li>x.requires_grad_()：设置积分的方法，设置之后requires_grad为True</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"""Tensor"""</span></span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="comment"># 创建一个Tensor并设置requires_grad=True</span></span><br><span class="line">x = torch.ones(<span class="number">2</span>, <span class="number">2</span>, requires_grad=<span class="literal">True</span>)</span><br><span class="line">print(x)</span><br><span class="line">print(x.grad_fn)</span><br><span class="line"></span><br><span class="line">y = x + <span class="number">2</span></span><br><span class="line">print(y)</span><br><span class="line">print(y.grad_fn)</span><br><span class="line"></span><br><span class="line">print(x.is_leaf, y.is_leaf)</span><br></pre></td></tr></table></figure>
-
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/07/29/指定tensorflow运行的GPU或CPU设备/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO_JING">
-      <meta itemprop="description" content="努力努力再努力">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Serendipper-x">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/07/29/指定tensorflow运行的GPU或CPU设备/" class="post-title-link" itemprop="url">指定tensorflow运行的GPU或CPU设备</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-07-29 16:11:15" itemprop="dateCreated datePublished" datetime="2020-07-29T16:11:15+08:00">2020-07-29</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 13:44:23" itemprop="dateModified" datetime="2020-11-22T13:44:23+08:00">2020-11-22</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li><p>如果 TensorFlow 指令中兼有 CPU 和 GPU 实现，当该指令分配到设备时，GPU 设备有优先权。</p>
-</li>
-<li><p>如果你的系统里有多个 GPU, 那么 ID 最小的 GPU 会默认使用。</p>
-</li>
-</ul><p>当我们要指定tensorflow运行的GPU或CPU设备时，可以使用<code>tf.device()</code>命令</p><p> 首先查看可用运算设备(CPU,GPU)</p>
+          <p><strong>题目</strong>：给你一个数组 candies 和一个整数 extraCandies ，其中 candies[i] 代表第 i 个孩子拥有的糖果数目。</p><p>对每一个孩子，检查是否存在一种方案，将额外的 extraCandies 个糖果分配给孩子们之后，此孩子有 最多 的糖果。注意，允许有多个孩子同时拥有 最多 的糖果数目。</p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2020/07/29/指定tensorflow运行的GPU或CPU设备/#more" rel="contents">
+              <a class="btn" href="/2020/11/24/LeetCode 1431. 拥有最多糖果的孩子/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -517,7 +336,7 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/07/29/module ‘tensorflow‘ has no attribute ‘sparse ‘/">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/11/24/LeetCode 771. 宝石与石头/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO_JING">
@@ -531,7 +350,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/07/29/module ‘tensorflow‘ has no attribute ‘sparse ‘/" class="post-title-link" itemprop="url">module ‘tensorflow‘ has no attribute ‘sparse ‘</a>
+            <a href="/2020/11/24/LeetCode 771. 宝石与石头/" class="post-title-link" itemprop="url">LeetCode 771. 宝石与石头</a>
           
         </h1>
 
@@ -546,7 +365,7 @@
                 
               
 
-              <time title="创建时间：2020-07-29 15:50:49" itemprop="dateCreated datePublished" datetime="2020-07-29T15:50:49+08:00">2020-07-29</time>
+              <time title="创建时间：2020-11-24 23:21:05" itemprop="dateCreated datePublished" datetime="2020-11-24T23:21:05+08:00">2020-11-24</time>
             </span>
           
             
@@ -557,7 +376,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:08:36" itemprop="dateModified" datetime="2020-11-22T15:08:36+08:00">2020-11-22</time>
+                <time title="修改时间：2020-11-25 09:14:39" itemprop="dateModified" datetime="2020-11-25T09:14:39+08:00">2020-11-25</time>
               </span>
             
           
@@ -573,358 +392,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>非常奇怪的一个报错，在查找资料无果的情况下选择了重装keras（应该是版本对应出现了问题），报错解决</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/07/29/深度学习环境搭建之Anaconda安装keras/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO_JING">
-      <meta itemprop="description" content="努力努力再努力">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Serendipper-x">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/07/29/深度学习环境搭建之Anaconda安装keras/" class="post-title-link" itemprop="url">深度学习环境搭建之Anaconda安装keras</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-07-29 15:43:11" itemprop="dateCreated datePublished" datetime="2020-07-29T15:43:11+08:00">2020-07-29</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:26:32" itemprop="dateModified" datetime="2020-11-22T15:26:32+08:00">2020-11-22</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>一、确定安装版本号</strong><br>搭环境遇到一堆坑，总结一点最重要的就是要选择好版本。<br>  这里我们要注意tensorflow与keras的版本对应关系。见下图<br>  <img src="https://img-blog.csdnimg.cn/20200729154029110.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>二、使用pip进行安装</strong></p>
-<p>这里注意首先要激活对应的环境</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install keras==版本号</span><br></pre></td></tr></table></figure>
-
-<p>后续有时间再补充安装tensorflow-gpu以及pytorch的教程</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/07/29/Linux下进入Anaconda Prompt以及Navigator/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO_JING">
-      <meta itemprop="description" content="努力努力再努力">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Serendipper-x">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/07/29/Linux下进入Anaconda Prompt以及Navigator/" class="post-title-link" itemprop="url">Linux下进入Anaconda Prompt以及Navigator</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-07-29 15:36:49" itemprop="dateCreated datePublished" datetime="2020-07-29T15:36:49+08:00">2020-07-29</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:10:30" itemprop="dateModified" datetime="2020-11-22T15:10:30+08:00">2020-11-22</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><code>一、进入Anaconda Promp</code></p>
-<p>打开终端，cd 进Anaconda下的bin目录</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda activate</span><br></pre></td></tr></table></figure>
-
-<p>退出</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda deactivate</span><br></pre></td></tr></table></figure>
-
-<p><code>二、进入Anaconda Navigator</code></p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">anaconda-navigator</span><br></pre></td></tr></table></figure>
-
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/07/15/哔哩哔哩n倍速播放视频/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO_JING">
-      <meta itemprop="description" content="努力努力再努力">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Serendipper-x">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/07/15/哔哩哔哩n倍速播放视频/" class="post-title-link" itemprop="url">哔哩哔哩n倍速播放视频</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-07-15 17:05:06" itemprop="dateCreated datePublished" datetime="2020-07-15T17:05:06+08:00">2020-07-15</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:32:11" itemprop="dateModified" datetime="2020-11-22T15:32:11+08:00">2020-11-22</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>在b站看一些学习视频的时候，有时候2倍速满足不了我们的需求，可以在控制台键入以下命令实现n倍速播放视频<br><img src="https://img-blog.csdnimg.cn/20200715170441296.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">'video'</span>).playbackRate = <span class="number">3</span></span><br></pre></td></tr></table></figure>
-
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/06/13/网络层的基本概念/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO_JING">
-      <meta itemprop="description" content="努力努力再努力">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Serendipper-x">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/06/13/网络层的基本概念/" class="post-title-link" itemprop="url">网络层的基本概念</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-06-13 16:14:56" itemprop="dateCreated datePublished" datetime="2020-06-13T16:14:56+08:00">2020-06-13</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:25:43" itemprop="dateModified" datetime="2020-11-22T15:25:43+08:00">2020-11-22</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h5 id="网络层的功能"><a href="#网络层的功能" class="headerlink" title="网络层的功能"></a>网络层的功能</h5><p><code>网络层负责实现各种不一样的物理网络的互联</code></p><ul>
-<li>网络层采用分组交换技术</li>
-<li>网络层应当使用统一编址</li>
-<li>路由器使用存储转发实现异构网络的互联</li>
-<li>网络层关注分组从一个网络到达另一个网络的选路问题</li>
-</ul><h5 id="资源子网与通信子网"><a href="#资源子网与通信子网" class="headerlink" title="资源子网与通信子网"></a>资源子网与通信子网</h5><p><code>资源子网</code></p><ul>
-<li>负责全网的数据处理业务，向网络用户提供各种网络资源与网络服务。</li>
-<li>传输层应用层属于资源子网，关注端到端通信</li>
-</ul>
+          <p><strong>题目</strong>： 给定字符串J 代表石头中宝石的类型，和字符串 S代表你拥有的石头。 S 中每个字符代表了一种你拥有的石头的类型，你想知道你拥有的石头中有多少是宝石。</p><p>J 中的字母不重复，J 和 S中的所有字符都是字母。字母区分大小写，因此”a”和”A”是不同类型的石头。</p><p><strong>示例 1:</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: J = &quot;aA&quot;, S = &quot;aAAbbbb&quot;</span><br><span class="line">输出: 3</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2020/06/13/网络层的基本概念/#more" rel="contents">
+              <a class="btn" href="/2020/11/24/LeetCode 771. 宝石与石头/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -953,7 +425,7 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/06/13/TCP的拥塞控制机制/">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/11/24/LeetCode 1486. 数组异或操作/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO_JING">
@@ -967,7 +439,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/06/13/TCP的拥塞控制机制/" class="post-title-link" itemprop="url">TCP的拥塞控制机制</a>
+            <a href="/2020/11/24/LeetCode 1486. 数组异或操作/" class="post-title-link" itemprop="url">LeetCode 1486.数组异或操作</a>
           
         </h1>
 
@@ -982,7 +454,7 @@
                 
               
 
-              <time title="创建时间：2020-06-13 11:18:19" itemprop="dateCreated datePublished" datetime="2020-06-13T11:18:19+08:00">2020-06-13</time>
+              <time title="创建时间：2020-11-24 23:18:54" itemprop="dateCreated datePublished" datetime="2020-11-24T23:18:54+08:00">2020-11-24</time>
             </span>
           
             
@@ -993,7 +465,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:02:25" itemprop="dateModified" datetime="2020-11-22T15:02:25+08:00">2020-11-22</time>
+                <time title="修改时间：2020-11-25 09:12:42" itemprop="dateModified" datetime="2020-11-25T09:12:42+08:00">2020-11-25</time>
               </span>
             
           
@@ -1009,18 +481,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><strong>拥塞：</strong></p><ul>
-<li>在某段时间，若对网络中某资源的需求超过了该资源所能提供的可用部分，网络的性能就要变坏，产生拥塞</li>
-<li>若网络中有许多资源同时产生拥塞，网络的性能就要明显变坏，整个网络的吞吐量将随输入负荷的增大而下降</li>
-</ul><p><strong>拥塞控制：</strong></p><ul>
-<li>保证网络能够承受现有的网络负荷</li>
-</ul><p><strong>开环控制和闭环控制</strong></p><p><code>开环控制</code></p><ul>
-<li>在设计网络时事先将有关发生的拥塞的因素考虑周到，力求网络在工作时不产生拥塞</li>
-</ul>
+          <p><strong>题目</strong>：</p><p>给你两个整数，n 和 start 。</p><p>数组 nums 定义为：nums[i] = start + 2*i（下标从 0 开始）且 n == nums.length 。</p><p>请返回 nums 中所有元素按位异或（XOR）后得到的结果。</p><p><strong>示例 1：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：n = 5, start = 0</span><br><span class="line">输出：8</span><br><span class="line">解释：数组 nums 为 [0, 2, 4, 6, 8]，其中 (0 ^ 2 ^ 4 ^ 6 ^ 8) = 8 。</span><br><span class="line">     &quot;^&quot; 为按位异或 XOR 运算符。</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2020/06/13/TCP的拥塞控制机制/#more" rel="contents">
+              <a class="btn" href="/2020/11/24/LeetCode 1486. 数组异或操作/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1049,7 +514,7 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/06/11/TCP协议详解/">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/11/24/LeetCode LCP 06. 拿硬币/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO_JING">
@@ -1063,7 +528,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/06/11/TCP协议详解/" class="post-title-link" itemprop="url">TCP协议详解</a>
+            <a href="/2020/11/24/LeetCode LCP 06. 拿硬币/" class="post-title-link" itemprop="url">LeetCode LCP 06. 拿硬币</a>
           
         </h1>
 
@@ -1078,7 +543,7 @@
                 
               
 
-              <time title="创建时间：2020-06-11 15:39:02" itemprop="dateCreated datePublished" datetime="2020-06-11T15:39:02+08:00">2020-06-11</time>
+              <time title="创建时间：2020-11-24 23:16:03" itemprop="dateCreated datePublished" datetime="2020-11-24T23:16:03+08:00">2020-11-24</time>
             </span>
           
             
@@ -1089,7 +554,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 15:01:41" itemprop="dateModified" datetime="2020-11-22T15:01:41+08:00">2020-11-22</time>
+                <time title="修改时间：2020-11-25 09:11:58" itemprop="dateModified" datetime="2020-11-25T09:11:58+08:00">2020-11-25</time>
               </span>
             
           
@@ -1105,40 +570,530 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h5 id="一、TCP的设计理念"><a href="#一、TCP的设计理念" class="headerlink" title="一、TCP的设计理念"></a>一、TCP的设计理念</h5><table>
-<thead>
-<tr>
-<th>传输层协议</th>
-<th>端到端控制，实现分用和复用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>可靠传输机制</td>
-<td>保证端到端数据按序正确的到达、序号机制、确认机制、差错检测机制、缓存机制、重传机制、滑动窗口机制</td>
-</tr>
-<tr>
-<td>其他机制</td>
-<td>流量控制机制、拥塞控制机制</td>
-</tr>
-</tbody></table><p><strong>TCP协议的可靠传输机制</strong></p><img src="https://img-blog.csdnimg.cn/2020061023181263.png" width="50%"><p><strong>TCP的首部</strong></p><img src="https://img-blog.csdnimg.cn/20200611084558107.png" width="50%"><ul>
-<li><code>源端口和目的端口</code>字段——各占2字节。端口是传输层与应用层的服务接口，类似一个地址标识。传输层的复用和分用功能都要通过端口才能实现</li>
-<li><code>序号</code>字段——占4字节。TCP连接中传送的数据流中的每一个字节都编上一个号。序号字段的值指的是本报文段所发送的数据的第一个字节的编号</li>
-<li><code>确认号</code>字段——占4字节，是期望收到对方的下一个报文段的数据的第一个字节的序号。注意，当有数据要发送给对方时，顺便确认，当没有数据发送给对方时，单独发一个确认报文</li>
-<li>特殊标记（Flag）：每个标记占一个bit，有特殊约定</li>
-<li><code>URG</code>——紧急比特标记，当URG置为1时，表明紧急指针字段有效。通知本报文段中有紧急数据，应尽快传送，紧急数据的优先级要高。</li>
-<li><code>ACK</code>——只有当ACK置为1时，确认号字段才有效。正常情况下只有第一次握手时ACK=0</li>
-<li><code>PSH</code>（Push）——推送比特，接收方收到推送比特置为1的报文段，就尽快地将该报文段的数据交付给接收应用进程，而不再等到整个缓存都填满了后再向上交付</li>
-<li><code>RST</code>（ReSet）——复位比特，当RST=1时，表明TCP连接中出现严重差错，必须强行释放连接，属于单方面强行断开连接</li>
-<li><code>SYN</code>——同步比特，SYN置为1，表示这是一个连接请求报文。正常情况下只有第一次握手和第二次握手时SYN等于1，其余都等于0</li>
-<li><code>FIN</code>（Final）——终止比特，用来正常释放一个连接。当FIN=1时，表明此报文段的发送端的数据已发送完毕，并请求对方释放连接，当对方确认后，会释放发送缓存</li>
-<li><code>窗口</code>字段——占2字节。窗口字段是<code>流量控制</code>的关键，用来控制对方发送窗口的大小，单位为字节。接收方根据自身的缓存大小确定自己的接收窗口大小，然后通知对方以确定对方的发送窗口的上限</li>
-<li>检验和——占2字节。检验和字段检验的范围包括首部和数据这两部分，在计算检验和时，要在TCP报文段的前面加上12字节的伪首部</li>
-<li><code>紧急指针</code>字段——占16bit，紧急指针指出在本报文段中的紧急数据的最后一个字节的序号 </li>
-</ul>
+          <p><strong>题目</strong>：<code>桌上有 n 堆力扣币，每堆的数量保存在数组 coins 中。我们每次可以选择任意一堆，拿走其中的一枚或者两枚，求拿完所有力扣币的最少次数。</code></p><p><strong>示例 1：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：[4,2,1]</span><br><span class="line"></span><br><span class="line">输出：4</span><br><span class="line"></span><br><span class="line">解释：第一堆力扣币最少需要拿 2 次，第二堆最少需要拿 1 次，第三堆最少需要拿 1 次，总共 4 次即可拿完。</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2020/06/11/TCP协议详解/#more" rel="contents">
+              <a class="btn" href="/2020/11/24/LeetCode LCP 06. 拿硬币/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/11/24/LeetCode 222. 完全二叉树的节点个数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO_JING">
+      <meta itemprop="description" content="努力努力再努力">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serendipper-x">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/11/24/LeetCode 222. 完全二叉树的节点个数/" class="post-title-link" itemprop="url">LeetCode 222. 完全二叉树的节点个数</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-11-24 23:12:52" itemprop="dateCreated datePublished" datetime="2020-11-24T23:12:52+08:00">2020-11-24</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-25 09:15:28" itemprop="dateModified" datetime="2020-11-25T09:15:28+08:00">2020-11-25</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>题目</strong>：<code>给出一个完全二叉树，求出该树的节点个数。</code></p><p><strong>说明：</strong></p><p>完全二叉树的定义如下：在完全二叉树中，除了最底层节点可能没填满外，其余每层节点数都达到最大值，并且最下面一层的节点都集中在该层最左边的若干位置。若最底层为第 h 层，则该层包含 1~ 2h 个节点。</p><p><strong>示例:</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入: </span><br><span class="line">    1</span><br><span class="line">   / \</span><br><span class="line">  2   3</span><br><span class="line"> / \  /</span><br><span class="line">4  5 6</span><br><span class="line"></span><br><span class="line">输出: 6</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/11/24/LeetCode 222. 完全二叉树的节点个数/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/11/24/LeetCode 1108. IP 地址无效化/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO_JING">
+      <meta itemprop="description" content="努力努力再努力">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serendipper-x">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/11/24/LeetCode 1108. IP 地址无效化/" class="post-title-link" itemprop="url">LeetCode 1108. IP地址无效化</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-11-24 23:06:59" itemprop="dateCreated datePublished" datetime="2020-11-24T23:06:59+08:00">2020-11-24</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-25 09:14:14" itemprop="dateModified" datetime="2020-11-25T09:14:14+08:00">2020-11-25</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>题目</strong>：</p><p><code>给你一个有效的 IPv4 地址 address，返回这个 IP 地址的无效化版本。
+所谓无效化 IP 地址，其实就是用 &quot;[.]&quot; 代替了每个 &quot;.&quot;。</code></p><p><strong>示例 1：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：address = &quot;1.1.1.1&quot;</span><br><span class="line">输出：&quot;1[.]1[.]1[.]1&quot;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/11/24/LeetCode 1108. IP 地址无效化/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/11/24/LeetCode 237. 删除链表中的节点/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO_JING">
+      <meta itemprop="description" content="努力努力再努力">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serendipper-x">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/11/24/LeetCode 237. 删除链表中的节点/" class="post-title-link" itemprop="url">LeetCode 237. 删除链表中的节点</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-11-24 23:03:51" itemprop="dateCreated datePublished" datetime="2020-11-24T23:03:51+08:00">2020-11-24</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-25 09:15:07" itemprop="dateModified" datetime="2020-11-25T09:15:07+08:00">2020-11-25</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>题目</strong>：<img src="https://img-blog.csdnimg.cn/20201124230138838.png#pic" alt="在这里插入图片描述"><br><strong>示例 1：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [4,5,1,9], node = 5</span><br><span class="line">输出：[4,1,9]</span><br><span class="line">解释：给定你链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 1 -&gt; 9.</span><br></pre></td></tr></table></figure><p><strong>示例 2：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [4,5,1,9], node = 1</span><br><span class="line">输出：[4,5,9]</span><br><span class="line">解释：给定你链表中值为 1 的第三个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 5 -&gt; 9.</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/11/24/LeetCode 237. 删除链表中的节点/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/11/24/LeetCode 1281. 整数的各位积和之差/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO_JING">
+      <meta itemprop="description" content="努力努力再努力">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serendipper-x">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/11/24/LeetCode 1281. 整数的各位积和之差/" class="post-title-link" itemprop="url">LeetCode 1281. 整数的各位积和之差</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-11-24 23:00:40" itemprop="dateCreated datePublished" datetime="2020-11-24T23:00:40+08:00">2020-11-24</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-25 09:13:48" itemprop="dateModified" datetime="2020-11-25T09:13:48+08:00">2020-11-25</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>题目</strong>：<code>给你一个整数 n，请你帮忙计算并返回该整数「各位数字之积」与「各位数字之和」的差。</code></p><p><strong>示例 1：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：n = 234</span><br><span class="line">输出：15 </span><br><span class="line">解释：</span><br><span class="line">各位数之积 = 2 * 3 * 4 = 24 </span><br><span class="line">各位数之和 = 2 + 3 + 4 = 9 </span><br><span class="line">结果 = 24 - 9 = 15</span><br></pre></td></tr></table></figure><p><strong>示例 2：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：n = 4421</span><br><span class="line">输出：21</span><br><span class="line">解释： </span><br><span class="line">各位数之积 = 4 * 4 * 2 * 1 = 32 </span><br><span class="line">各位数之和 = 4 + 4 + 2 + 1 = 11 </span><br><span class="line">结果 = 32 - 11 = 21</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/11/24/LeetCode 1281. 整数的各位积和之差/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/11/22/LeetCode 1480 一维数组的动态和/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO_JING">
+      <meta itemprop="description" content="努力努力再努力">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serendipper-x">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/11/22/LeetCode 1480 一维数组的动态和/" class="post-title-link" itemprop="url">LeetCode 1480 一维数组的动态和</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-11-22 17:30:21 / 修改时间：17:31:52" itemprop="dateCreated datePublished" datetime="2020-11-22T17:30:21+08:00">2020-11-22</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>题目</strong>：</p><p><code>给你一个数组 nums 。数组「动态和」的计算公式为：runningSum[i] = sum(nums[0]…nums[i]) 。</code></p><p><code>请返回 nums 的动态和。</code></p><p><strong>示例 1：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [1,2,3,4]</span><br><span class="line">输出：[1,3,6,10]</span><br><span class="line">解释：动态和计算过程为 [1, 1+2, 1+2+3, 1+2+3+4] 。</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/11/22/LeetCode 1480 一维数组的动态和/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://1979F.github.io/2020/11/22/小白 LeetCode 5605 检查两个字符串数据是否相等/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO_JING">
+      <meta itemprop="description" content="努力努力再努力">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serendipper-x">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/11/22/小白 LeetCode 5605 检查两个字符串数据是否相等/" class="post-title-link" itemprop="url">小白 LeetCode 5605 检查两个字符串数据是否相等</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-11-22 17:07:07 / 修改时间：17:08:24" itemprop="dateCreated datePublished" datetime="2020-11-22T17:07:07+08:00">2020-11-22</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>题目</strong>：<code>给你两个字符串数组 word1 和 word2 。如果两个数组表示的字符串相同，返回 true ；否则，返回 false 。</code></p><p><strong>数组表示的字符串</strong> 是由数组中的所有元素 按顺序 连接形成的字符串。</p><p><strong>示例 1：</strong></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：word1 = [<span class="string">"ab"</span>, <span class="string">"c"</span>], word2 = [<span class="string">"a"</span>, <span class="string">"bc"</span>]</span><br><span class="line">输出：<span class="keyword">true</span></span><br><span class="line">解释：</span><br><span class="line">word1 表示的字符串为 <span class="string">"ab"</span> + <span class="string">"c"</span> -&gt; <span class="string">"abc"</span></span><br><span class="line">word2 表示的字符串为 <span class="string">"a"</span> + <span class="string">"bc"</span> -&gt; <span class="string">"abc"</span></span><br><span class="line">两个字符串相同，返回 <span class="keyword">true</span></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/11/22/小白 LeetCode 5605 检查两个字符串数据是否相等/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1166,7 +1121,7 @@
   
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/9/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/9/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1215,7 +1170,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">150</span>
+          <span class="site-state-item-count">166</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1228,7 +1183,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -1346,7 +1301,7 @@ setInterval("createtime()",250);
 </script>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共96.3k字</span>
+  <span class="post-count">博客全站共104k字</span>
 </div>
 
         
