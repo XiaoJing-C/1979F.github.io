@@ -56,19 +56,19 @@
   };
 </script>
 
-  <meta name="description" content="@TOC一、中断机制的诞生:tipping_hand_woman:  早期的计算机：各程序只能串行执行，系统资源利用率低为了解决上述问题，人们发明了操作系统（作为计算机的管理者），引入中断机制，实现了多道程序并发执行。本质：发生中断就意味着需要操作系统介入，开展工作。二、中断的概念和作用1、当中断发生时，CPU立即进入核心态">
+  <meta name="description" content="一、中断机制的诞生早期的计算机：各程序只能串行执行，系统资源利用率低为了解决上述问题，人们发明了操作系统（作为计算机的管理者），引入中断机制，实现了多道程序并发执行。本质：发生中断就意味着需要操作系统介入，开展工作。二、中断的概念和作用1、当中断发生时，CPU立即进入核心态2、当中断发生后，当前运行的进程暂停运行，并由操作系统内核对中断进行处理">
 <meta name="keywords" content="操作系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【操作系统复习】中断和异常">
 <meta property="og:url" content="http://1979F.github.io/2021/03/10/【操作系统复习】中断和异常/index.html">
 <meta property="og:site_name" content="Serendipper-x">
-<meta property="og:description" content="@TOC一、中断机制的诞生:tipping_hand_woman:  早期的计算机：各程序只能串行执行，系统资源利用率低为了解决上述问题，人们发明了操作系统（作为计算机的管理者），引入中断机制，实现了多道程序并发执行。本质：发生中断就意味着需要操作系统介入，开展工作。二、中断的概念和作用1、当中断发生时，CPU立即进入核心态">
+<meta property="og:description" content="一、中断机制的诞生早期的计算机：各程序只能串行执行，系统资源利用率低为了解决上述问题，人们发明了操作系统（作为计算机的管理者），引入中断机制，实现了多道程序并发执行。本质：发生中断就意味着需要操作系统介入，开展工作。二、中断的概念和作用1、当中断发生时，CPU立即进入核心态2、当中断发生后，当前运行的进程暂停运行，并由操作系统内核对中断进行处理">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20210310120021965.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2021-03-10T08:22:19.940Z">
+<meta property="og:updated_time" content="2021-03-10T08:53:46.299Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【操作系统复习】中断和异常">
-<meta name="twitter:description" content="@TOC一、中断机制的诞生:tipping_hand_woman:  早期的计算机：各程序只能串行执行，系统资源利用率低为了解决上述问题，人们发明了操作系统（作为计算机的管理者），引入中断机制，实现了多道程序并发执行。本质：发生中断就意味着需要操作系统介入，开展工作。二、中断的概念和作用1、当中断发生时，CPU立即进入核心态">
+<meta name="twitter:description" content="一、中断机制的诞生早期的计算机：各程序只能串行执行，系统资源利用率低为了解决上述问题，人们发明了操作系统（作为计算机的管理者），引入中断机制，实现了多道程序并发执行。本质：发生中断就意味着需要操作系统介入，开展工作。二、中断的概念和作用1、当中断发生时，CPU立即进入核心态2、当中断发生后，当前运行的进程暂停运行，并由操作系统内核对中断进行处理">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20210310120021965.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70">
   <link rel="canonical" href="http://1979F.github.io/2021/03/10/【操作系统复习】中断和异常/">
 
@@ -279,7 +279,7 @@
                 
               
 
-              <time title="创建时间：2021-03-10 12:00:38 / 修改时间：16:22:19" itemprop="dateCreated datePublished" datetime="2021-03-10T12:00:38+08:00">2021-03-10</time>
+              <time title="创建时间：2021-03-10 12:00:38 / 修改时间：16:53:46" itemprop="dateCreated datePublished" datetime="2021-03-10T12:00:38+08:00">2021-03-10</time>
             </span>
           
             
@@ -306,17 +306,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>@<a href="中断和异常">TOC</a></p><h2 id="一、中断机制的诞生"><a href="#一、中断机制的诞生" class="headerlink" title="一、中断机制的诞生"></a>一、中断机制的诞生</h2><p>:tipping_hand_woman:  早期的计算机：各程序只能串行执行，系统资源利用率低</p><p>为了解决上述问题，人们发明了操作系统（作为计算机的管理者），引入中断机制，实现了多道程序并发执行。</p><p><strong>本质</strong>：发生中断就意味着需要操作系统介入，开展工作。</p><h2 id="二、中断的概念和作用"><a href="#二、中断的概念和作用" class="headerlink" title="二、中断的概念和作用"></a>二、中断的概念和作用</h2><p>1、当中断发生时，CPU立即进入核心态</p><a id="more"></a>
+        <h2 id="一、中断机制的诞生"><a href="#一、中断机制的诞生" class="headerlink" title="一、中断机制的诞生"></a>一、中断机制的诞生</h2><p>早期的计算机：各程序只能串行执行，系统资源利用率低</p><p>为了解决上述问题，人们发明了操作系统（作为计算机的管理者），引入中断机制，实现了多道程序并发执行。</p><p><strong>本质</strong>：发生中断就意味着需要操作系统介入，开展工作。</p><h2 id="二、中断的概念和作用"><a href="#二、中断的概念和作用" class="headerlink" title="二、中断的概念和作用"></a>二、中断的概念和作用</h2><p>1、当中断发生时，CPU立即进入核心态</p><p>2、当中断发生后，当前运行的进程暂停运行，并由操作系统内核对中断进行处理</p><a id="more"></a>
 
 
 
 
-<p>2、当中断发生后，当前运行的进程暂停运行，并由操作系统内核对中断进行处理</p>
 <p>3、对于不同的中断信号，会进行不同的处理</p>
-<p>:deciduous_tree:  由于操作系统的管理工作（比如进程切换、分配I/O设备等）需要使用特权指令，因此CPU要从用户态转为核心态。<code>中断可以使CPU从用户态切换为核心态，使操作系统获得计算机的控制权</code>。有了中断，才能实现多道程序并发执行。</p>
-<p>:question:  用户态、核心态之间的切换是怎么实现的？</p>
-<p>:arrow_forward:  “ 用户态 –&gt; 核心态 ” 是通过中断实现，并且中断是==唯一==途径。</p>
-<p>:arrow_forward:  “ 核心态 –&gt; 用户态 ” 的切换是通过执行一个特权指令，将程序状态字（PSW）的标志位设置为用户态。</p>
+<p>由于操作系统的管理工作（比如进程切换、分配I/O设备等）需要使用特权指令，因此CPU要从用户态转为核心态。<code>中断可以使CPU从用户态切换为核心态，使操作系统获得计算机的控制权</code>。有了中断，才能实现多道程序并发执行。</p>
+<p>用户态、核心态之间的切换是怎么实现的？</p>
+<ul>
+<li><p>“ 用户态 –&gt; 核心态 ” 是通过中断实现，并且中断是==唯一==途径。</p>
+</li>
+<li><p>“ 核心态 –&gt; 用户态 ” 的切换是通过执行一个特权指令，将程序状态字（PSW）的标志位设置为用户态。</p>
+</li>
+</ul>
 <h2 id="三、中断的分类"><a href="#三、中断的分类" class="headerlink" title="三、中断的分类"></a>三、中断的分类</h2><p><img src="https://img-blog.csdnimg.cn/20210310120021965.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RzdW5kZXJlX3g=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <h2 id="四、外中断的处理过程"><a href="#四、外中断的处理过程" class="headerlink" title="四、外中断的处理过程"></a>四、外中断的处理过程</h2><p>1、执行完每个指令之后，CPU都要检查当前是否有外部中断信号</p>
 <p>2、如果检测到外部中断信号，则需要保护被中断进程的CPU环境（如程序状态字PSW、程序计数器PC、各种通用寄存器）</p>
@@ -580,7 +583,7 @@ setInterval("createtime()",250);
 </script>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共104k字</span>
+  <span class="post-count">博客全站共103.9k字</span>
 </div>
 
         

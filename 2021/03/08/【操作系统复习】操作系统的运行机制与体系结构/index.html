@@ -56,18 +56,18 @@
   };
 </script>
 
-  <meta name="description" content="@TOC一、两种指令、两种处理器状态、两种程序:tipping_hand_woman: ” 指令 ” 就是处理器（CPU）能识别、执行的最基本命令 特权指令： 如内存清零指令 –&amp;gt; 不允许用户程序使用。 非特权指令： 如普通的运算指令 :grey_question: CPU如何判断当前是否可以执行特权指令？">
+  <meta name="description" content="一、两种指令、两种处理器状态、两种程序 ” 指令 ” 就是处理器（CPU）能识别、执行的最基本命令 特权指令： 如内存清零指令 –&amp;gt; 不允许用户程序使用。  非特权指令： 如普通的运算指令 CPU如何判断当前是否可以执行特权指令？  用程序状态寄存器（PSW）中的某标志位来标识当前处理器处于什么状态，如0为用户态，1为核心态。">
 <meta name="keywords" content="操作系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【操作系统复习】操作系统的运行机制与体系结构">
 <meta property="og:url" content="http://1979F.github.io/2021/03/08/【操作系统复习】操作系统的运行机制与体系结构/index.html">
 <meta property="og:site_name" content="Serendipper-x">
-<meta property="og:description" content="@TOC一、两种指令、两种处理器状态、两种程序:tipping_hand_woman: ” 指令 ” 就是处理器（CPU）能识别、执行的最基本命令 特权指令： 如内存清零指令 –&amp;gt; 不允许用户程序使用。 非特权指令： 如普通的运算指令 :grey_question: CPU如何判断当前是否可以执行特权指令？">
+<meta property="og:description" content="一、两种指令、两种处理器状态、两种程序 ” 指令 ” 就是处理器（CPU）能识别、执行的最基本命令 特权指令： 如内存清零指令 –&amp;gt; 不允许用户程序使用。  非特权指令： 如普通的运算指令 CPU如何判断当前是否可以执行特权指令？  用程序状态寄存器（PSW）中的某标志位来标识当前处理器处于什么状态，如0为用户态，1为核心态。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-03-10T08:23:06.377Z">
+<meta property="og:updated_time" content="2021-03-10T08:54:23.949Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【操作系统复习】操作系统的运行机制与体系结构">
-<meta name="twitter:description" content="@TOC一、两种指令、两种处理器状态、两种程序:tipping_hand_woman: ” 指令 ” 就是处理器（CPU）能识别、执行的最基本命令 特权指令： 如内存清零指令 –&amp;gt; 不允许用户程序使用。 非特权指令： 如普通的运算指令 :grey_question: CPU如何判断当前是否可以执行特权指令？">
+<meta name="twitter:description" content="一、两种指令、两种处理器状态、两种程序 ” 指令 ” 就是处理器（CPU）能识别、执行的最基本命令 特权指令： 如内存清零指令 –&amp;gt; 不允许用户程序使用。  非特权指令： 如普通的运算指令 CPU如何判断当前是否可以执行特权指令？  用程序状态寄存器（PSW）中的某标志位来标识当前处理器处于什么状态，如0为用户态，1为核心态。">
   <link rel="canonical" href="http://1979F.github.io/2021/03/08/【操作系统复习】操作系统的运行机制与体系结构/">
 
 
@@ -288,7 +288,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-10 16:23:06" itemprop="dateModified" datetime="2021-03-10T16:23:06+08:00">2021-03-10</time>
+                <time title="修改时间：2021-03-10 16:54:23" itemprop="dateModified" datetime="2021-03-10T16:54:23+08:00">2021-03-10</time>
               </span>
             
           
@@ -312,19 +312,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>@<a href="操作系统的运行机制与体系结构">TOC</a></p><h2 id="一、两种指令、两种处理器状态、两种程序"><a href="#一、两种指令、两种处理器状态、两种程序" class="headerlink" title="一、两种指令、两种处理器状态、两种程序"></a>一、两种指令、两种处理器状态、两种程序</h2><p>:tipping_hand_woman: ” <strong>指令</strong> ” 就是处理器（CPU）能识别、执行的最基本命令</p><ul>
-<li><strong>特权指令：</strong> 如内存清零指令 –&gt; 不允许用户程序使用。</li>
-<li><strong>非特权指令：</strong> 如普通的运算指令</li>
-</ul><p>:grey_question: CPU如何判断当前是否可以执行特权指令？</p><a id="more"></a>
+        <h2 id="一、两种指令、两种处理器状态、两种程序"><a href="#一、两种指令、两种处理器状态、两种程序" class="headerlink" title="一、两种指令、两种处理器状态、两种程序"></a>一、两种指令、两种处理器状态、两种程序</h2><p> ” <strong>指令</strong> ” 就是处理器（CPU）能识别、执行的最基本命令</p><ul>
+<li><p><strong>特权指令：</strong> 如内存清零指令 –&gt; 不允许用户程序使用。</p>
+</li>
+<li><p><strong>非特权指令：</strong> 如普通的运算指令</p>
+<p>CPU如何判断当前是否可以执行特权指令？</p>
+</li>
+</ul><p>用程序状态寄存器（PSW）中的某标志位来标识当前处理器处于什么状态，如0为用户态，1为核心态。</p><a id="more"></a>
 
 
-
-<p>用程序状态寄存器（PSW）中的某标志位来标识当前处理器处于什么状态，如0为用户态，1为核心态。</p>
 <ul>
 <li><strong>用户态（目态）：</strong> 此时CPU只能执行非特权指令</li>
 <li><strong>核心态（管态）</strong>：特权指令、非特权指令都可以执行</li>
 </ul>
-<p>:arrow_right: 两种程序</p>
+<p><strong>两种程序</strong></p>
 <ul>
 <li><strong>内核程序：</strong> 操作系统的内核程序是系统的管理者，既可以执行特权指令，也可以执行非特权指令，运行在核心态。</li>
 <li><strong>应用程序：</strong> 为了保证系统能安全运行，普通应用程序只能执行非特权指令，运行在用户态。</li>
@@ -623,7 +624,7 @@ setInterval("createtime()",250);
 </script>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共104k字</span>
+  <span class="post-count">博客全站共103.9k字</span>
 </div>
 
         
